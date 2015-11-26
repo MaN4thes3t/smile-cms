@@ -2,56 +2,19 @@
 namespace backend\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
-use yii\web\Controller;
-use common\models\LoginForm;
-use yii\filters\VerbFilter;
+use yii\helpers\VarDumper;
+use backend\smile\controllers\SmileBackendController;
+use backend\models\LoginForm;
+
 
 /**
  * Site controller
  */
-class SiteController extends Controller
+class SiteController extends SmileBackendController
 {
     /**
      * @inheritdoc
      */
-    public function behaviors()
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'actions' => ['login', 'error'],
-                        'allow' => true,
-                    ],
-                    [
-                        'actions' => ['logout', 'index'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
-        ];
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function actions()
-    {
-        return [
-            'error' => [
-                'class' => 'yii\web\ErrorAction',
-            ],
-        ];
-    }
 
     public function actionIndex()
     {
@@ -60,6 +23,7 @@ class SiteController extends Controller
 
     public function actionLogin()
     {
+        $this->layout = 'guest';
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -77,7 +41,15 @@ class SiteController extends Controller
     public function actionLogout()
     {
         Yii::$app->user->logout();
-
         return $this->goHome();
+    }
+
+    public function actionChangeLanguage(){
+//
+        if(Yii::$app->request->isAjax){
+            if($language = Yii::$app->request->post('language','')){
+                Yii::$app->session->set('language',$language);
+            }
+        }
     }
 }

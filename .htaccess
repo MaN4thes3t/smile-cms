@@ -1,4 +1,4 @@
-<IfModule mod_rewrite.c>
+#<IfModule mod_rewrite.c>
 
 Options +FollowSymlinks
 
@@ -49,4 +49,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^.*$ frontend/web/index.php
 
-</IfModule>
+#</IfModule>

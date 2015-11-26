@@ -7,14 +7,17 @@ use yii\widgets\Breadcrumbs;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-
 AppAsset::register($this);
+use yii\helpers\Url;
+use yii\helpers\ArrayHelper;
+use yii\helpers\VarDumper;
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <meta charset="<?= Yii::$app->charset ?>">
+    <meta charset="<?= Yii::$app->charset ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
@@ -22,50 +25,93 @@ AppAsset::register($this);
 </head>
 <body>
     <?php $this->beginBody() ?>
-    <div class="wrap">
-        <?php
-            NavBar::begin([
-                'brandLabel' => 'My Company',
-                'brandUrl' => Yii::$app->homeUrl,
-                'options' => [
-                    'class' => 'navbar-inverse navbar-fixed-top',
-                ],
-            ]);
-            $menuItems = [
-                ['label' => 'Home', 'url' => ['/site/index']],
-            ];
-            if (Yii::$app->user->isGuest) {
-                $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-            } else {
-                $menuItems[] = [
-                    'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                    'url' => ['/site/logout'],
-                    'linkOptions' => ['data-method' => 'post']
-                ];
-            }
-            echo Nav::widget([
-                'options' => ['class' => 'navbar-nav navbar-right'],
-                'items' => $menuItems,
-            ]);
-            NavBar::end();
-        ?>
+    <div id="wrapper">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <?= Html::a(Yii::t('backend','Smile CMS'), ['/'], ['class' => 'navbar-brand']) ?>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <?php $nav = [
+                        Yii::t('backend','Категории новостей') => [
+                            'url'=>Url::toRoute(['/newscategory/newscategory'],true),
+                            'controller'=>'newscategory'
+                        ],
+                        Yii::t('backend','Опросы') => [
+                            'url'=>Url::toRoute(['/poll/poll'],true),
+                            'controller'=>'poll'
+                        ],
+                        Yii::t('backend','Советы') => [
+                            'url'=>Url::toRoute(['/advice/advice'],true),
+                            'controller'=>'advice'
+                        ],
+                        Yii::t('backend','Страницы') => [
+                            'url'=>Url::toRoute(['/page/page'],true),
+                            'controller'=>'page'
+                        ],
+                        Yii::t('backend','Лидеры') => [
+                            'url'=>Url::toRoute(['/leader/leader'],true),
+                            'controller'=>'leader'
+                        ],
+                        Yii::t('backend','Теги') => [
+                            'url'=>Url::toRoute(['/tag/tag'],true),
+                            'controller'=>'tag'
+                        ],
+                        Yii::t('backend','Управление языками') => [
+                            'url'=>Url::toRoute(['/language/language'],true),
+                            'controller'=>'language'
+                        ],
+                        Yii::t('backend','Словарь переводов') => [
+                            'url'=>Url::toRoute(['/dictionary/dictionary'],true),
+                            'controller'=>'dictionary'
+                        ],
+                        Yii::t('backend','Выход') => [
+                            'url'=>Url::toRoute(['/site/logout'],true),
+                            'controller'=>''
+                        ],
+                    ];?>
+                    <?php foreach($nav as $k=>$v):
+                        ?>
+                        <li class="<?= Yii::$app->controller->id==$v['controller']?'active':''?>">
+                            <?= Html::a($k, $v['url']) ?>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        </nav>
 
-        <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= $content ?>
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <?= Breadcrumbs::widget([
+                        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                    ]) ?>
+                    <?= $content ?>
+                </div>
+
+            </div>
+            <div class="select_language_container">
+                <?=Html::dropDownList('select_language',Yii::$app->language,ArrayHelper::map(
+                    Yii::$app->params['languages'],
+                    'code',function($data){
+                    return $data['name'].' / '.$data['translate'][Yii::$app->language]['translate'];
+                }),[
+                    'class'=>'form-control',
+                    'id'=>'select_language'
+                ])?>
+            </div>
         </div>
+
     </div>
-
-    <footer class="footer">
-        <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-        <p class="pull-right"><?= Yii::powered() ?></p>
-        </div>
-    </footer>
 
     <?php $this->endBody() ?>
 </body>
 </html>
-<?php $this->endPage() ?>
+<?php $this->endPage();
+?>
