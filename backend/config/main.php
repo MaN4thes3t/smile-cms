@@ -10,8 +10,11 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [
+        'dropzone' => [
+            'class' => 'backend\smile\modules\dropzone\SmileDropZoneModule',
+        ],
         'redactor' => [
-            'class'=>'backend\smile\Redactor',
+            'class'=>'backend\smile\modules\redactor\SmileRedactorModule',
             'uploadDir' => '@img_root/uploads',
             'uploadUrl' => '/uploads',
             'imageAllowExtensions'=>['jpg','png','jpeg']

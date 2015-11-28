@@ -22,11 +22,9 @@
         "fxp/composer-asset-plugin": "~1.1.0",
         "bower-asset/select2": "3.*",
         "kartik-v/yii2-widget-select2": "v2.0.3",
-        "letyii/yii2-tinymce": "1.0",
         "yiidoc/yii2-redactor": "*",
-        "vova07/yii2-imperavi-widget": "*",
-        "2amigos/yii2-file-upload-widget": "~1.0",
-        "perminder-klair/yii2-dropzone": "dev-master"
+        "perminder-klair/yii2-dropzone": "dev-master",
+        "yurkinx/yii2-image": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

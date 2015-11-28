@@ -1,5 +1,6 @@
 <?php
 Yii::setAlias('@img_root', realpath(dirname(__FILE__).'/../../'));
+Yii::setAlias('@images', '/images');
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
 //    'bootstrap' => ['debug'],
@@ -8,6 +9,11 @@ return [
 //        'debug'=>'yii\debug\Module'
     ],
     'components' => [
+        'image' => [
+            /* @var \yii\image\ImageDriver */
+            'class' => 'yii\image\ImageDriver',
+            'driver' => 'GD',  //GD or Imagick
+        ],
         'request'=>[
             /* @var \common\smile\components\SmileCommonRequest */
             'cookieValidationKey' => 'iqTh78ppBnqlaM8RehWVv0lXvK1RkZvv',

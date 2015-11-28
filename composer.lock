@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fe44636a574d7b76f98b70e24aebca1f",
-    "content-hash": "378ff79cafe7e13c8febbaa09cdf3279",
+    "hash": "55c0edcbc6347d1f61df7a493eebef2d",
+    "content-hash": "071bb17e0573a1c1c0393f604a74aea9",
     "packages": [
         {
             "name": "2amigos/yii2-file-upload-widget",
@@ -592,16 +592,16 @@
         },
         {
             "name": "bower-asset/jquery.inputmask",
-            "version": "3.2.4",
+            "version": "3.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobinHerbots/jquery.inputmask.git",
-                "reference": "4e39624ea093d23c34f340c5bd8ab4e3a0aea17d"
+                "reference": "d08264a678865849c808359d126e3bddb9ec87a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/4e39624ea093d23c34f340c5bd8ab4e3a0aea17d",
-                "reference": "4e39624ea093d23c34f340c5bd8ab4e3a0aea17d",
+                "url": "https://api.github.com/repos/RobinHerbots/jquery.inputmask/zipball/d08264a678865849c808359d126e3bddb9ec87a6",
+                "reference": "d08264a678865849c808359d126e3bddb9ec87a6",
                 "shasum": ""
             },
             "require": {
@@ -1644,12 +1644,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "185b16fb5a4fc1c773293b2fe35880a3b016f0c2"
+                "reference": "55e36af89d0e1edc8a54382e8401236217adbee8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/185b16fb5a4fc1c773293b2fe35880a3b016f0c2",
-                "reference": "185b16fb5a4fc1c773293b2fe35880a3b016f0c2",
+                "url": "https://api.github.com/repos/symfony/process/zipball/55e36af89d0e1edc8a54382e8401236217adbee8",
+                "reference": "55e36af89d0e1edc8a54382e8401236217adbee8",
                 "shasum": ""
             },
             "require": {
@@ -1685,7 +1685,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-23 10:41:47"
+            "time": "2015-11-28 09:12:47"
         },
         {
             "name": "tinymce/tinymce",
@@ -1845,12 +1845,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "af788cd08fed9c8137c0e941f5650f028b3fb505"
+                "reference": "6978120b2be1fd0b4c21e404fe34c23defc5459e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/af788cd08fed9c8137c0e941f5650f028b3fb505",
-                "reference": "af788cd08fed9c8137c0e941f5650f028b3fb505",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/6978120b2be1fd0b4c21e404fe34c23defc5459e",
+                "reference": "6978120b2be1fd0b4c21e404fe34c23defc5459e",
                 "shasum": ""
             },
             "require": {
@@ -1926,7 +1926,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-11-26 20:57:11"
+            "time": "2015-11-27 19:08:53"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -2124,6 +2124,49 @@
                 "yii2"
             ],
             "time": "2015-09-29 11:01:52"
+        },
+        {
+            "name": "yurkinx/yii2-image",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yurkinx/yii2-image.git",
+                "reference": "0d6d261bf9c2dc35e9ad8c5cc56793580b74eefd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yurkinx/yii2-image/zipball/0d6d261bf9c2dc35e9ad8c5cc56793580b74eefd",
+                "reference": "0d6d261bf9c2dc35e9ad8c5cc56793580b74eefd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-0": {
+                    "yii\\image\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Yuri Kileev",
+                    "email": "kileev@gmail.com"
+                }
+            ],
+            "description": "Yii2 extension for image manipulating using Kohana Image Library.",
+            "homepage": "https://github.com/yurkinx/yii2-image",
+            "keywords": [
+                "extension",
+                "image",
+                "yii2"
+            ],
+            "time": "2015-06-24 13:41:22"
         }
     ],
     "packages-dev": [
@@ -2160,12 +2203,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "008e69f17a1286c29b8a60082119b7d6eee69082"
+                "reference": "47df6ab21ce82fe7021ebbc00cff901f76b5029b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/008e69f17a1286c29b8a60082119b7d6eee69082",
-                "reference": "008e69f17a1286c29b8a60082119b7d6eee69082",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/47df6ab21ce82fe7021ebbc00cff901f76b5029b",
+                "reference": "47df6ab21ce82fe7021ebbc00cff901f76b5029b",
                 "shasum": ""
             },
             "require": {
@@ -2202,7 +2245,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-11-16 08:55:57"
+            "time": "2015-11-27 16:01:28"
         },
         {
             "name": "phpspec/php-diff",
@@ -2434,7 +2477,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "perminder-klair/yii2-dropzone": 20
+        "perminder-klair/yii2-dropzone": 20,
+        "yurkinx/yii2-image": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

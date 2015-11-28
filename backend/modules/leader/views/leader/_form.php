@@ -5,6 +5,7 @@ use yii\widgets\ActiveForm;
 use yii\bootstrap\Tabs;
 use yii\helpers\Url;
 use yii\jui\DatePicker;
+use backend\smile\widget\SmileDropZOne;
 
 /* @var $this yii\web\View */
 /* @var $model backend\modules\leader\models\Leader */
@@ -20,7 +21,7 @@ use yii\jui\DatePicker;
     <?= DatePicker::widget([
         'model' => $model,
         'attribute' => 'birthday',
-        'language' => 'ru',
+        'language' => 'en-AU',
         'options' =>[
             'class'=>'form-control'
         ],
@@ -46,19 +47,13 @@ use yii\jui\DatePicker;
     <?php echo Tabs::widget([
         'items' => $items,
     ]);?>
+    <div class="form-group">
     <?php
-    echo \kato\DropZone::widget([
-        'options' => [
-            'maxFilesize' => '2',
-        ],
-        'uploadUrl'=>Url::toRoute(['/leader/leader/upload'],true),
-        'clientEvents' => [
-            'complete' => "function(file){console.log(file)}",
-            'removedfile' => "function(file){alert(file.name + ' is removed')}"
-        ],
+    echo SmileDropZOne::widget([
+        'model'=>$model,
     ]);
     ?>
-
+    </div>
     <div class="form-group">
         <?= SmileHtml::submitButton($model->isNewRecord ? Yii::t('backend','Создать') : Yii::t('backend','Сохранить'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

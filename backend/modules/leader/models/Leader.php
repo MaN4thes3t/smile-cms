@@ -45,8 +45,12 @@ class Leader extends SmileBackendModel
     }
     public function birthdayValidation($attribute, $params){
         if ($this->$attribute) {
+
             if(is_string($this->$attribute)){
+//                VarDumper::dump($this->$attribute,6,1);
+//                die();
                 $this->$attribute = strtotime($this->$attribute);
+
             }else{
                 $this->addError($attribute, Yii::t('backend','Введите корректную дату'));
             }

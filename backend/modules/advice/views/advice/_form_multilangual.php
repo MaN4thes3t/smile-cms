@@ -28,19 +28,19 @@ $className = StringHelper::basename(get_class($model));
     <?= $form->field($model, 'description')->widget(Redactor::className(), [
             'options' => [
                 'name' => $className.'['.$language.'][description]',
-                'id' => $className.'_'.$language.'_'.'description'
+                'id' => $className.'_'.$language.'_'.'description',
             ],
             'clientOptions' => [
                 'minHeight'=>300,
-                'imageManagerJson' => ['/redactor/upload/image-json'],
-                'imageUpload' => ['/redactor/upload/image'],
-                'fileUpload' => ['/redactor/upload/file'],
                 'placeholder'=>'Enter your text here...',
                 'plugins' => [
                     'fontsize','fontfamily','fontcolor','table','video','clips','counter','textdirection','fullscreen'
                 ],
             ]
         ])?>
+    <?php
+        Yii::$app->session->set('redactorModuleName',$className);
+    ?>
     <?= $form->field($model, 'seotitle')->textInput(array(
         'name' => $className.'['.$language.'][seotitle]',
         'id' => $className.'_'.$language.'_'.'seotitle'
