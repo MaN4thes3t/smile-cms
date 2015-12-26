@@ -21,7 +21,7 @@ class SmileRedactorModule extends RedactorModule
     {
         $date = getdate();
         $moduleName = Yii::$app->session->get('redactorModuleName')?Yii::$app->session->get('redactorModuleName'). DIRECTORY_SEPARATOR : '';
-        Yii::$app->session->remove('redactorModuleName');
+//        Yii::$app->session->remove('redactorModuleName');
         return $moduleName.$date['year']. DIRECTORY_SEPARATOR . $date['mon'] . DIRECTORY_SEPARATOR . $date['mday'];
     }
 }

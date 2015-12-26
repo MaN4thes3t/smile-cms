@@ -5,7 +5,8 @@ use yii\widgets\ActiveForm;
 use yii\bootstrap\Tabs;
 use yii\helpers\Url;
 use yii\jui\DatePicker;
-use backend\smile\widget\SmileDropZOne;
+use dosamigos\fileupload\FileUploadUI;
+use dosamigos\gallery\Gallery;
 
 /* @var $this yii\web\View */
 /* @var $model backend\modules\leader\models\Leader */
@@ -47,13 +48,36 @@ use backend\smile\widget\SmileDropZOne;
     <?php echo Tabs::widget([
         'items' => $items,
     ]);?>
-    <div class="form-group">
-    <?php
-    echo SmileDropZOne::widget([
-        'model'=>$model,
-    ]);
-    ?>
-    </div>
+    <?php if(!$model->isNewRecord){
+        ?>
+        <div class="form-group">
+
+        </div>
+        <div class="form-group">
+            <?= FileUploadUI::widget([
+                'name'=>'images[]',
+                'gallery'=>true,
+                'id'=>'images-upload',
+                'url' => ['/dropzone/drop-zone/upload', 'id' => $model->id, 'class'=>get_class($model)],
+                'fieldOptions' => [
+                    'accept' => 'image/*',
+                    'fileTypes'=>'png',
+                ],
+                'clientOptions' => [
+                    'maxFileSize' => 5000000,
+                    'autoUpload'=>true,
+                    'fileTypes'=>'png',
+                    'multipart'=>true,
+                    'forceIframeTransport'=>false,
+//                    'sequentialUploads'=>true,//upload one by one,
+                    'singleFileUploads'=>false,
+                ],
+            ]);
+            ?>
+        </div>
+        <?php
+    }?>
+
     <div class="form-group">
         <?= SmileHtml::submitButton($model->isNewRecord ? Yii::t('backend','Создать') : Yii::t('backend','Сохранить'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

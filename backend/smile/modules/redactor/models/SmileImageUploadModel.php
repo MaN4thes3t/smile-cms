@@ -30,6 +30,9 @@ class SmileImageUploadModel extends SmileFileUploadModel
         if ($this->validate()) {
             $path = Yii::$app->controller->module->getFilePath($this->getFileName());
             $file = $this->file->saveAs($path, true);
+//            VarDumper::dump($this->file,6,1);
+//            VarDumper::dump($file,6,1);
+//            die();
             if($file){
                 $image = Yii::$app->image->load($path);
                 if($image){

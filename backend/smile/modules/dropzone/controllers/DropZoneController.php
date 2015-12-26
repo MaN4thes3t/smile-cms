@@ -7,12 +7,10 @@
  */
 
 namespace backend\smile\modules\dropzone\controllers;
+use backend\smile\modules\dropzone\models\SmileDropZoneModel;
 use yii\helpers\VarDumper;
 use Yii;
-use yii\helpers\StringHelper;
-use yii\helpers\Inflector;
-use yii\web\UploadedFile;
-use yii\helpers\FileHelper;
+use yii\web\Response;
 
 /**
  * @author Nghia Nguyen <yiidevelop@hotmail.com>
@@ -21,42 +19,29 @@ use yii\helpers\FileHelper;
 class DropZoneController extends \yii\web\Controller
 {
     const IMG_MAX_WIDTH = 2048;
+    const IMG_MIN_WIDTH = 156;
     const IMG_MAX_HEIGHT = 1536;
+    const IMG_MIN_HEIGHT = 156;
     public function actionUpload()
     {
-        $uploadPath = Yii::getAlias('@img_root').'/uploads_db';
-        if (isset($_FILES['file']) && Yii::$app->request->get('id') && Yii::$app->request->get('class')) {
-            $files = UploadedFile::getInstancesByName('file');
+        Yii::$app->response->getHeaders()->set('Vary', 'Accept');
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        if (isset($_FILES['images']) && Yii::$app->request->get('id') && Yii::$app->request->get('class')) {
             $model_id = Yii::$app->request->get('id');
             $model_class = Yii::$app->request->get('class');
-            $model_short_class = StringHelper::basename($model_class);
-            $date = getdate();
-            $result = [];
 
-            if(!$files){
-                $files = [UploadedFile::getInstanceByName('file')];
-            }
-            $path = $uploadPath . DIRECTORY_SEPARATOR . $model_short_class . DIRECTORY_SEPARATOR .
-                $date['year']. DIRECTORY_SEPARATOR . $date['mon'] . DIRECTORY_SEPARATOR . $date['mday'].DIRECTORY_SEPARATOR. $model_id;
-            if (FileHelper::createDirectory($path, 0777)) {
-                foreach($files as $file){
-                    $fileName = substr(uniqid(md5(rand()), true), 0, 10);
-                    $fileName .= '-' . Inflector::slug($file->baseName);
-                    $fileName .= '.' . $file->extension;
-                    $pathFile = $path.DIRECTORY_SEPARATOR.$fileName;
-                    if ($file->saveAs($pathFile, true)) {
-                        $image = Yii::$app->image->load($pathFile);
-                        if($image){
-                            $image->resize(self::IMG_MAX_WIDTH,self::IMG_MAX_HEIGHT)->save($pathFile,80);
-                        }
-                        //need add save to database
-                        $result[] = $file;
-                    }
-                }
-                return \yii\helpers\Json::encode($result);
+            $model =  new SmileDropZoneModel();
+            $response = $model->saveImage($model_id, $model_class);
+            if($response){
+                return $response;
             }
         }
-        return false;
+        return ['error' => Yii::t('backend', 'Невозможно сохранить картинку')];
    }
+
+    public function actionDelete(){
+        VarDumper::dump($_REQUEST,6,1);
+        die();
+    }
 
 }

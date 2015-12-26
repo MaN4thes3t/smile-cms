@@ -44,6 +44,7 @@ class Leader extends SmileBackendModel
         ];
     }
     public function birthdayValidation($attribute, $params){
+        $this->save();
         if ($this->$attribute) {
 
             if(is_string($this->$attribute)){

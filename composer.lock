@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "55c0edcbc6347d1f61df7a493eebef2d",
-    "content-hash": "071bb17e0573a1c1c0393f604a74aea9",
+    "hash": "b867c2152165e617ae6e7c7ffd866ca8",
+    "content-hash": "e8ab61d9cc4f8d98995fea50784c0719",
     "packages": [
         {
             "name": "2amigos/yii2-file-upload-widget",
@@ -914,12 +914,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FortAwesome/Font-Awesome.git",
-                "reference": "7e6010c73be2f28746d56f1024f273257fa2f5bc"
+                "reference": "ac14003ffc6b4a99b0d64d72c0c63278f72a8c71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/7e6010c73be2f28746d56f1024f273257fa2f5bc",
-                "reference": "7e6010c73be2f28746d56f1024f273257fa2f5bc",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/ac14003ffc6b4a99b0d64d72c0c63278f72a8c71",
+                "reference": "ac14003ffc6b4a99b0d64d72c0c63278f72a8c71",
                 "shasum": ""
             },
             "require-dev": {
@@ -954,7 +954,7 @@
                 "font",
                 "icon"
             ],
-            "time": "2015-11-05 08:52:53"
+            "time": "2015-11-27 10:59:50"
         },
         {
             "name": "fxp/composer-asset-plugin",
@@ -1234,43 +1234,6 @@
             "time": "2015-11-24 14:41:57"
         },
         {
-            "name": "letyii/yii2-tinymce",
-            "version": "1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/letyii/yii2-tinymce.git",
-                "reference": "4f0b5a25f37b1ca1f4c7bd24bd0a04ef23a7a48c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/letyii/yii2-tinymce/zipball/4f0b5a25f37b1ca1f4c7bd24bd0a04ef23a7a48c",
-                "reference": "4f0b5a25f37b1ca1f4c7bd24bd0a04ef23a7a48c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4",
-                "tinymce/tinymce": ">=4",
-                "yiisoft/yii2": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "letyii\\tinymce\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "TinyMce for yii2 textarea",
-            "homepage": "https://github.com/letyii/yii2-tinymce",
-            "keywords": [
-                "tinymce",
-                "yii2"
-            ],
-            "time": "2015-05-12 08:17:09"
-        },
-        {
             "name": "onokumus/metismenu",
             "version": "dev-master",
             "source": {
@@ -1447,48 +1410,6 @@
             "time": "2015-06-03 06:21:19"
         },
         {
-            "name": "perminder-klair/yii2-dropzone",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/perminder-klair/yii2-dropzone.git",
-                "reference": "41e8145d940cc9955011138a9f16ad80e9831423"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/perminder-klair/yii2-dropzone/zipball/41e8145d940cc9955011138a9f16ad80e9831423",
-                "reference": "41e8145d940cc9955011138a9f16ad80e9831423",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "2.0.*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "kato\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Parminder Klair",
-                    "email": "perminder.klair@gmail.com"
-                }
-            ],
-            "description": "DropzoneJs Extention for Yii2",
-            "keywords": [
-                "dropzone",
-                "extension",
-                "upload",
-                "yii2"
-            ],
-            "time": "2015-11-09 11:28:44"
-        },
-        {
             "name": "philippfrenzel/yii2fullcalendar",
             "version": "dev-master",
             "source": {
@@ -1644,12 +1565,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "55e36af89d0e1edc8a54382e8401236217adbee8"
+                "reference": "01383ed02a1020759bc8ee5d975fcec04ba16fbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/55e36af89d0e1edc8a54382e8401236217adbee8",
-                "reference": "55e36af89d0e1edc8a54382e8401236217adbee8",
+                "url": "https://api.github.com/repos/symfony/process/zipball/01383ed02a1020759bc8ee5d975fcec04ba16fbf",
+                "reference": "01383ed02a1020759bc8ee5d975fcec04ba16fbf",
                 "shasum": ""
             },
             "require": {
@@ -1685,115 +1606,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2015-11-28 09:12:47"
-        },
-        {
-            "name": "tinymce/tinymce",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tinymce/tinymce-dist.git",
-                "reference": "4576d6944b107a8a0291756e31db9854b9b85a36"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/4576d6944b107a8a0291756e31db9854b9b85a36",
-                "reference": "4576d6944b107a8a0291756e31db9854b9b85a36",
-                "shasum": ""
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "tinymce.js",
-                        "plugins/*/plugin.js",
-                        "themes/*/theme.js"
-                    ],
-                    "files": [
-                        "tinymce.min.js",
-                        "plugins/*/plugin.min.js",
-                        "themes/*/theme.min.js",
-                        "skins/**"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-2.1"
-            ],
-            "description": "Web based JavaScript HTML WYSIWYG editor control.",
-            "homepage": "http://www.tinymce.com",
-            "keywords": [
-                "editor",
-                "html",
-                "javascript",
-                "richtext",
-                "tinymce",
-                "wysiwyg"
-            ],
-            "time": "2015-11-23 02:38:55"
-        },
-        {
-            "name": "vova07/yii2-imperavi-widget",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vova07/yii2-imperavi-widget.git",
-                "reference": "afb59bff9a4ce18f5ecd144cf1fe224bf939ec15"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/vova07/yii2-imperavi-widget/zipball/afb59bff9a4ce18f5ecd144cf1fe224bf939ec15",
-                "reference": "afb59bff9a4ce18f5ecd144cf1fe224bf939ec15",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "*"
-            },
-            "require-dev": {
-                "mikey179/vfsstream": "~1",
-                "phpunit/phpunit": "4.*",
-                "scrutinizer/ocular": "~1.1"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                },
-                "asset-installer-paths": {
-                    "bower-asset-library": "vendor/bower"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "vova07\\imperavi\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Crudu Vasile",
-                    "email": "bazillio07@yandex.ru",
-                    "homepage": "https://github.com/vova07",
-                    "role": "Developer"
-                }
-            ],
-            "description": "The imperavi redactor widget for Yii 2 framework.",
-            "homepage": "https://github.com/vova07/yii2-imperavi-widget",
-            "keywords": [
-                "Redactor",
-                "extension",
-                "imperavi",
-                "widget",
-                "wysiwyg",
-                "yii",
-                "yii 2",
-                "yii2"
-            ],
-            "time": "2015-08-21 11:36:17"
+            "time": "2015-11-30 12:36:17"
         },
         {
             "name": "yiidoc/yii2-redactor",
@@ -1845,12 +1658,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "6978120b2be1fd0b4c21e404fe34c23defc5459e"
+                "reference": "2ea5184e4438d50a2a56150b3013bc8b54ba52bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/6978120b2be1fd0b4c21e404fe34c23defc5459e",
-                "reference": "6978120b2be1fd0b4c21e404fe34c23defc5459e",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/2ea5184e4438d50a2a56150b3013bc8b54ba52bc",
+                "reference": "2ea5184e4438d50a2a56150b3013bc8b54ba52bc",
                 "shasum": ""
             },
             "require": {
@@ -1918,6 +1731,11 @@
                     "name": "Paul Klimov",
                     "email": "klimov.paul@gmail.com",
                     "role": "Core framework development"
+                },
+                {
+                    "name": "Dmitry Naumenko",
+                    "email": "d.naumenko.a@gmail.com",
+                    "role": "Core framework development"
                 }
             ],
             "description": "Yii PHP Framework Version 2",
@@ -1926,7 +1744,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2015-11-27 19:08:53"
+            "time": "2015-11-30 17:13:53"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -2203,12 +2021,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "47df6ab21ce82fe7021ebbc00cff901f76b5029b"
+                "reference": "3037df47eca2e534f62f061415a071f9b5d1a1a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/47df6ab21ce82fe7021ebbc00cff901f76b5029b",
-                "reference": "47df6ab21ce82fe7021ebbc00cff901f76b5029b",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/3037df47eca2e534f62f061415a071f9b5d1a1a4",
+                "reference": "3037df47eca2e534f62f061415a071f9b5d1a1a4",
                 "shasum": ""
             },
             "require": {
@@ -2245,7 +2063,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-11-27 16:01:28"
+            "time": "2015-11-30 17:35:42"
         },
         {
             "name": "phpspec/php-diff",
@@ -2477,7 +2295,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "perminder-klair/yii2-dropzone": 20,
         "yurkinx/yii2-image": 20
     },
     "prefer-stable": false,
