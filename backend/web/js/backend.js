@@ -36,3 +36,28 @@ Smile.Poll = {
         });
     }
 };
+Smile.Image = {
+    init: function(){
+        $('#images-upload-fileupload tbody.files').sortable({
+            update: function(event, ui){
+                var arr = {};
+                $('#images-upload-fileupload tbody.files tr').each(function(key, elem){
+                    $(elem).attr('data-order',key+1);
+                    arr[$(elem).data('id_image')] = {order:key+1,class_id:$(elem).data('class_id'),class:$(elem).data('class')};
+                });
+                console.log(arr);
+                $.ajax({
+                    type: "get",
+                    url: "/backend/dropzone/drop-zone/sort",
+                    data:{
+                        image:arr
+                    },
+                    success: function(msg){
+                        console.log(msg);
+                    }
+                });
+            }
+        });
+        $('#images-upload-fileupload tbody.files').disableSelection();
+    }
+};

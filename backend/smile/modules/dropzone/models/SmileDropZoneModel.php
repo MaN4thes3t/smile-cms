@@ -41,6 +41,7 @@ class SmileDropZoneModel extends ActiveRecord
     public $root = '';
     public $rootPath = '';
     public $thumbnailsFolder = 'thumbnails';
+    public $imageFolder = 'uploads_db';
 
     protected $_image;
     protected $_thumbnail;
@@ -54,7 +55,7 @@ class SmileDropZoneModel extends ActiveRecord
     public function init(){
         parent::init();
         $this->root = Yii::getAlias('@img_root');
-        $this->basePath = self::SEPARATOR.'uploads_db';
+        $this->basePath = self::SEPARATOR.$this->imageFolder;
         $this->rootPath = $this->root.self::SEPARATOR.$this->basePath;
     }
 
@@ -67,11 +68,52 @@ class SmileDropZoneModel extends ActiveRecord
         ];
     }
 
+    public function beforeDelete(){
+        if (parent::beforeDelete()) {
+            $date = getdate($this->date);
+            $fileName =
+                $this->rootPath.
+                self::SEPARATOR.
+                self::$MODELCLASS.
+                self::SEPARATOR.
+                $date['year'].
+                self::SEPARATOR.
+                $date['mon'].
+                self::SEPARATOR.
+                $date['mday'].
+                self::SEPARATOR.
+                $this->id_item
+                ;
+            $thumbnailFolder = $fileName.self::SEPARATOR.$this->id;
+            $fileName = $fileName.self::SEPARATOR.
+                $this->name;
+            if (file_exists($fileName)) {
+                unlink($fileName);
+            }
+            if (file_exists($thumbnailFolder)){
+                $this->delTree($thumbnailFolder);
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public function delTree($dir) {
+        $files = array_diff(scandir($dir), array('.','..'));
+        foreach ($files as $file) {
+            (is_dir("$dir/$file")) ? $this->delTree("$dir/$file") : unlink("$dir/$file");
+        }
+        return rmdir($dir);
+    }
+    public function initFields($id,$class){
+        $this->_modelClass = $class;
+        $this->_modelId = $id;
+        self::$MODELCLASS = StringHelper::basename($this->_modelClass);
+    }
+
     public function saveImage($id, $class){
         $this->prepareFiles();
-        $this->_modelId = $id;
-        $this->_modelClass = $class;
-        self::$MODELCLASS = StringHelper::basename($this->_modelClass);
+        $this->initFields($id,$class);
         return $this->uploadImage();
     }
 
@@ -98,28 +140,44 @@ class SmileDropZoneModel extends ActiveRecord
                         $image = Yii::$app->image->load($savePathFile);
                         if($image){
                             $image->resize(self::IMG_MAX_WIDTH,self::IMG_MAX_HEIGHT)->save($savePathFile,80);
-                            $thumbnailSavePath = $savePath.
-                                self::SEPARATOR.$this->thumbnailsFolder.
-                                self::SEPARATOR.self::IMG_MIN_WIDTH.'x'.self::IMG_MIN_HEIGHT;
-                            $thumbnailSavePathFile = $thumbnailSavePath.self::SEPARATOR.$fileName;
-                            $thumbnailShowPathFile = $showPath.
-                                self::SEPARATOR.$this->thumbnailsFolder.
-                                self::SEPARATOR.self::IMG_MIN_WIDTH.'x'.self::IMG_MIN_HEIGHT.
-                                self::SEPARATOR.$fileName;
-                            if(FileHelper::createDirectory($thumbnailSavePath, 0777)){
-                                $thumbnail = $image->resize(self::IMG_MIN_WIDTH,self::IMG_MIN_HEIGHT)->save($thumbnailSavePathFile,80);
-                                if($thumbnail){
-                                    //save to database logic
-                                    if($this->saveToDb($fileName, $date)){
+                            //save to database logic
+                            $model = $this->saveToDb($fileName, $date);
+                            if($model){
+                                $thumbnailSavePath = $savePath.
+                                    self::SEPARATOR.
+                                    $model->id.
+                                    self::SEPARATOR.
+                                    $this->thumbnailsFolder.
+                                    self::SEPARATOR.self::IMG_MIN_WIDTH.'x'.self::IMG_MIN_HEIGHT;
+                                $thumbnailSavePathFile = $thumbnailSavePath.self::SEPARATOR.$fileName;
+                                $thumbnailShowPathFile = $showPath.
+                                    self::SEPARATOR.
+                                    $model->id.
+                                    self::SEPARATOR.
+                                    $this->thumbnailsFolder.
+                                    self::SEPARATOR.self::IMG_MIN_WIDTH.'x'.self::IMG_MIN_HEIGHT.
+                                    self::SEPARATOR.$fileName;
+                                if(FileHelper::createDirectory($thumbnailSavePath, 0777)){
+                                    $thumbnail = $image->resize(self::IMG_MIN_WIDTH,self::IMG_MIN_HEIGHT)->save($thumbnailSavePathFile,80);
+                                    if($thumbnail){
                                         $response['files'][] = [
                                             'name' => $file->baseName,
                                             'type' => $file->type,
                                             'size' => $file->size,
                                             'url' => $showPathFile,
                                             'thumbnailUrl' =>$thumbnailShowPathFile,
-                                            'deleteUrl' => Url::to(['/dropzone/drop-zone/delete',
-                                                'id' => $this->_modelId, 'class'=>$this->_modelClass,
-                                                'id_image'=>$this->id]),
+                                            'id_image'=>$model->id,
+                                            'order_image'=>$model->order,
+                                            'class'=>$this->_modelClass,
+                                            'class_id'=>$this->_modelId,
+                                            'deleteUrl' => Url::to(
+                                                [
+                                                    '/dropzone/drop-zone/delete',
+                                                    'class'=>$this->_modelClass,
+                                                    'id_image'=>$model->id,
+                                                    'id'=>$this->_modelId
+                                                ]
+                                            ),
                                             'deleteType' => 'GET'
                                         ];
                                     }
@@ -143,7 +201,11 @@ class SmileDropZoneModel extends ActiveRecord
             'model'=>$model->model,
             'id_item'=>$model->id_item
         ])->max('`order`')+1;
-        return $model->save();
+        $res = $model->save();
+        if($res){
+            return $model;
+        }
+        return [];
     }
 
     public static function tableName()

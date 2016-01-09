@@ -11,12 +11,13 @@ use backend\smile\modules\dropzone\models\SmileDropZoneModel;
 use yii\helpers\VarDumper;
 use Yii;
 use yii\web\Response;
+use backend\smile\controllers\SmileBackendController;
 
 /**
  * @author Nghia Nguyen <yiidevelop@hotmail.com>
  * @since 2.0
  */
-class DropZoneController extends \yii\web\Controller
+class DropZoneController extends SmileBackendController
 {
     const IMG_MAX_WIDTH = 2048;
     const IMG_MIN_WIDTH = 156;
@@ -40,8 +41,29 @@ class DropZoneController extends \yii\web\Controller
    }
 
     public function actionDelete(){
-        VarDumper::dump($_REQUEST,6,1);
-        die();
+        if(Yii::$app->request->isAjax){
+            $model = new SmileDropZoneModel();
+            $model->initFields(Yii::$app->request->get('id'),Yii::$app->request->get('class'));
+            if(Yii::$app->request->get('id_image')){
+                $model = $model->findOne(Yii::$app->request->get('id_image'))->delete();
+                return $model;
+            }
+        }
+        return 0;
     }
 
+    public function actionSort(){
+        if(Yii::$app->request->isAjax){
+            $images = Yii::$app->request->get('image',[]);
+            if($images){
+                foreach($images as $id=>$param){
+                    $model = new SmileDropZoneModel();
+                    $model->initFields($param['class_id'],$param['class']);
+                    $model = $model->findOne($id);
+                    $model->order = $param['order'];
+                    $model->save();
+                }
+            }
+        }
+    }
 }

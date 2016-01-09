@@ -5,8 +5,7 @@ use yii\widgets\ActiveForm;
 use yii\bootstrap\Tabs;
 use yii\helpers\Url;
 use yii\jui\DatePicker;
-use dosamigos\fileupload\FileUploadUI;
-use dosamigos\gallery\Gallery;
+    use dosamigos\fileupload\FileUploadUI;
 
 /* @var $this yii\web\View */
 /* @var $model backend\modules\leader\models\Leader */
@@ -72,6 +71,13 @@ use dosamigos\gallery\Gallery;
 //                    'sequentialUploads'=>true,//upload one by one,
                     'singleFileUploads'=>false,
                 ],
+                'clientEvents'=>[
+//                    'fileuploaddone'=>'function(e, data) {
+//                                }',
+                    'fileuploadalways'=>'function(e, data) {
+                                    Smile.Image.init();
+                                }',
+                ]
             ]);
             ?>
         </div>
@@ -83,3 +89,8 @@ use dosamigos\gallery\Gallery;
     </div>
     <?php ActiveForm::end(); ?>
 </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        Smile.Image.init();
+    })
+</script>
