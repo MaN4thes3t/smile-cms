@@ -23,6 +23,11 @@ class DropZoneController extends SmileBackendController
     const IMG_MIN_WIDTH = 156;
     const IMG_MAX_HEIGHT = 1536;
     const IMG_MIN_HEIGHT = 156;
+
+    public function actionLoad(){
+
+    }
+
     public function actionUpload()
     {
         Yii::$app->response->getHeaders()->set('Vary', 'Accept');

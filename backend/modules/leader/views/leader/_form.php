@@ -5,7 +5,7 @@ use yii\widgets\ActiveForm;
 use yii\bootstrap\Tabs;
 use yii\helpers\Url;
 use yii\jui\DatePicker;
-    use dosamigos\fileupload\FileUploadUI;
+use backend\smile\modules\dropzone\widgets\FileUploadUI;
 
 /* @var $this yii\web\View */
 /* @var $model backend\modules\leader\models\Leader */
@@ -55,8 +55,10 @@ use yii\jui\DatePicker;
         <div class="form-group">
             <?= FileUploadUI::widget([
                 'name'=>'images[]',
-                'gallery'=>true,
+                'gallery'=>false,
                 'id'=>'images-upload',
+                'idItem'=>$model->id,
+                'modelClass'=>get_class($model),
                 'url' => ['/dropzone/drop-zone/upload', 'id' => $model->id, 'class'=>get_class($model)],
                 'fieldOptions' => [
                     'accept' => 'image/*',
@@ -68,12 +70,9 @@ use yii\jui\DatePicker;
                     'fileTypes'=>'png',
                     'multipart'=>true,
                     'forceIframeTransport'=>false,
-//                    'sequentialUploads'=>true,//upload one by one,
                     'singleFileUploads'=>false,
                 ],
                 'clientEvents'=>[
-//                    'fileuploaddone'=>'function(e, data) {
-//                                }',
                     'fileuploadalways'=>'function(e, data) {
                                     Smile.Image.init();
                                 }',
@@ -81,16 +80,16 @@ use yii\jui\DatePicker;
             ]);
             ?>
         </div>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                Smile.Image.init();
+            })
+        </script>
         <?php
     }?>
-
     <div class="form-group">
         <?= SmileHtml::submitButton($model->isNewRecord ? Yii::t('backend','Создать') : Yii::t('backend','Сохранить'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
     <?php ActiveForm::end(); ?>
 </div>
-<script type="text/javascript">
-    $(document).ready(function(){
-        Smile.Image.init();
-    })
-</script>
+

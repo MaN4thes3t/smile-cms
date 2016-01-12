@@ -68,6 +68,54 @@ class SmileDropZoneModel extends ActiveRecord
         ];
     }
 
+    public function loadImages(){
+        $images = self::find()->where(['id_item'=>$this->_modelId, 'model'=>self::$MODELCLASS])->orderBy('order')->asArray()->all();
+        $arr_img = [];
+        foreach($images as $key=>$img){
+            $date = getdate($img['date']);
+            $fileName =
+                $this->rootPath.
+                self::SEPARATOR.
+                self::$MODELCLASS.
+                self::SEPARATOR.
+                $date['year'].
+                self::SEPARATOR.
+                $date['mon'].
+                self::SEPARATOR.
+                $date['mday'].
+                self::SEPARATOR.
+                $img['id_item']
+            ;
+            $thumbnailName = $fileName.self::SEPARATOR.$img['id'].self::SEPARATOR.$this->thumbnailsFolder.self::SEPARATOR.self::IMG_MIN_WIDTH.'x'.self::IMG_MIN_HEIGHT.self::SEPARATOR.$img['name'];
+            $fileName = $fileName.self::SEPARATOR.
+                $img['name'];
+            if (file_exists($fileName)) {
+                $image = Yii::$app->image->load($fileName);
+                if(!file_exists($thumbnailName)){
+                    $image->resize(self::IMG_MIN_WIDTH,self::IMG_MIN_HEIGHT)->save($thumbnailName,80);
+                }
+                $arr_img[$key]['class'] = $this->_modelClass;
+                $arr_img[$key]['class_id'] = $this->_modelId;
+                $arr_img[$key]['id_image'] = $img['id'];
+                $arr_img[$key]['order_image'] = $img['order'];
+                $arr_img[$key]['name'] = $img['name'];
+                $arr_img[$key]['deleteUrl'] =  Url::to(
+                    [
+                        '/dropzone/drop-zone/delete',
+                        'class'=>$this->_modelClass,
+                        'id_image'=>$img['id'],
+                        'id'=>$this->_modelId
+                    ]);
+                $arr_img[$key]['url'] = str_replace($this->rootPath,$this->basePath,$fileName);
+                $arr_img[$key]['thumbnailUrl'] = str_replace($this->rootPath,$this->basePath,$thumbnailName);
+                $arr_img[$key]['size'] = filesize($fileName);
+                $arr_img[$key]['type'] = $image->type;
+                $arr_img[$key]['deleteType'] = 'GET';
+            }
+        }
+        return $arr_img;
+    }
+
     public function beforeDelete(){
         if (parent::beforeDelete()) {
             $date = getdate($this->date);
