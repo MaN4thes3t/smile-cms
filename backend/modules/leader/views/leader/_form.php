@@ -15,17 +15,18 @@ use backend\smile\modules\dropzone\widgets\FileUploadUI;
 <div class="leader-form span6">
 
     <?php $form = ActiveForm::begin(); ?>
-    <?=$form->field($model, 'birthday',[
-        'template'=>'{label}'
-    ]) ?>
-    <?= DatePicker::widget([
-        'model' => $model,
-        'attribute' => 'birthday',
-        'language' => 'en-AU',
-        'options' =>[
-            'class'=>'form-control'
-        ],
-    ]); ?>
+    <div class="form-group">
+        <?= SmileHtml::label(Yii::t('backend','День рождения'))?>
+        <?= DatePicker::widget([
+            'model' => $model,
+            'attribute' => 'birthday',
+            'language' => 'en-AU',
+            'options' =>[
+                'class'=>'form-control'
+            ],
+        ]); ?>
+    </div>
+
     <?= $form->field($model, 'show')->checkbox(); ?>
 
 
@@ -49,9 +50,6 @@ use backend\smile\modules\dropzone\widgets\FileUploadUI;
     ]);?>
     <?php if(!$model->isNewRecord){
         ?>
-        <div class="form-group">
-
-        </div>
         <div class="form-group">
             <?= FileUploadUI::widget([
                 'name'=>'images[]',
@@ -89,6 +87,7 @@ use backend\smile\modules\dropzone\widgets\FileUploadUI;
     }?>
     <div class="form-group">
         <?= SmileHtml::submitButton($model->isNewRecord ? Yii::t('backend','Создать') : Yii::t('backend','Сохранить'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= SmileHtml::submitButton(Yii::t('backend','Сохранить и редактировать'), ['class' => 'btn btn-info','name'=>'edit','value'=>'1']) ?>
     </div>
     <?php ActiveForm::end(); ?>
 </div>

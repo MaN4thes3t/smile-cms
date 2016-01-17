@@ -8,7 +8,7 @@ use backend\smile\models\SmileBackendModel;
 
 use yii\helpers\VarDumper;
 /**
- * This is the model class for table "newscategory".
+ * This is the model class for table "category".
  *
  * @property integer $id
  * @property integer $show
@@ -29,7 +29,7 @@ class Newscategory extends SmileBackendModel
 
     public static function tableName()
     {
-        return 'news_category';
+        return 'category';
     }
 
     /**

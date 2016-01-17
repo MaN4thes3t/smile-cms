@@ -40,6 +40,10 @@ use yii\helpers\VarDumper;
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <?php $nav = [
+                        Yii::t('backend','Новости') => [
+                            'url'=>Url::toRoute(['/news/news'],true),
+                            'controller'=>'news'
+                        ],
                         Yii::t('backend','Категории новостей') => [
                             'url'=>Url::toRoute(['/newscategory/newscategory'],true),
                             'controller'=>'newscategory'

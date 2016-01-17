@@ -73,3 +73,20 @@ Smile.Image = {
         return (bytes / 1000).toFixed(2) + ' KB';
     }
 };
+Smile.News = {
+    init:function(){
+        if($('.news_change_type').val() && typeof $('.news_change_type').val() == 'object'){
+            $('.news_change_type').val().map(function(value){
+                $('.types_fields.'+value).show();
+            });
+        }
+        $('.news_change_type').on('change',function(){
+            $('.types_fields').hide();
+            if($(this).val() && typeof $(this).val() == 'object'){
+                $(this).val().map(function(value){
+                    $('.types_fields.'+value).show();
+                });
+            }
+        })
+    }
+};

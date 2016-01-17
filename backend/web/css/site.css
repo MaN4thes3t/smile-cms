@@ -169,3 +169,6 @@ a.desc:after {
 .answers_container_main{
     margin-left:15px;
 }
+.types_fields{
+    display:none;
+}

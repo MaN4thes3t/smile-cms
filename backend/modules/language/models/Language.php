@@ -52,7 +52,7 @@ class Language extends SmileBackendModel
     {
         return [
             'code' => Yii::t('backend','Код'),
-            'name' => Yii::t('backend','Названия'),
+            'name' => Yii::t('backend','Название'),
             'is_default' => Yii::t('backend','По-умолчанию'),
             'show' => Yii::t('backend','Отображать'),
         ];

@@ -11,6 +11,7 @@
 use yii\helpers\Html;
 use yii\helpers\VarDumper;
 use yii\helpers\StringHelper;
+use yii\redactor\widgets\Redactor;
 ?>
 <?php
 $className = StringHelper::basename(get_class($model));
@@ -19,10 +20,26 @@ $className = StringHelper::basename(get_class($model));
         'name' => $className.'['.$language.'][title]',
         'id' => $className.'_'.$language.'_'.'title'
     )); ?>
-    <?= $form->field($model, 'description')->textarea(array(
+<?php if(!$model->isNewRecord){
+    ?>
+    <?= $form->field($model, 'description')->widget(Redactor::className(), [
+        'options' => [
             'name' => $className.'['.$language.'][description]',
             'id' => $className.'_'.$language.'_'.'description'
-        )); ?>
+        ],
+        'clientOptions' => [
+            'minHeight'=>300,
+            'placeholder'=>'Enter your text here...',
+            'plugins' => [
+                'fontsize','fontfamily','fontcolor','table','video','clips','counter','textdirection','fullscreen'
+            ],
+        ],
+    ])?>
+    <?php
+    Yii::$app->session->set('redactorModuleName',$className);
+    ?>
+    <?php
+}?>
     <?= $form->field($model, 'seotitle')->textInput(array(
         'name' => $className.'['.$language.'][seotitle]',
         'id' => $className.'_'.$language.'_'.'seotitle'

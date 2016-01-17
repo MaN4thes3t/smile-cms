@@ -40,6 +40,9 @@ return [
         'leader' => [
             'class' => 'backend\modules\leader\leader',
         ],
+        'news' => [
+            'class' => 'backend\modules\news\news',
+        ],
         'page' => [
             'class' => 'backend\modules\page\page',
         ],

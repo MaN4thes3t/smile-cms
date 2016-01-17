@@ -5,7 +5,7 @@ namespace backend\modules\newscategory\models;
 use Yii;
 use backend\smile\models\SmileBackendModelTranslate;
 /**
- * This is the model class for table "newscategory_translate".
+ * This is the model class for table "category".
  *
  * @property integer $id
  * @property string $language
@@ -20,7 +20,7 @@ class NewscategoryTranslate extends SmileBackendModelTranslate
      */
     public static function tableName()
     {
-        return 'news_category_translate';
+        return 'category_translate';
     }
 
     /**

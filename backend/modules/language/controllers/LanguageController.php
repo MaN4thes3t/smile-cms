@@ -44,7 +44,9 @@ class LanguageController extends SmileBackendController
                 Language::updateAll(['is_default'=>0],['is_default'=>1]);
             }
             $model->save(false);
-            return $this->redirect(['index']);
+            if(!Yii::$app->request->post('edit')){
+                return $this->redirect(['index']);
+            }
         }
         return $this->render('create', [
             'model' => $model,
@@ -60,7 +62,9 @@ class LanguageController extends SmileBackendController
                 Language::updateAll(['is_default'=>0],['is_default'=>1]);
             }
             $model->save(false);
-            return $this->redirect(['index']);
+            if(!Yii::$app->request->post('edit')){
+                return $this->redirect(['index']);
+            }
         }
         return $this->render('update', [
             'model' => $model,

@@ -38,6 +38,7 @@ use yii\bootstrap\Tabs;
 
     <div class="form-group">
         <?= SmileHtml::submitButton($model->isNewRecord ? Yii::t('backend','Создать') : Yii::t('backend','Сохранить'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= SmileHtml::submitButton(Yii::t('backend','Сохранить и редактировать'), ['class' => 'btn btn-info','name'=>'edit','value'=>'1']) ?>
     </div>
     <?php ActiveForm::end(); ?>
 </div>

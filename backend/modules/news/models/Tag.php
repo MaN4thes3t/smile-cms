@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\modules\advice\models;
+namespace backend\modules\news\models;
 
 use Yii;
 
@@ -8,10 +8,10 @@ use backend\smile\models\SmileBackendModel;
 
 use yii\helpers\VarDumper;
 /**
- * This is the model class for table "advice_tag".
+ * This is the model class for table "news_tag".
  *
  * @property integer $id_tag
- * @property integer $id_advice
+ * @property integer $id_news
  *
  */
 class Tag extends SmileBackendModel
@@ -23,7 +23,7 @@ class Tag extends SmileBackendModel
 
     public static function tableName()
     {
-        return 'advice_tag';
+        return 'news_tag';
     }
 
     /**
@@ -33,7 +33,7 @@ class Tag extends SmileBackendModel
     public function rules()
     {
         return [
-            [['id_tag','id_advice'], 'required'],
+            [['id_tag','id_news'], 'required'],
         ];
     }
 

@@ -40,7 +40,9 @@ class AdviceController extends SmileBackendController
         $model->attachMultilingual();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $model->save(false);
-            return $this->redirect(['index']);
+            if(!Yii::$app->request->post('edit')){
+                return $this->redirect(['index']);
+            }
         }
         return $this->render('create', [
             'model' => $model,
@@ -53,7 +55,9 @@ class AdviceController extends SmileBackendController
         $model = $this->findModel($id);
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $model->save(false);
-            return $this->redirect(['index']);
+            if(!Yii::$app->request->post('edit')){
+                return $this->redirect(['index']);
+            }
         }
         return $this->render('update', [
             'model' => $model,

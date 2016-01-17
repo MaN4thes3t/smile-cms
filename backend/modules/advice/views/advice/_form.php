@@ -17,15 +17,19 @@ use kartik\select2\Select2;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'show')->checkbox(); ?>
-    <?= Select2::widget([
-        'name' => 'Tag',
-        'value' => ArrayHelper::map($model->tags,'id_tag', 'id_tag'),
-        'data' =>
-        ArrayHelper::map(Tag::find()->with('t')->all(),'id',function($tag){
-            return $tag->t->text;
-        }),
-        'options' => ['multiple' => true, 'placeholder' => Yii::t('backend','Выберите теги')]
-    ]);?>
+    <div class="form-group">
+        <?= SmileHtml::label(Yii::t('frontend','Выбирите теги'))?>
+        <?= Select2::widget([
+            'name' => 'Tag',
+            'value' => ArrayHelper::map($model->tags,'id_tag', 'id_tag'),
+            'data' =>
+                ArrayHelper::map(Tag::find()->with('t')->all(),'id',function($tag){
+                    return $tag->t->text;
+                }),
+            'options' => ['multiple' => true, 'placeholder' => Yii::t('backend','Выберите теги')]
+        ]);?>
+    </div>
+
     <?php foreach (Yii::$app->params['languages'] as $lang=>$info): ?>
         <?php
         $tab = [
@@ -47,6 +51,7 @@ use kartik\select2\Select2;
 
     <div class="form-group">
         <?= SmileHtml::submitButton($model->isNewRecord ? Yii::t('backend','Создать') : Yii::t('backend','Сохранить'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= SmileHtml::submitButton(Yii::t('backend','Сохранить и редактировать'), ['class' => 'btn btn-info','name'=>'edit','value'=>'1']) ?>
     </div>
     <?php ActiveForm::end(); ?>
 </div>
