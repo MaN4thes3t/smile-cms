@@ -17,6 +17,7 @@ use yii\helpers\VarDumper;
  * @property integer $photo
  * @property integer $event_date
  * @property integer $color
+ * @property integer $title_color
  *
  */
 class News extends SmileBackendModel
@@ -43,7 +44,7 @@ class News extends SmileBackendModel
     {
         return [
             [['show'], 'required'],
-            [['create_date','end_date','color','event_date'], 'string'],
+            [['create_date','end_date','color','event_date','title_color'], 'string'],
             [['photo'], 'file', 'extensions' => 'gif, jpg, png'],
             ['create_date','default','value'=>function($value){
                 return date('m/d/Y');
@@ -88,7 +89,8 @@ class News extends SmileBackendModel
             'create_date' => Yii::t('backend','Дата создания'),
             'event_date' => Yii::t('backend','Дата события (если тип "Афиша")'),
             'end_date' => Yii::t('backend','Дата окончания'),
-            'color' => Yii::t('backend','Цвет (если тип "Точка зрения" или "Слово общественности")'),
+            'color' => Yii::t('backend','Цвет (если тип "Точка зрения"")'),
+            'title_color' => Yii::t('backend','Цвет заголовка'),
             'photo' => Yii::t('backend','Фото (если тип "Точка зрения" или "Слово общественности" или "Интервью")'),
         ];
     }

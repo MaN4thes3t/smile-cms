@@ -10,6 +10,7 @@ use backend\modules\tag\models\Tag;
 use backend\modules\newscategory\models\Newscategory;
 use yii\helpers\ArrayHelper;
 use kartik\select2\Select2;
+use kartik\color\ColorInput;
 
 /* @var $this yii\web\View */
 /* @var $model backend\modules\news\models\News */
@@ -102,8 +103,19 @@ use kartik\select2\Select2;
     }?>
     <?= $form->field($model, 'photo')->fileInput() ?>
     </div>
+    <div class="types_fields point_of_view">
+        <?php
+        echo $form->field($model, 'color')->widget(ColorInput::classname(), [
+            'options' => ['placeholder' => Yii::t('backend','Выберите цвет')],
+        ]);
+        ?>
+    </div>
     <?= $form->field($model, 'show')->checkbox(); ?>
-
+    <?php
+    echo $form->field($model, 'title_color')->widget(ColorInput::classname(), [
+        'options' => ['placeholder' => Yii::t('backend','Выберите цвет заголовка')],
+    ]);
+    ?>
     <?php foreach (Yii::$app->params['languages'] as $lang=>$info): ?>
         <?php
         $tab = [
