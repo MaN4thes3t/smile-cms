@@ -72,6 +72,7 @@ class Advice extends SmileBackendModel
 
     public function afterDelete(){
         Tag::deleteAll(['id_advice'=>$this->id]);
+        parent::afterDelete();
     }
 
 }

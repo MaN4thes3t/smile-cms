@@ -57,15 +57,17 @@ class LeaderSearch extends Leader
 
         $this->load($params);
 
-        $query->joinWith(['translate']);
 
         if($this->show != ''){
             $query->andWhere([''.Leader::tableName().'.'.'show' => $this->show]);
         }
 
         if($this->name){
-            $query->andFilterWhere(['like', LeaderTranslate::tableName().'.'.'first_name', $this->name]);
-            $query->andFilterWhere(['like', LeaderTranslate::tableName().'.'.'last_name', $this->name]);
+            $query->joinWith(['t'=>function($q){
+                return $q->from(LeaderTranslate::tableName().' as translate');
+            }]);
+            $query->orFilterWhere(['like', 'translate.first_name', $this->name]);
+            $query->orFilterWhere(['like', 'translate.last_name', $this->name]);
         }
 
         return $dataProvider;

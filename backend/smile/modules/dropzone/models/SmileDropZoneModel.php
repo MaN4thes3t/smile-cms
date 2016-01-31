@@ -132,6 +132,7 @@ class SmileDropZoneModel extends ActiveRecord
                 self::SEPARATOR.
                 $this->id_item
                 ;
+
             $thumbnailFolder = $fileName.self::SEPARATOR.$this->id;
             $fileName = $fileName.self::SEPARATOR.
                 $this->name;
@@ -146,6 +147,7 @@ class SmileDropZoneModel extends ActiveRecord
             return false;
         }
     }
+
     public function delTree($dir) {
         $files = array_diff(scandir($dir), array('.','..'));
         foreach ($files as $file) {

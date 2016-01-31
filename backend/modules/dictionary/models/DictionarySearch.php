@@ -47,7 +47,6 @@ class DictionarySearch extends Dictionary
             'query' => $query,
         ]);
         $this->load($params);
-//        $query->joinWith(['t']);
 
         if($this->message){
             $query->andWhere(['like', ''.Dictionary::tableName().'.'.'message', $this->message]);

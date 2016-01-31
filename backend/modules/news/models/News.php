@@ -5,7 +5,8 @@ namespace backend\modules\news\models;
 use Yii;
 
 use backend\smile\models\SmileBackendModel;
-
+use backend\smile\modules\dropzone\models\SmileDropZoneModel;
+use yii\helpers\StringHelper;
 use yii\helpers\VarDumper;
 /**
  * This is the model class for table "news".
@@ -18,6 +19,9 @@ use yii\helpers\VarDumper;
  * @property integer $event_date
  * @property integer $color
  * @property integer $title_color
+ * @property integer $views
+ * @property integer $user_id
+ * @property integer $comments
  *
  */
 class News extends SmileBackendModel
@@ -52,7 +56,11 @@ class News extends SmileBackendModel
             ['end_date','default','value'=>function($value){
                 return date('m/d/Y',strtotime('+1 year'));
             }],
-            [['create_date','end_date','event_date'], 'dateValidation']
+            [['create_date','end_date','event_date'], 'dateValidation'],
+            [['user_id','views','comments'],'integer'],
+            ['user_id','default','value'=>function($model){
+                return Yii::$app->user->id;
+            }],
         ];
     }
 
@@ -79,6 +87,10 @@ class News extends SmileBackendModel
         return $this->hasMany(Type::className(), ['id_news' => 'id'])->indexBy('type_code');
     }
 
+    public function getAuthor(){
+
+    }
+
     /**
      * @inheritdoc
      */
@@ -92,6 +104,9 @@ class News extends SmileBackendModel
             'color' => Yii::t('backend','Цвет (если тип "Точка зрения"")'),
             'title_color' => Yii::t('backend','Цвет заголовка'),
             'photo' => Yii::t('backend','Фото (если тип "Точка зрения" или "Слово общественности" или "Интервью")'),
+            'views' => Yii::t('backend','Просмотры'),
+            'comments' => Yii::t('backend','Комментарии'),
+            'user_id' => Yii::t('backend','Автор'),
         ];
     }
 
@@ -136,6 +151,15 @@ class News extends SmileBackendModel
         Tag::deleteAll(['id_news'=>$this->id]);
         Category::deleteAll(['id_news'=>$this->id]);
         Type::deleteAll(['id_news'=>$this->id]);
+        $modelImages = new SmileDropZoneModel();
+        $modelImages->initFields($this->id,get_class($this));
+        $modelImages = $modelImages::find()
+            ->where(['id_item'=>$this->id,'model'=>StringHelper::basename(get_class($this))])
+            ->all();
+        foreach ($modelImages as $model) {
+            $model->delete();
+        }
+        parent::afterDelete();
     }
 
 }

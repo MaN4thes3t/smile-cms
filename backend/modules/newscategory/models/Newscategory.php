@@ -2,6 +2,7 @@
 
 namespace backend\modules\newscategory\models;
 
+use backend\modules\news\models\Category;
 use Yii;
 
 use backend\smile\models\SmileBackendModel;
@@ -53,6 +54,11 @@ class Newscategory extends SmileBackendModel
             'show_in_menu' => Yii::t('backend','Отображать в меню'),
             'show_in_left_menu' => Yii::t('backend','Отображать в левом меню'),
         ];
+    }
+
+    public function afterDelete(){
+        Category::deleteAll(['id_category'=>$this->id]);
+        parent::afterDelete();
     }
 
 }

@@ -149,12 +149,17 @@ a.desc:after {
 .type_tab{
     display:none;
 }
-.select_language_container{
+.bottom_language_container{
     overflow: hidden;
 }
-.select_language_container .form-control{
+.bottom_language_container .form-control{
     width: auto;
     float:right;
+    margin:10px;
+}
+.bottom_language_container .logout{
+    float:right;
+    margin:10px;
 }
 .site_index_logo{
     text-align: center;

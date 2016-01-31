@@ -19,9 +19,7 @@ class NewscategorySearch extends Newscategory
     public function rules()
     {
         return [
-            [['show'],'integer'],
-            [['show_in_menu'],'integer'],
-            [['show_in_left_menu'],'integer'],
+            [['show','show_in_menu','show_in_left_menu','id'],'integer'],
             [['name'],'string'],
         ];
     }
@@ -56,7 +54,6 @@ class NewscategorySearch extends Newscategory
         ];
         $this->load($params);
 
-        $query->joinWith(['translate']);
 
         if($this->show != ''){
             $query->andWhere([''.Newscategory::tableName().'.'.'show' => $this->show]);
@@ -71,7 +68,10 @@ class NewscategorySearch extends Newscategory
         }
 
         if($this->name){
-            $query->andFilterWhere(['like', NewscategoryTranslate::tableName().'.'.'name', $this->name]);
+            $query->joinWith(['t'=>function($q){
+                return $q->from(NewscategoryTranslate::tableName().' as translate');
+            }]);
+            $query->andFilterWhere(['like', 'translate.name', $this->name]);
         }
 
         return $dataProvider;

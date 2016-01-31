@@ -1,6 +1,6 @@
 <?php
 use backend\assets\AppAsset;
-use yii\helpers\Html;
+use backend\smile\components\SmileHtml;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
@@ -19,8 +19,8 @@ use yii\helpers\VarDumper;
 <head>
     <meta charset="<?= Yii::$app->charset ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <?= SmileHtml::csrfMetaTags() ?>
+    <title><?= SmileHtml::encode($this->title) ?></title>
     <link rel="icon" type="image/png" href="/images/favicon.ico">
     <?php $this->head() ?>
 </head>
@@ -35,7 +35,7 @@ use yii\helpers\VarDumper;
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <?= Html::a(Yii::t('backend','Smile CMS'), ['/'], ['class' => 'navbar-brand']) ?>
+<!--                --><?//= SmileHtml::a(Yii::t('backend','Smile CMS'), ['/'], ['class' => 'navbar-brand']) ?>
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
@@ -76,15 +76,15 @@ use yii\helpers\VarDumper;
                             'url'=>Url::toRoute(['/dictionary/dictionary'],true),
                             'controller'=>'dictionary'
                         ],
-                        Yii::t('backend','Выход') => [
-                            'url'=>Url::toRoute(['/site/logout'],true),
-                            'controller'=>''
-                        ],
+//                        Yii::t('backend','Выход') => [
+//                            'url'=>Url::toRoute(['/site/logout'],true),
+//                            'controller'=>''
+//                        ],
                     ];?>
                     <?php foreach($nav as $k=>$v):
                         ?>
                         <li class="<?= Yii::$app->controller->id==$v['controller']?'active':''?>">
-                            <?= Html::a($k, $v['url']) ?>
+                            <?= SmileHtml::a($k, $v['url']) ?>
                         </li>
                     <?php endforeach; ?>
                 </ul>
@@ -97,12 +97,15 @@ use yii\helpers\VarDumper;
                     <?= Breadcrumbs::widget([
                         'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                     ]) ?>
-                    <?= $content ?>
+                    <div class="main-content">
+                        <?= $content ?>
+                    </div>
                 </div>
 
             </div>
-            <div class="select_language_container">
-                <?=Html::dropDownList('select_language',Yii::$app->language,ArrayHelper::map(
+            <div class="bottom_language_container">
+                <?=SmileHtml::button(SmileHtml::a(Yii::t('backend','Выход'),Url::toRoute(['/site/logout'],true)),['class'=>'btn logout']) ?>
+                <?=SmileHtml::dropDownList('select_language',Yii::$app->language,ArrayHelper::map(
                     Yii::$app->params['languages'],
                     'code',function($data){
                     return $data['name'].' / '.$data['translate'][Yii::$app->language]['translate'];

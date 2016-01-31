@@ -57,7 +57,6 @@ class PageSearch extends Page
 
         $this->load($params);
 
-        $query->joinWith(['translate']);
 
         if($this->show != ''){
             $query->andWhere([''.Page::tableName().'.'.'show' => $this->show]);
@@ -68,7 +67,10 @@ class PageSearch extends Page
         }
 
         if($this->title){
-            $query->andFilterWhere(['like', PageTranslate::tableName().'.'.'title', $this->title]);
+            $query->joinWith(['t'=>function($q){
+                return $q->from(PageTranslate::tableName().' as translate');
+            }]);
+            $query->andFilterWhere(['like', 'translate.title', $this->title]);
         }
 
         return $dataProvider;

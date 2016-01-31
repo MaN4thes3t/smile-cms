@@ -20,6 +20,11 @@ use kartik\color\ColorInput;
 <div class="news-form span6">
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
+    <?php
+    echo $form->field($model, 'title_color')->widget(ColorInput::classname(), [
+        'options' => ['placeholder' => Yii::t('backend','Выберите цвет заголовка')],
+    ]);
+    ?>
     <div class="form-group">
     <?= SmileHtml::label(Yii::t('frontend','Выберите типы'))?>
     <?= Select2::widget([
@@ -111,11 +116,7 @@ use kartik\color\ColorInput;
         ?>
     </div>
     <?= $form->field($model, 'show')->checkbox(); ?>
-    <?php
-    echo $form->field($model, 'title_color')->widget(ColorInput::classname(), [
-        'options' => ['placeholder' => Yii::t('backend','Выберите цвет заголовка')],
-    ]);
-    ?>
+
     <?php foreach (Yii::$app->params['languages'] as $lang=>$info): ?>
         <?php
         $tab = [

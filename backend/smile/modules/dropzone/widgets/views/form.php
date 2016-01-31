@@ -7,7 +7,7 @@ $context = $this->context;
     <!-- The file upload form used as target for the file upload widget -->
 <?= Html::beginTag('div', $context->options); ?>
     <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-    <div class="row fileupload-buttonbar">
+    <div class="fileupload-buttonbar">
         <div class="col-lg-7">
             <!-- The fileinput-button span is used to style the file input field as button -->
             <span class="btn btn-success fileinput-button">

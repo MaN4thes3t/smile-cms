@@ -20,11 +20,6 @@ class SmileBackendModel extends ActiveRecord
 
     public $multilingualArr = [];
 
-//    public function loadDefaultValues($skipIfSet = false)
-//    {
-//        return parent::loadDefaultValues($skipIfSet);
-//    }
-
     public function getTranslate()
     {
         return $this->hasMany($this->multilingualModelClassName, [$this->multilingualKey => $this->modelPrimaryKeyAttribute])->indexBy($this->multilingualIndex);

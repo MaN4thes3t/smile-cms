@@ -2,6 +2,7 @@
 
 namespace backend\modules\poll\models;
 
+use backend\modules\poll\models\Poll;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
@@ -19,8 +20,7 @@ class PollSearch extends Poll
     public function rules()
     {
         return [
-            [['show'],'integer'],
-            [['type'],'integer'],
+            [['show','type'],'integer'],
             [['title'],'string'],
         ];
     }
@@ -57,7 +57,6 @@ class PollSearch extends Poll
 
         $this->load($params);
 
-        $query->joinWith(['translate']);
 
         if($this->show != ''){
             $query->andWhere([''.Poll::tableName().'.'.'show' => $this->show]);
@@ -68,7 +67,10 @@ class PollSearch extends Poll
         }
 
         if($this->title){
-            $query->andFilterWhere(['like', PollTranslate::tableName().'.'.'title', $this->title]);
+            $query->joinWith(['t'=>function($q){
+                return $q->from(PollTranslate::tableName().' as translate');
+            }]);
+            $query->andFilterWhere(['like', 'translate.title', $this->title]);
         }
 
         return $dataProvider;

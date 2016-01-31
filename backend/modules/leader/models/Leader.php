@@ -5,7 +5,9 @@ namespace backend\modules\leader\models;
 use Yii;
 
 use backend\smile\models\SmileBackendModel;
+use backend\smile\modules\dropzone\models\SmileDropZoneModel;
 
+use yii\helpers\StringHelper;
 use yii\helpers\VarDumper;
 /**
  * This is the model class for table "leader".
@@ -63,6 +65,18 @@ class Leader extends SmileBackendModel
             'show' => Yii::t('backend','Отображать'),
             'birthday' => Yii::t('backend','День рождения'),
         ];
+    }
+
+    public function afterDelete(){
+        $modelImages = new SmileDropZoneModel();
+        $modelImages->initFields($this->id,get_class($this));
+        $modelImages = $modelImages::find()
+            ->where(['id_item'=>$this->id,'model'=>StringHelper::basename(get_class($this))])
+            ->all();
+        foreach ($modelImages as $model) {
+            $model->delete();
+        }
+        parent::afterDelete();
     }
 
 }
