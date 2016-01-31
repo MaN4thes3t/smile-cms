@@ -37,7 +37,7 @@ class Answer extends SmileBackendModel
     public function rules()
     {
         return [
-            [['id_poll_tr','title'], 'required'],
+            [['id_poll_tr'], 'required'],
             [['title'], 'string'],
             [['id_poll_tr'], 'integer'],
         ];

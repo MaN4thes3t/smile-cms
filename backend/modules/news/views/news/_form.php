@@ -21,7 +21,7 @@ use kartik\color\ColorInput;
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
     <div class="form-group">
-    <?= SmileHtml::label(Yii::t('frontend','Выбирите типы'))?>
+    <?= SmileHtml::label(Yii::t('frontend','Выберите типы'))?>
     <?= Select2::widget([
         'name' => 'Type',
         'value' => ArrayHelper::map($model->types, 'type_code', 'type_code'),
@@ -30,7 +30,7 @@ use kartik\color\ColorInput;
     ]);?>
     </div>
     <div class="form-group">
-    <?= SmileHtml::label(Yii::t('frontend','Выбирите категории'))?>
+    <?= SmileHtml::label(Yii::t('frontend','Выберите категории'))?>
     <?= Select2::widget([
         'name' => 'Category',
         'value' => ArrayHelper::map($model->categories,'id_category', 'id_category'),
@@ -42,7 +42,7 @@ use kartik\color\ColorInput;
     ]);?>
     </div>
     <div class="form-group">
-    <?= SmileHtml::label(Yii::t('frontend','Выбирите теги'))?>
+    <?= SmileHtml::label(Yii::t('frontend','Выберите теги'))?>
     <?= Select2::widget([
         'name' => 'Tag',
         'value' => ArrayHelper::map($model->tags,'id_tag', 'id_tag'),

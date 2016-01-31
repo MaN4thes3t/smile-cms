@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= SmileHtml::encode($this->title) ?></h1>
 
     <p>
-        <?= SmileHtml::a(Yii::t('backend','Создать новой новости'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= SmileHtml::a(Yii::t('backend','Создать новую новость'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

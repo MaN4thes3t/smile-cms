@@ -18,7 +18,7 @@ use kartik\select2\Select2;
 
     <?= $form->field($model, 'show')->checkbox(); ?>
     <div class="form-group">
-        <?= SmileHtml::label(Yii::t('frontend','Выбирите теги'))?>
+        <?= SmileHtml::label(Yii::t('frontend','Выберите теги'))?>
         <?= Select2::widget([
             'name' => 'Tag',
             'value' => ArrayHelper::map($model->tags,'id_tag', 'id_tag'),

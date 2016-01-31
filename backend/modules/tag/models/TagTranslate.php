@@ -29,7 +29,7 @@ class TagTranslate extends SmileBackendModelTranslate
     public function rules()
     {
         return [
-            [['language','text'], 'required'],
+            [['language'], 'required'],
             [['id_item'], 'required', 'on'=>'ownerUpdate'],
             [['id_item'], 'integer'],
             [['language'], 'string', 'max' => 16],

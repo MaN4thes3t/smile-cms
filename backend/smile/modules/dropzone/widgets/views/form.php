@@ -86,7 +86,6 @@ $context = $this->context;
 <script type="text/javascript">
     $(document).ready(function(){
         $('table.table-striped span.size').each(function(key){
-            console.log(this);
             $(this).html(Smile.Image.calculateFileSize(parseInt($(this).html())));
         });
     });

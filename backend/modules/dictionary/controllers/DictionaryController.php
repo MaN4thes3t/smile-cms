@@ -42,6 +42,8 @@ class DictionaryController extends SmileBackendController
             $model->save(false);
             if(!Yii::$app->request->post('edit')){
                 return $this->redirect(['index']);
+            }else{
+                return $this->redirect(['update','id'=>$model->id]);
             }
         }
         return $this->render('create', [

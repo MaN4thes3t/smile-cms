@@ -65,10 +65,9 @@ class PollTranslate extends SmileBackendModelTranslate
         $classAnswer = StringHelper::basename(get_class(new Answer()));
         $answers = !empty(Yii::$app->request->post()[$class][$this->language][$classAnswer])?
             Yii::$app->request->post()[$class][$this->language][$classAnswer]:[];
-
         if(!empty($answers['new'])){
             foreach($answers['new'] as $answer){
-                if($answer['title'] != 'deleted'){
+                if(!empty($answer['title']) && $answer['title'] != 'deleted'){
                     $model = new Answer();
                     $model->title = $answer['title'];
                     $model->id_poll_tr = $this->id;
@@ -77,6 +76,7 @@ class PollTranslate extends SmileBackendModelTranslate
             }
             unset($answers['new']);
         }
+
         foreach($answers as $key => $answer){
             $model = Answer::findOne($key);
             if($answer['title'] == 'deleted'){
