@@ -60,10 +60,13 @@ class TagSearch extends Tag
         if($this->show != ''){
             $query->andWhere([''.Tag::tableName().'.'.'show' => $this->show]);
         }
+        $query->joinWith(['t'=>function($q){
+            return $q->from(TagTranslate::tableName().' as translate');
+        }]);
         if($this->text){
-            $query->joinWith(['t'=>function($q){
-                return $q->from(TagTranslate::tableName().' as translate');
-            }]);
+            $query->andFilterWhere(['like', 'translate.text', $this->text]);
+        }
+        if($this->text){
             $query->andFilterWhere(['like', 'translate.text', $this->text]);
         }
 

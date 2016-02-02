@@ -12,14 +12,14 @@ use yii\helpers\VarDumper;
  */
 class DictionarySearch extends Dictionary
 {
+    public $translation;
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['category'],'string'],
-            [['message'],'string']
+            [['category','translation','message'],'string'],
         ];
     }
 
@@ -46,8 +46,18 @@ class DictionarySearch extends Dictionary
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
+        $dataProvider->getSort()->attributes['translation'] = [
+            'asc' => ['translation' => SORT_ASC],
+            'desc' => ['translation' => SORT_DESC],
+            'default' => SORT_ASC
+        ];
         $this->load($params);
-
+        $query->joinWith(['t'=>function($q){
+            return $q->from(DictionaryTranslate::tableName().' as translate');
+        }]);
+        if($this->translation){
+            $query->andFilterWhere(['like', 'translate.translation', $this->translation]);
+        }
         if($this->message){
             $query->andWhere(['like', ''.Dictionary::tableName().'.'.'message', $this->message]);
         }

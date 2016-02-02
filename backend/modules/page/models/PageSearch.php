@@ -65,11 +65,11 @@ class PageSearch extends Page
         if($this->show_in_menu != ''){
             $query->andWhere([''.Page::tableName().'.'.'show_in_menu' => $this->show_in_menu]);
         }
-
+        $query->joinWith(['t'=>function($q){
+            return $q->from(PageTranslate::tableName().' as translate');
+        }]);
         if($this->title){
-            $query->joinWith(['t'=>function($q){
-                return $q->from(PageTranslate::tableName().' as translate');
-            }]);
+
             $query->andFilterWhere(['like', 'translate.title', $this->title]);
         }
 

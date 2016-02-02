@@ -66,11 +66,11 @@ class NewscategorySearch extends Newscategory
         if($this->show_in_left_menu != ''){
             $query->andWhere([''.Newscategory::tableName().'.'.'show_in_left_menu' => $this->show_in_left_menu]);
         }
-
+        $query->joinWith(['t'=>function($q){
+            return $q->from(NewscategoryTranslate::tableName().' as translate');
+        }]);
         if($this->name){
-            $query->joinWith(['t'=>function($q){
-                return $q->from(NewscategoryTranslate::tableName().' as translate');
-            }]);
+
             $query->andFilterWhere(['like', 'translate.name', $this->name]);
         }
 

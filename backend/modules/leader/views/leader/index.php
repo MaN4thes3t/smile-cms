@@ -4,6 +4,8 @@ use yii\grid\GridView;
 use \yii\widgets\Pjax;
 use yii\helpers\StringHelper;
 use yii\helpers\Url;
+use yii\jui\DatePicker;
+use backend\smile\modules\dropzone\models\SmileDropZoneModel;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -65,6 +67,53 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
                 'filter'=>SmileHtml::activeTextInput($searchModel,'name',['class'=>'form-control']),
                 'format'=>'raw'
+            ],
+            [
+                'header'=>Yii::t('backend','Фото'),
+                'value'=>function($data) use($dataProvider){
+                    $html = '</br>';
+                    $model = new SmileDropZoneModel();
+                    $model->initFields($data->id,get_class($data));
+                    foreach ($model->loadImages() as $image) {
+                        $html.= SmileHtml::img($image['thumbnailUrl'],[
+                            'style'=>[
+                                'max-width'=>'56px',
+                                'max-height'=>'56px',
+                                'margin'=>'5px',
+                                'border'=>'1px',
+                                'float'=>'left'
+                            ],
+                        ]);
+                    }
+                    return $html;
+                },
+                'format'=>'raw'
+            ],
+            [
+                'attribute'=>'birthday',
+                'value'=>function($data){
+                    return date('d.m.Y',$data->birthday);
+                },
+                'filter'=>
+                    Yii::t('backend','От').DatePicker::widget([
+                        'language' => 'en-AU',
+                        'value'=>$searchModel->birthday?$searchModel->birthday['from']:'',
+                        'name'=>StringHelper::basename(get_class($searchModel)).'[birthday][from]',
+                        'options'=>[
+                            'class'=>'form-control',
+                        ]
+                    ]).
+                    Yii::t('backend','До').DatePicker::widget([
+                        'language' => 'en-AU',
+                        'value'=>$searchModel->birthday?$searchModel->birthday['to']:'',
+                        'name'=>StringHelper::basename(get_class($searchModel)).'[birthday][to]',
+                        'options'=>[
+                            'class'=>'form-control',
+                        ]
+                    ]),
+                'contentOptions'=>['style'=>[
+                    'width'=>'10px'
+                ]]
             ],
             [
                 'attribute'=>'show',

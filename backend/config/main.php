@@ -20,31 +20,31 @@ return [
             'imageAllowExtensions'=>['jpg','png','jpeg']
         ],
         'language' => [
-            'class' => 'backend\modules\language\language',
+            'class' => 'backend\modules\language\Language',
         ],
         'poll' => [
-            'class' => 'backend\modules\poll\poll',
+            'class' => 'backend\modules\poll\Poll',
         ],
         'advice' => [
-            'class' => 'backend\modules\advice\advice',
+            'class' => 'backend\modules\advice\Advice',
         ],
         'newscategory' => [
-            'class' => 'backend\modules\newscategory\newscategory',
+            'class' => 'backend\modules\newscategory\Newscategory',
         ],
         'dictionary' => [
-            'class' => 'backend\modules\dictionary\dictionary',
+            'class' => 'backend\modules\dictionary\Dictionary',
         ],
         'tag' => [
-            'class' => 'backend\modules\tag\tag',
+            'class' => 'backend\modules\tag\Tag',
         ],
         'leader' => [
-            'class' => 'backend\modules\leader\leader',
+            'class' => 'backend\modules\leader\Leader',
         ],
         'news' => [
-            'class' => 'backend\modules\news\news',
+            'class' => 'backend\modules\news\News',
         ],
         'page' => [
-            'class' => 'backend\modules\page\page',
+            'class' => 'backend\modules\page\Page',
         ],
     ],
     'components' => [

@@ -62,11 +62,11 @@ class NewsSearch extends News
         if($this->show != ''){
             $query->andWhere([''.News::tableName().'.'.'show' => $this->show]);
         }
-
+        $query->joinWith(['t'=>function($q){
+            return $q->from(NewsTranslate::tableName().' as translate');
+        }]);
         if($this->title){
-            $query->joinWith(['t'=>function($q){
-                return $q->from(NewsTranslate::tableName().' as translate');
-            }]);
+
             $query->andFilterWhere(['like', 'translate.title', $this->title]);
         }
 

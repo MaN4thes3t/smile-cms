@@ -65,11 +65,11 @@ class PollSearch extends Poll
         if($this->type != ''){
             $query->andWhere([''.Poll::tableName().'.'.'type' => $this->type]);
         }
-
+        $query->joinWith(['t'=>function($q){
+            return $q->from(PollTranslate::tableName().' as translate');
+        }]);
         if($this->title){
-            $query->joinWith(['t'=>function($q){
-                return $q->from(PollTranslate::tableName().' as translate');
-            }]);
+
             $query->andFilterWhere(['like', 'translate.title', $this->title]);
         }
 

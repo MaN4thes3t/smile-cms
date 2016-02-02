@@ -66,6 +66,18 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format'=>'raw',
             ],
             [
+                'attribute'=>'translation',
+                'label'=>Yii::t('backend','Переводы'),
+                'value'=>function($data){
+                    $output = '';
+                    foreach(Yii::$app->params['languages'] as $key=>$lang){
+                        $output .= $key.': '.$data->translate[$key]->translation.'<br/>';
+                    }
+                    return $output;
+                },
+                'format'=>'raw',
+            ],
+            [
                 'attribute'=>'category',
                 'filter'=>SmileHtml::activeEnumDropDownList($searchModel, 'category', ['class'=>'form-control',
                     'prompt'=>Yii::t('backend','Выберите')

@@ -60,11 +60,11 @@ class AdviceSearch extends Advice
         if($this->show != ''){
             $query->andWhere([''.Advice::tableName().'.'.'show' => $this->show]);
         }
-
+        $query->joinWith(['t'=>function($q){
+            return $q->from(AdviceTranslate::tableName().' as translate');
+        }]);
         if($this->title){
-            $query->joinWith(['t'=>function($q){
-                return $q->from(AdviceTranslate::tableName().' as translate');
-            }]);
+
             $query->andFilterWhere(['like', 'translate.title', $this->title]);
         }
 

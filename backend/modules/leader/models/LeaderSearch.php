@@ -20,8 +20,7 @@ class LeaderSearch extends Leader
     {
         return [
             [['show'],'integer'],
-            [['first_name'],'string'],
-            [['last_name'],'string'],
+            [['first_name','birthday','last_name'],'string'],
         ];
     }
 
@@ -61,11 +60,11 @@ class LeaderSearch extends Leader
         if($this->show != ''){
             $query->andWhere([''.Leader::tableName().'.'.'show' => $this->show]);
         }
-
+        $query->joinWith(['t'=>function($q){
+            return $q->from(LeaderTranslate::tableName().' as translate');
+        }]);
         if($this->name){
-            $query->joinWith(['t'=>function($q){
-                return $q->from(LeaderTranslate::tableName().' as translate');
-            }]);
+
             $query->orFilterWhere(['like', 'translate.first_name', $this->name]);
             $query->orFilterWhere(['like', 'translate.last_name', $this->name]);
         }

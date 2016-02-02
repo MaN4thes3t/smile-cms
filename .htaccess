@@ -1,9 +1,18 @@
 #<IfModule mod_rewrite.c>
-
+AuthUserFile  /home/order17527/data/www/yii2-zhitomirnews.com/.htpasswd
+AuthType Basic
+AuthName 'auth'
+require valid-user
 Options +FollowSymlinks
 
 RewriteEngine On
 
+#AuthUserFile /dev/null
+#AuthName "Authorization Form Title"
+#AuthType Basic
+#
+##Allow only one user with specified username
+#require user test123
 
 RewriteCond %{REQUEST_URI} !^/backend/
 RewriteCond %{REQUEST_URI}  !\.(css|js|php|html|jpg|gif|png|ico|ttf|eot|svg|woff|woff2)$

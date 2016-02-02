@@ -50,10 +50,11 @@ class LanguageSearch extends Language
             'query' => $query,
         ]);
         $this->load($params);
+        $query->joinWith(['t'=>function($q){
+            return $q->from(LanguageTranslate::tableName().' as translate');
+        }]);
         if($this->translate){
-            $query->joinWith(['t'=>function($q){
-                return $q->from(LanguageTranslate::tableName().' as translate');
-            }]);
+
             $query->andWhere(['like', 'translate.translate', $this->translate]);
         }
 
