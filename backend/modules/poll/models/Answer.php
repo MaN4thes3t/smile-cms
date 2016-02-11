@@ -11,8 +11,7 @@ use yii\helpers\VarDumper;
  * This is the model class for table "poll_answer".
  *
  * @property integer $id
- * @property string $title
- * @property integer $id_poll_tr
+ * @property integer $id_poll
  * @property integer $count_answers
  *
  */
@@ -22,6 +21,7 @@ class Answer extends SmileBackendModel
      * @inheritdoc
      */
     public function init(){
+        $this->multilingualModelClassName = AnswerTranslate::className();
         parent::init();
     }
 
@@ -37,9 +37,8 @@ class Answer extends SmileBackendModel
     public function rules()
     {
         return [
-            [['id_poll_tr'], 'required'],
-            [['title'], 'string'],
-            [['id_poll_tr'], 'integer'],
+            [['id_poll'], 'required'],
+            [['count_answers'], 'integer'],
         ];
     }
 
@@ -50,7 +49,7 @@ class Answer extends SmileBackendModel
     public function attributeLabels()
     {
         return [
-            'title' => Yii::t('backend','Вариант ответа'),
+            'count_answers'=>Yii::t('backend','Количество ответов'),
         ];
     }
 

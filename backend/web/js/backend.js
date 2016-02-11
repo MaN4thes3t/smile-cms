@@ -27,12 +27,15 @@ Smile.Langauge = {
 Smile.Poll = {
     init: function(){
         $(document).on('click','.add_new_answer',function(e){
-            $(this).closest('.tab-pane').find('.answers_container').append(
-                $(this).closest('.tab-pane').find('.answer_template').html()
-            );
+            $('.tab-pane').find('.answers_container').each(function(){
+                $(this).append($(this).closest('.tab-pane').find('.answer_template').html());
+            })
         });
         $(document).on('click','.remove_answer ',function(e){
-            $(this).closest('.form-group').addClass('hidden').find('input').val('deleted');
+            var index = $(this).closest('.form-group').index();
+            $('.answers_container_main').each(function(){
+                $(this).find('.answer_input').eq(index).val('deleted').closest('.form-group').addClass('hidden');
+            });
         });
     }
 };

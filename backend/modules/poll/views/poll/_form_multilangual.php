@@ -11,7 +11,7 @@
  * @var $answers backend\modules\poll\models\Answer
  */
 use backend\modules\poll\models\Answer;
-use backend\modules\poll\models\PollTranslate;
+use backend\modules\poll\models\Poll;
 use yii\helpers\Html;
 use yii\helpers\VarDumper;
 use yii\helpers\StringHelper;
@@ -27,34 +27,41 @@ $className = StringHelper::basename(get_class($model));
 <div class="answers_container_main">
     <div class="answers_container">
         <?php
-        $b_model = PollTranslate::findOne($model->id);
+        $modelAnswer = new Answer();
+        $classNameAnswer = StringHelper::basename(get_class($modelAnswer));
+        $b_model = Poll::findOne($model->id_item);
         $answers = $b_model->answers;
         if($answers){
             foreach($answers as $key => $answer){
-                $classNameAnswer = StringHelper::basename(get_class($answer));
                 ?>
-                <?= $form->field($answer, 'title',[
-                    'template'=>"{label} (".$answer->count_answers.")\n{input}\n<div class='remove_answer glyphicon glyphicon-remove'></div>\n{hint}\n{error}"
-                ])->textInput([
-                    'name' => $className.'['.$language.']['.$classNameAnswer.']['.$key.'][title]',
-                    'id' => $className.'_'.$language.'_'.$classNameAnswer.'_'.$key.'_title',
-                ])?>
+                <div class="form-group">
+                    <?= SmileHtml::label(Yii::t('backend','Вариант ответа').' '.'('.$answer->count_answers.')',$classNameAnswer.'_new_'.$language.'_title',[
+                        'class'=>'control-label'
+                    ])?>
+                    <?= SmileHtml::textInput($classNameAnswer.'['.$key.']['.$language.'][title]',$answer->translate[$language]->title,[
+                        'class'=>'answer_input form-control',
+                        'id'=>$classNameAnswer.'['.$key.']['.$language.'][title]'
+                    ])?>
+                    <div class='remove_answer glyphicon glyphicon-remove'></div>
+                </div>
                 <?php
             }
         }
         ?>
     </div>
     <div class="hidden answer_template">
-        <?php
-        $modelAnswer = new Answer();
-        $classNameAnswer = StringHelper::basename(get_class($modelAnswer));
-        ?>
-        <?= $form->field($modelAnswer, 'title',[
-            'template'=>"{label} (".Yii::t('backend','Новый вариант').")\n{input}\n<div class='remove_answer glyphicon glyphicon-remove'></div>\n{hint}\n{error}"
-        ])->textInput([
-            'name' => $className.'['.$language.']['.$classNameAnswer.'][new][][title]',
-            'id' => $className.'_'.$language.'_'.$classNameAnswer.'_new_title',
-        ])?>
+
+        <div class="form-group">
+            <?= SmileHtml::label(Yii::t('backend','Вариант ответа').' '.'('.Yii::t('backend','Новый вариант').')',$classNameAnswer.'_new_'.$language.'_title',[
+                'class'=>'control-label'
+            ])?>
+            <?= SmileHtml::textInput($classNameAnswer.'[new]['.$language.'][][title]','',[
+                'class'=>'answer_input form-control',
+                'id'=>$classNameAnswer.'[new]['.$language.'][][title]'
+            ])?>
+            <div class='remove_answer glyphicon glyphicon-remove'></div>
+        </div>
+
     </div>
     <div class="form-group">
         <?= SmileHtml::button(Yii::t('backend','Добавить новый вариант ответа'),[

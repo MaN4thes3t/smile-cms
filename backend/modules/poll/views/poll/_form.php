@@ -15,6 +15,7 @@ use yii\jui\DatePicker;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'show')->checkbox(); ?>
+    <?= $form->field($model, 'my_version')->checkbox(); ?>
     <?= $form->field($model, 'type')->dropDownList($model::$POLL_TYPES); ?>
 
 

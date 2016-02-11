@@ -3,6 +3,7 @@
 namespace backend\modules\news\controllers;
 
 use backend\modules\news\models\News;
+use backend\smile\modules\dropzone\models\SmileDropZoneModel;
 use Yii;
 use yii\web\UploadedFile;
 use backend\smile\controllers\SmileBackendController;
@@ -77,8 +78,11 @@ class NewsController extends SmileBackendController
             }
             $photo = UploadedFile::getInstance($model, 'photo');
             if($photo){
-                $path = Yii::getAlias('@img_root').DIRECTORY_SEPARATOR.'uploads'.DIRECTORY_SEPARATOR.'NewsPhoto'.DIRECTORY_SEPARATOR.$model->id.DIRECTORY_SEPARATOR;
+                $dir = Yii::getAlias('@img_root').DIRECTORY_SEPARATOR.'uploads'.DIRECTORY_SEPARATOR.'NewsPhoto'.DIRECTORY_SEPARATOR.$model->id;
+                SmileDropZoneModel::delTree($dir);
+                $path = $dir.DIRECTORY_SEPARATOR;
                 if(FileHelper::createDirectory($path,0777)){
+
                     $fileName = substr(uniqid(md5(rand()), true), 0, 10);
                     $fileName .= '-' . Inflector::slug($photo->baseName);
                     $fileName .= '.' . $photo->extension;

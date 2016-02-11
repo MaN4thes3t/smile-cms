@@ -10,6 +10,7 @@ namespace backend\smile\modules\redactor\models;
 
 use yii\helpers\VarDumper;
 use Yii;
+use yii\image\drivers\Image;
 
 /**
  * @author Nghia Nguyen <yiidevelop@hotmail.com>
@@ -33,7 +34,7 @@ class SmileImageUploadModel extends SmileFileUploadModel
             if($file){
                 $image = Yii::$app->image->load($path);
                 if($image){
-                    $image->resize(self::IMG_MAX_WIDTH,self::IMG_MAX_HEIGHT)->save($path,80);
+                    $image->crop(self::IMG_MAX_WIDTH,self::IMG_MAX_HEIGHT)->save($path,80);
                 }
             }
             return $file;

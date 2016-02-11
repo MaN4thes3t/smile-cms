@@ -1,8 +1,8 @@
-#<IfModule mod_rewrite.c>
-AuthUserFile  /home/order17527/data/www/yii2-zhitomirnews.com/.htpasswd
-AuthType Basic
-AuthName 'auth'
-require valid-user
+<IfModule mod_rewrite.c>
+#AuthUserFile  /home/order17527/data/www/yii2-zhitomirnews.com/.htpasswd
+#AuthType Basic
+#AuthName 'auth'
+#require valid-user
 Options +FollowSymlinks
 
 RewriteEngine On
@@ -58,4 +58,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^.*$ frontend/web/index.php
 
-#</IfModule>
+</IfModule>

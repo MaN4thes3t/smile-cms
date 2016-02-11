@@ -2,8 +2,10 @@
 
 namespace backend\modules\news\models;
 
+use backend\smile\modules\dropzone\models\SmileDropZoneModel;
 use Yii;
 use backend\smile\models\SmileBackendModelTranslate;
+use yii\helpers\StringHelper;
 use yii\helpers\VarDumper;
 
 /**

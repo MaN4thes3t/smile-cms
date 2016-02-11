@@ -159,6 +159,10 @@ class News extends SmileBackendModel
         foreach ($modelImages as $model) {
             $model->delete();
         }
+        if($this->photo){
+            $dir = Yii::getAlias('@img_root').DIRECTORY_SEPARATOR.'uploads'.DIRECTORY_SEPARATOR.'NewsPhoto'.DIRECTORY_SEPARATOR.$this->id;
+            SmileDropZoneModel::delTree($dir);
+        }
         parent::afterDelete();
     }
 

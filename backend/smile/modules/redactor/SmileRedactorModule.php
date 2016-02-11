@@ -2,6 +2,7 @@
 namespace backend\smile\modules\redactor;
 
 use Yii;
+use yii\base\Exception;
 use yii\helpers\VarDumper;
 use yii\redactor\RedactorModule;
 /**
@@ -21,7 +22,10 @@ class SmileRedactorModule extends RedactorModule
     {
         $date = getdate();
         $moduleName = Yii::$app->session->get('redactorModuleName')?Yii::$app->session->get('redactorModuleName'). DIRECTORY_SEPARATOR : '';
-//        Yii::$app->session->remove('redactorModuleName');
-        return $moduleName.$date['year']. DIRECTORY_SEPARATOR . $date['mon'] . DIRECTORY_SEPARATOR . $date['mday'];
+        $moduleId = Yii::$app->session->get('redactorModuleNameId')?Yii::$app->session->get('redactorModuleNameId') : '';
+        if(!$moduleId || !$moduleName){
+            throw new Exception('redactorModuleName or redactorModuleNameId undefined, please reload the page');
+        }
+        return $moduleName.$date['year']. DIRECTORY_SEPARATOR . $date['mon'] . DIRECTORY_SEPARATOR . $date['mday'] .DIRECTORY_SEPARATOR .$moduleId;
     }
 }

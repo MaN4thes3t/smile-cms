@@ -140,7 +140,7 @@ class SmileDropZoneModel extends ActiveRecord
                 unlink($fileName);
             }
             if (file_exists($thumbnailFolder)){
-                $this->delTree($thumbnailFolder);
+                self::delTree($thumbnailFolder);
             }
             return true;
         } else {
@@ -148,10 +148,13 @@ class SmileDropZoneModel extends ActiveRecord
         }
     }
 
-    public function delTree($dir) {
+    public static function delTree($dir) {
+        if(!file_exists($dir)){
+            return;
+        }
         $files = array_diff(scandir($dir), array('.','..'));
         foreach ($files as $file) {
-            (is_dir("$dir/$file")) ? $this->delTree("$dir/$file") : unlink("$dir/$file");
+            (is_dir("$dir/$file")) ? self::delTree("$dir/$file") : unlink("$dir/$file");
         }
         return rmdir($dir);
     }
@@ -189,7 +192,7 @@ class SmileDropZoneModel extends ActiveRecord
                     if ($file->saveAs($savePathFile, true)) {
                         $image = Yii::$app->image->load($savePathFile);
                         if($image){
-                            $image->resize(self::IMG_MAX_WIDTH,self::IMG_MAX_HEIGHT)->save($savePathFile,80);
+                            $image->crop(self::IMG_MAX_WIDTH,self::IMG_MAX_HEIGHT)->save($savePathFile,80);
                             //save to database logic
                             $model = $this->saveToDb($fileName, $date);
                             if($model){

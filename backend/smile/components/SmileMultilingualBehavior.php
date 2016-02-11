@@ -73,7 +73,6 @@ class SmileMultilingualBehavior extends Behavior
         $isValid = true;
 
         $className = $this->prepareClassName($this->multilingualModelClassName);
-
         foreach(Yii::$app->params['languages'] as $lang=>$info)
         {
             if($this->multilingualArr){

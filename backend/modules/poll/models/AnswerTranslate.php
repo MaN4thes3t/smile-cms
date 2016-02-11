@@ -2,13 +2,14 @@
 
 namespace backend\modules\poll\models;
 
-use Yii;
 use backend\smile\models\SmileBackendModelTranslate;
-use yii\helpers\VarDumper;
-use yii\helpers\StringHelper;
+use Yii;
 
+use backend\smile\models\SmileBackendModel;
+
+use yii\helpers\VarDumper;
 /**
- * This is the model class for table "poll_translate".
+ * This is the model class for table "poll_answer_translate".
  *
  * @property integer $id
  * @property string $language
@@ -16,24 +17,24 @@ use yii\helpers\StringHelper;
  * @property string $title
  *
  */
-class PollTranslate extends SmileBackendModelTranslate
+class AnswerTranslate extends SmileBackendModelTranslate
 {
     /**
      * @inheritdoc
      */
-    public function init()
-    {
+    public function init(){
         parent::init();
     }
 
     public static function tableName()
     {
-        return 'poll_translate';
+        return 'poll_answer_translate';
     }
 
     /**
      * @inheritdoc
      */
+
     public function rules()
     {
         return [
@@ -49,16 +50,11 @@ class PollTranslate extends SmileBackendModelTranslate
     /**
      * @inheritdoc
      */
-
     public function attributeLabels()
     {
         return [
-            'title' => Yii::t('backend','Заголовок'),
+            'title' => Yii::t('backend','Вариант ответа'),
         ];
     }
 
-    public function afterDelete(){
-        Answer::deleteAll(['id_poll_tr'=>$this->id]);
-        parent::afterDelete();
-    }
 }

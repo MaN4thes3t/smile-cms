@@ -31,12 +31,37 @@ $className = StringHelper::basename(get_class($model));
             'minHeight'=>300,
             'placeholder'=>'Enter your text here...',
             'plugins' => [
-                'fontsize','fontfamily','fontcolor','table','video','clips','counter','textdirection','fullscreen'
+                'textdirection',
+                'fontsize',
+                'fontfamily',
+                'fontcolor',
+                'table',
+                'video',
+//                'counter',
+                'fullscreen',
+//                'definedlinks',
+//                'limiter',
+//                'textpander'
+            ],
+            'lang'=>Yii::$app->language,
+            'buttons'=>[
+                'alignment',/*выравнивание*/
+                'bold',/*жирный*/
+                'italic',/*наклонный*/
+                'underline',/*подчеркнутый*/
+                'deleted',/*зачеркнутый*/
+                'horizontalrule',/*горизонтальная линия*/
+                'unorderedlist',/*список*/
+                'image',/*картинки*/
+                'link',/*вставить ссылку*/
+                'indent',/*отступ увеличить*/
+                'outdent',/*отсуп уменьшить*/
             ],
         ],
     ])?>
     <?php
     Yii::$app->session->set('redactorModuleName',$className);
+    Yii::$app->session->set('redactorModuleNameId',$model->id);
     ?>
     <?php
 }?>
