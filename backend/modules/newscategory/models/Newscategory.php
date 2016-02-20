@@ -50,6 +50,7 @@ class Newscategory extends SmileBackendModel
     public function attributeLabels()
     {
         return [
+            'id' => Yii::t('backend','Ид'),
             'show' => Yii::t('backend','Отображать'),
             'show_in_menu' => Yii::t('backend','Отображать в меню'),
             'show_in_left_menu' => Yii::t('backend','Отображать в левом меню'),

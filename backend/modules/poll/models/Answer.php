@@ -38,7 +38,7 @@ class Answer extends SmileBackendModel
     {
         return [
             [['id_poll'], 'required'],
-            [['count_answers'], 'integer'],
+            [['count_answers'], 'double'],
         ];
     }
 

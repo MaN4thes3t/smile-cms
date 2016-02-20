@@ -56,9 +56,4 @@ class PollTranslate extends SmileBackendModelTranslate
             'title' => Yii::t('backend','Заголовок'),
         ];
     }
-
-    public function afterDelete(){
-        Answer::deleteAll(['id_poll_tr'=>$this->id]);
-        parent::afterDelete();
-    }
 }

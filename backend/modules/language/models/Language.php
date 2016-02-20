@@ -51,6 +51,7 @@ class Language extends SmileBackendModel
     public function attributeLabels()
     {
         return [
+            'id' => Yii::t('backend','Ид'),
             'code' => Yii::t('backend','Код'),
             'name' => Yii::t('backend','Название'),
             'is_default' => Yii::t('backend','По-умолчанию'),

@@ -36,10 +36,8 @@ return [
 
         ],
         'urlManager' => [
-            'class' => 'frontend\components\ZUrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-//            'enableStrictParsing'=>true,
             'rules' => [
                 ''=>'site/main-page',
 //                '<controller:news>/<category:\d+>/<news:\d+/>'=>'news/one',

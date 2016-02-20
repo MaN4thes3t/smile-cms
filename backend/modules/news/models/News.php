@@ -97,6 +97,7 @@ class News extends SmileBackendModel
     public function attributeLabels()
     {
         return [
+            'id' => Yii::t('backend','Ид'),
             'show' => Yii::t('backend','Отображать'),
             'create_date' => Yii::t('backend','Дата создания'),
             'event_date' => Yii::t('backend','Дата события (если тип "Афиша")'),

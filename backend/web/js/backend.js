@@ -37,6 +37,19 @@ Smile.Poll = {
                 $(this).find('.answer_input').eq(index).val('deleted').closest('.form-group').addClass('hidden');
             });
         });
+        $(document).on('submit','#poll_form',function(){
+             $(this).find('.answer_template').remove();
+        });
+        $(document).on('click','.remove_my_answer',function(){
+            $(this).closest('.form-group').remove();
+        });
+        $(document).on('change','.my_version_checkbox',function(){
+            if($(this).is(":checked")) {
+                $('.my_answers_container').show();
+            }else{
+                $('.my_answers_container').hide();
+            }
+        });
     }
 };
 Smile.Image = {

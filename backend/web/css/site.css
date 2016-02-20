@@ -2,7 +2,9 @@ html,
 body {
     height: 100%;
 }
-
+html body{
+    background-color: #365FB9;
+}
 .wrap {
     min-height: 100%;
     height: auto;
@@ -165,7 +167,7 @@ a.desc:after {
     text-align: center;
     margin-bottom: 20px;
 }
-.answers_container .remove_answer{
+.answers_container .remove_answer, .remove_my_answer{
     top: -24px;
     float: right;
     right: 10px;
@@ -176,4 +178,17 @@ a.desc:after {
 }
 .types_fields{
     display:none;
+}
+#wrapper .navbar-inverse .navbar-nav > li > a{
+    color:white;
+}
+#wrapper .navbar-inverse{
+    background-color: #365FB9;
+}
+#wrapper .navbar-inverse .navbar-nav > li.active > a{
+    background-color: #d93e3e;
+}
+#wrapper .navbar-inverse .navbar-nav > li > a:hover,
+#wrapper .navbar-inverse .navbar-nav > li > a:focus{
+    background-color: #FF9292;
 }

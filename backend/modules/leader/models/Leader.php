@@ -62,6 +62,7 @@ class Leader extends SmileBackendModel
     public function attributeLabels()
     {
         return [
+            'id' => Yii::t('backend','Ид'),
             'show' => Yii::t('backend','Отображать'),
             'birthday' => Yii::t('backend','День рождения'),
         ];

@@ -63,7 +63,7 @@ class NewsTranslate extends SmileBackendModelTranslate
                     }
                 }
                 foreach(explode(' ',$model->title) as $title){
-                    if($title){
+                    if($title && is_string($title) && strlen($title)>2){
                         $keywords .= ', '.$title;
                     }
                 }

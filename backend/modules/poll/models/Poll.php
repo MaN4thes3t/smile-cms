@@ -8,6 +8,7 @@ use backend\smile\models\SmileBackendModel;
 
 use yii\helpers\StringHelper;
 use yii\helpers\VarDumper;
+use yii\helpers\Json;
 /**
  * This is the model class for table "poll".
  *
@@ -15,6 +16,8 @@ use yii\helpers\VarDumper;
  * @property integer $show
  * @property integer $type
  * @property integer $my_version
+ * @property integer $my_version_count
+ * @property integer $my_version_text
  *
  */
 class Poll extends SmileBackendModel
@@ -46,8 +49,15 @@ class Poll extends SmileBackendModel
     public function rules()
     {
         return [
-            [['show','type'], 'required'],
+            [['show','type','my_version'], 'required'],
+            [['my_version_text'], 'versionsValidation'],
+            [['my_version_count'], 'double'],
         ];
+    }
+
+    public function versionsValidation($attribute, $params){
+        $this->my_version_count = count(Yii::$app->request->post('my_version'));
+        $this->$attribute = Json::encode(Yii::$app->request->post('my_version'));
     }
 
     public function getAnswers(){
@@ -60,9 +70,11 @@ class Poll extends SmileBackendModel
     public function attributeLabels()
     {
         return [
+            'id' => Yii::t('backend','Ид'),
             'show' => Yii::t('backend','Отображать'),
             'type' => Yii::t('backend','Тип опроса'),
             'my_version' => Yii::t('backend','Мой вариант'),
+            'my_version_text' => Yii::t('backend','Варианты'),
         ];
     }
     public function afterSave($insert, $changedAttributes){
@@ -91,14 +103,23 @@ class Poll extends SmileBackendModel
                 $model->attachMultilingual();
                 if($answer[Yii::$app->language]['title'] == 'deleted'){
                     $model->delete();
-                }else{
-                    foreach(Yii::$app->params['languages'] as $lang=>$info){
-                        $model->multilingualArr[$classAnswerTranslate][$lang]['title'] = $answer[$lang]['title'];
-                    }
-                    $model->save();
+                    continue;
                 }
+                foreach(Yii::$app->params['languages'] as $lang=>$info){
+                    $model->multilingualArr[$classAnswerTranslate][$lang]['title'] = $answer[$lang]['title'];
+                }
+                $model->attachMultilingual();
+                $model->save();
             }
         }
         parent::afterSave($insert, $changedAttributes);
+    }
+    public function afterDelete(){
+        $answers = Answer::findAll(['id_poll'=>$this->id]);
+        foreach($answers as $answer){
+            $answer->attachMultilingual();
+            $answer->delete();
+        }
+        parent::afterDelete();
     }
 }

@@ -48,6 +48,7 @@ class Dictionary extends SmileBackendModel
     public function attributeLabels()
     {
         return [
+            'id' => Yii::t('backend','Ид'),
             'category' => Yii::t('backend','Категория'),
             'message' => Yii::t('backend','Код'),
         ];

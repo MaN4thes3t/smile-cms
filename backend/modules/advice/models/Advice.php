@@ -47,6 +47,7 @@ class Advice extends SmileBackendModel
     public function attributeLabels()
     {
         return [
+            'id' => Yii::t('backend','Ид'),
             'show' => Yii::t('backend','Отображать'),
         ];
     }

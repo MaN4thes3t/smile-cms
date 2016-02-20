@@ -47,8 +47,14 @@ class Tag extends SmileBackendModel
     public function attributeLabels()
     {
         return [
+            'id' => Yii::t('backend','Ид'),
             'show' => Yii::t('backend','Отображать'),
         ];
+    }
+
+    public function afterDelete(){
+        \backend\modules\news\models\Tag::deleteAll(['id_tag'=>$this->id]);
+        parent::afterDelete();
     }
 
 }

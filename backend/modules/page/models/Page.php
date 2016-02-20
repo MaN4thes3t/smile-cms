@@ -48,6 +48,7 @@ class Page extends SmileBackendModel
     public function attributeLabels()
     {
         return [
+            'id' => Yii::t('backend','Ид'),
             'show' => Yii::t('backend','Отображать'),
             'show_in_menu' => Yii::t('backend','Отображать в меню'),
         ];
