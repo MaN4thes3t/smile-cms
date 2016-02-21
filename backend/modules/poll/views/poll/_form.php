@@ -21,30 +21,36 @@ use yii\helpers\Json;
     <?= $form->field($model, 'my_version')->checkbox([
         'class'=>'my_version_checkbox'
     ]); ?>
-    <?= $form->field($model, 'my_version_text',[
-        'template' => "{input}"
-    ])->hiddenInput()?>
-    <?php
-    $versions = $model->my_version_text?Json::decode($model->my_version_text):[];
-    ?>
-    <div class="my_answers_container" <?php if(!$versions || !$model->my_version){?> style="display:none;" <?php }?>>
-    <?= SmileHtml::label(Yii::t('backend','Варианты ответов людей').' '.'('.$model->my_version_count.')','',[
-        'class'=>'control-label'
-    ])?>
-    <?php
-    foreach($versions as $key=>$version){
+    <?php if(!$model->isNewRecord){
         ?>
-        <div class="form-group">
-            <?= SmileHtml::textInput('my_version'.'['.$key.']',$version,[
-                'class'=>'my_answer_input form-control',
-                'id'=>'my_version'.'['.$key.']'
-            ])?>
-            <div class='remove_my_answer glyphicon glyphicon-remove'></div>
-        </div>
+        <?= $form->field($model, 'my_version_text',[
+            'template' => "{input}"
+        ])->hiddenInput()?>
         <?php
-    }
-    ?>
-    </div>
+        $versions = $model->my_version_text?Json::decode($model->my_version_text):[];
+        ?>
+        <div class="my_answers_container" <?php if(!$versions || !$model->my_version){?> style="display:none;" <?php }?>>
+            <?= SmileHtml::label(Yii::t('backend','Варианты ответов людей').' '.'('.$model->my_version_count.')','',[
+            'class'=>'control-label'
+        ])?>
+        <?php
+        foreach($versions as $key=>$version){
+            ?>
+            <div class="form-group">
+                <?= SmileHtml::textInput('my_version'.'['.$key.']',$version,[
+                    'class'=>'my_answer_input form-control',
+                    'id'=>'my_version'.'['.$key.']'
+                ])?>
+                <div class='remove_my_answer glyphicon glyphicon-remove'></div>
+            </div>
+            <?php
+        }
+        ?>
+        </div>
+            <?php
+    }?>
+
+
     <?php
     ?>
     <?= $form->field($model, 'type')->dropDownList($model::$POLL_TYPES); ?>

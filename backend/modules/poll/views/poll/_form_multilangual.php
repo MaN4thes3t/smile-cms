@@ -29,22 +29,24 @@ $className = StringHelper::basename(get_class($model));
         <?php
         $modelAnswer = new Answer();
         $classNameAnswer = StringHelper::basename(get_class($modelAnswer));
-        $b_model = Poll::findOne($model->id_item);
-        $answers = $b_model->answers;
-        if($answers){
-            foreach($answers as $key => $answer){
-                ?>
-                <div class="form-group">
-                    <?= SmileHtml::label(Yii::t('backend','Вариант ответа').' '.'('.$answer->count_answers.')',$classNameAnswer.'_new_'.$language.'_title',[
-                        'class'=>'control-label'
-                    ])?>
-                    <?= SmileHtml::textInput($classNameAnswer.'['.$key.']['.$language.'][title]',$answer->translate[$language]->title,[
-                        'class'=>'answer_input form-control',
-                        'id'=>$classNameAnswer.'['.$key.']['.$language.'][title]'
-                    ])?>
-                    <div class='remove_answer glyphicon glyphicon-remove'></div>
-                </div>
-                <?php
+        if(!$model->isNewRecord){
+            $b_model = Poll::findOne($model->id_item);
+            $answers = $b_model->answers;
+            if($answers){
+                foreach($answers as $key => $answer){
+                    ?>
+                    <div class="form-group">
+                        <?= SmileHtml::label(Yii::t('backend','Вариант ответа').' '.'('.$answer->count_answers.')',$classNameAnswer.'_new_'.$language.'_title',[
+                            'class'=>'control-label'
+                        ])?>
+                        <?= SmileHtml::textInput($classNameAnswer.'['.$key.']['.$language.'][title]',$answer->translate[$language]->title,[
+                            'class'=>'answer_input form-control',
+                            'id'=>$classNameAnswer.'['.$key.']['.$language.'][title]'
+                        ])?>
+                        <div class='remove_answer glyphicon glyphicon-remove'></div>
+                    </div>
+                    <?php
+                }
             }
         }
         ?>

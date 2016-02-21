@@ -80,9 +80,10 @@ class Poll extends SmileBackendModel
     public function afterSave($insert, $changedAttributes){
         $classAnswer = StringHelper::basename(get_class(new Answer()));
         $classAnswerTranslate = StringHelper::basename(get_class(new AnswerTranslate()));
-        if(Yii::$app->request->post()[$classAnswer]){
-            $answers = Yii::$app->request->post()[$classAnswer];
-            if($answers['new']){ //new
+
+        if(Yii::$app->request->post($classAnswer)){
+            $answers = Yii::$app->request->post($classAnswer);
+            if(!empty($answers['new'])){ //new
                 $new_arr = $answers['new'];
                 if($new_arr[Yii::$app->language]){
                     foreach($new_arr[Yii::$app->language] as $key=>$arr){
@@ -97,7 +98,6 @@ class Poll extends SmileBackendModel
                 }
                 unset($answers['new']);
             }
-
             foreach($answers as $key => $answer){
                 $model = Answer::findOne($key);
                 $model->attachMultilingual();

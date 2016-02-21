@@ -54,6 +54,7 @@ class Tag extends SmileBackendModel
 
     public function afterDelete(){
         \backend\modules\news\models\Tag::deleteAll(['id_tag'=>$this->id]);
+        \backend\modules\advice\models\Tag::deleteAll(['id_tag'=>$this->id]);
         parent::afterDelete();
     }
 
