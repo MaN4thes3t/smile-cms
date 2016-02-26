@@ -20,8 +20,6 @@ $className = StringHelper::basename(get_class($model));
         'name' => $className.'['.$language.'][title]',
         'id' => $className.'_'.$language.'_'.'title'
     )); ?>
-<?php if(!$model->isNewRecord){
-    ?>
     <?= $form->field($model, 'description')->widget(Redactor::className(), [
         'options' => [
             'name' => $className.'['.$language.'][description]',
@@ -45,26 +43,23 @@ $className = StringHelper::basename(get_class($model));
             ],
             'lang'=>Yii::$app->language,
             'buttons'=>[
-                'alignment',/*выравнивание*/
-                'bold',/*жирный*/
-                'italic',/*наклонный*/
-                'underline',/*подчеркнутый*/
-                'deleted',/*зачеркнутый*/
-                'horizontalrule',/*горизонтальная линия*/
-                'unorderedlist',/*список*/
-                'image',/*картинки*/
-                'link',/*вставить ссылку*/
-                'indent',/*отступ увеличить*/
-                'outdent',/*отсуп уменьшить*/
+                'alignment',
+                'bold',
+                'italic',
+                'underline',
+                'deleted',
+                'horizontalrule',
+                'unorderedlist',
+                'image',
+                'link',
+                'indent',
+                'outdent',
             ],
         ],
     ])?>
     <?php
     Yii::$app->session->set('redactorModuleName',$className);
-    Yii::$app->session->set('redactorModuleNameId',$model->id);
     ?>
-    <?php
-}?>
     <?= $form->field($model, 'seotitle')->textInput(array(
         'name' => $className.'['.$language.'][seotitle]',
         'id' => $className.'_'.$language.'_'.'seotitle'

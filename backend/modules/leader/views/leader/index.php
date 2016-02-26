@@ -96,7 +96,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
                 'filter'=>
                     Yii::t('backend','От').DatePicker::widget([
-                        'language' => 'en-AU',
+                        'language' => 'uk',
+                        'dateFormat' => 'dd.MM.yyyy',
                         'value'=>$searchModel->birthday?$searchModel->birthday['from']:'',
                         'name'=>StringHelper::basename(get_class($searchModel)).'[birthday][from]',
                         'options'=>[
@@ -104,7 +105,8 @@ $this->params['breadcrumbs'][] = $this->title;
                         ]
                     ]).
                     Yii::t('backend','До').DatePicker::widget([
-                        'language' => 'en-AU',
+                        'language' => 'uk',
+                        'dateFormat' => 'dd.MM.yyyy',
                         'value'=>$searchModel->birthday?$searchModel->birthday['to']:'',
                         'name'=>StringHelper::basename(get_class($searchModel)).'[birthday][to]',
                         'options'=>[

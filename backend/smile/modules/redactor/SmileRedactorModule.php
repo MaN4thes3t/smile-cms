@@ -7,7 +7,7 @@ use yii\helpers\VarDumper;
 use yii\redactor\RedactorModule;
 /**
  * Created by PhpStorm.
- * User: Àðò¸ì
+ * User: ï¿½ï¿½ï¿½ï¿½
  * Date: 26.11.2015
  * Time: 23:06
  */
@@ -22,10 +22,10 @@ class SmileRedactorModule extends RedactorModule
     {
         $date = getdate();
         $moduleName = Yii::$app->session->get('redactorModuleName')?Yii::$app->session->get('redactorModuleName'). DIRECTORY_SEPARATOR : '';
-        $moduleId = Yii::$app->session->get('redactorModuleNameId')?Yii::$app->session->get('redactorModuleNameId') : '';
-        if(!$moduleId || !$moduleName){
-            throw new Exception('redactorModuleName or redactorModuleNameId undefined, please reload the page');
+//        $moduleId = Yii::$app->session->get('redactorModuleNameId')?Yii::$app->session->get('redactorModuleNameId') : '';
+        if(!$moduleName){
+            throw new Exception('redactorModuleName undefined, please reload the page');
         }
-        return $moduleName.$date['year']. DIRECTORY_SEPARATOR . $date['mon'] . DIRECTORY_SEPARATOR . $date['mday'] .DIRECTORY_SEPARATOR .$moduleId;
+        return $moduleName.$date['year']. DIRECTORY_SEPARATOR . $date['mon'] . DIRECTORY_SEPARATOR . $date['mday'];
     }
 }

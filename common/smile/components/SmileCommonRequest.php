@@ -23,7 +23,7 @@ class SmileCommonRequest extends Request
         if($model = Language::findOne(['is_default'=>1])){
             Yii::$app->sourceLanguage = $model->code;
         }else{
-            Yii::$app->sourceLanguage = 'ru';
+            Yii::$app->sourceLanguage = 'ua';
         }
     }
 }

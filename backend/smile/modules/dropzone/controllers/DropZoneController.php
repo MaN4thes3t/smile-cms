@@ -42,7 +42,7 @@ class DropZoneController extends SmileBackendController
                 return $response;
             }
         }
-        return ['error' => Yii::t('backend', 'Невозможно сохранить картинку')];
+        return ['error' => Yii::t('backend', 'Upload file error')];
    }
 
     public function actionDelete(){
