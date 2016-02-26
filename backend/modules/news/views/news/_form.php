@@ -63,7 +63,8 @@ use kartik\color\ColorInput;
         <?= DatePicker::widget([
             'model' => $model,
             'attribute' => 'create_date',
-            'language' => 'en-AU',
+            'language' => 'uk',
+            'dateFormat' => 'dd.MM.yyyy',
             'options' =>[
                 'class'=>'form-control'
             ],
@@ -74,8 +75,9 @@ use kartik\color\ColorInput;
         <?= SmileHtml::label(Yii::t('backend','Дата окончания'))?>
         <?= DatePicker::widget([
             'model' => $model,
+            'dateFormat' => 'dd.MM.yyyy',
             'attribute' => 'end_date',
-            'language' => 'en-AU',
+            'language' => 'uk',
             'options' =>[
                 'class'=>'form-control'
             ],
@@ -87,7 +89,8 @@ use kartik\color\ColorInput;
         <?= DatePicker::widget([
             'model' => $model,
             'attribute' => 'event_date',
-            'language' => 'en-AU',
+            'dateFormat' => 'dd.MM.yyyy',
+            'language' => 'uk',
             'options' =>[
                 'class'=>'form-control'
             ],

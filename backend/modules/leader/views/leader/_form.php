@@ -20,7 +20,8 @@ use backend\smile\modules\dropzone\widgets\FileUploadUI;
         <?= DatePicker::widget([
             'model' => $model,
             'attribute' => 'birthday',
-            'language' => 'en-AU',
+            'language' => 'uk',
+            'dateFormat' => 'dd.MM.yyyy',
             'options' =>[
                 'class'=>'form-control'
             ],

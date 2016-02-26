@@ -151,7 +151,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
                 'filter'=>
                     Yii::t('backend','От').DatePicker::widget([
-                    'language' => 'en-AU',
+                    'language' => 'uk',
+                        'dateFormat' => 'dd.MM.yyyy',
                     'value'=>$searchModel->create_date?$searchModel->create_date['from']:'',
                     'name'=>StringHelper::basename(get_class($searchModel)).'[create_date][from]',
                     'options'=>[
@@ -159,7 +160,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     ]
                     ]).
                     Yii::t('backend','До').DatePicker::widget([
-                        'language' => 'en-AU',
+                        'language' => 'uk',
+                        'dateFormat' => 'dd.MM.yyyy',
                         'value'=>$searchModel->create_date?$searchModel->create_date['to']:'',
                         'name'=>StringHelper::basename(get_class($searchModel)).'[create_date][to]',
                         'options'=>[
@@ -177,7 +179,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
                 'filter'=>
                     Yii::t('backend','От').DatePicker::widget([
-                        'language' => 'en-AU',
+                        'language' => 'uk',
+                        'dateFormat' => 'dd.MM.yyyy',
                         'value'=>$searchModel->end_date?$searchModel->end_date['from']:'',
                         'name'=>StringHelper::basename(get_class($searchModel)).'[end_date][from]',
                         'options'=>[
@@ -185,7 +188,8 @@ $this->params['breadcrumbs'][] = $this->title;
                         ]
                     ]).
                     Yii::t('backend','До').DatePicker::widget([
-                        'language' => 'en-AU',
+                        'language' => 'uk',
+                        'dateFormat' => 'dd.MM.yyyy',
                         'value'=>$searchModel->end_date?$searchModel->end_date['to']:'',
                         'name'=>StringHelper::basename(get_class($searchModel)).'[end_date][to]',
                         'options'=>[
