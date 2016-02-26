@@ -84,7 +84,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         ]);
                     }
 
-                    return SmileHtml::a($data->t->title, ['update','id'=>$data->id],[
+                    return SmileHtml::a($data->t->title?$data->t->title:Yii::t('backend', 'Нет заголовка'), ['update','id'=>$data->id],[
                         'style'=>[
                             'color'=>$data->title_color
                         ]
