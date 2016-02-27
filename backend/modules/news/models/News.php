@@ -145,6 +145,13 @@ class News extends SmileBackendModel
                 $model->save();
             }
         }
+        if(Yii::$app->request->post('new_image_hash')){
+            $modelImages = new SmileDropZoneModel();
+            $modelImages->initFields($this->id,get_class($this));
+            /**
+             * TODO add logic
+             */
+        }
         parent::afterSave($insert, $changedAttributes);
     }
 

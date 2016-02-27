@@ -62,6 +62,8 @@ class FileUploadUI extends BaseUpload
 
     public $modelClass = '';
 
+    public $hash = '';
+
     /**
      * @inheritdoc
      */
@@ -83,12 +85,15 @@ class FileUploadUI extends BaseUpload
     public function run()
     {
         $model = new SmileDropZoneModel();
+        $images = [];
         $model->initFields($this->idItem,$this->modelClass);
+        if($this->idItem){
+            $images = $model->loadImages();
+        }
+
         echo $this->render($this->uploadTemplateView);
         echo $this->render($this->downloadTemplateView);
-        echo $this->render($this->formView
-            ,['images'=>$model->loadImages()]
-        );
+        echo $this->render($this->formView,['images'=>$images]);
 
         if ($this->gallery) {
             echo $this->render($this->galleryTemplateView);

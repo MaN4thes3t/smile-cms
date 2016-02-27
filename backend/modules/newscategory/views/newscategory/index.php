@@ -61,7 +61,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'name',
                 'label'=>Yii::t('backend','Название'),
                 'value'=>function($data){
-                    return SmileHtml::a($data->t->name,['update','id'=>$data->id]);
+                    return SmileHtml::a($data->t->name?$data->t->name:Yii::t('backend', 'Нет названия'),['update','id'=>$data->id]);
                 },
                 'filter'=>SmileHtml::activeTextInput($searchModel,'name',['class'=>'form-control']),
                 'format'=>'raw'

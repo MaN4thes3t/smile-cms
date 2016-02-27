@@ -43,12 +43,20 @@ RewriteRule ^css/(.*)$ frontend/web/css/$1 [L]
 RewriteCond %{REQUEST_URI} ^/(uploads)
 RewriteRule ^uploads/(.*)$ uploads/$1 [L]
 
+RewriteCond %{REQUEST_URI} ^/(uploads_db)
+RewriteRule ^uploads/(.*)$ uploads_db/$1 [L]
+
+RewriteCond %{REQUEST_URI} ^/(tmp)
+RewriteRule ^uploads/(.*)$ tmp/$1 [L]
+
 RewriteCond %{REQUEST_URI} !^/(frontend|backend)/web/(assets|js)/
 RewriteCond %{REQUEST_URI} !^/(frontend|backend)/web/(assets|css)/
 
 RewriteCond %{REQUEST_URI} !^/(images)
 RewriteCond %{REQUEST_URI} !^/(fonts)
 RewriteCond %{REQUEST_URI} !^/(uploads)
+RewriteCond %{REQUEST_URI} !^/(uploads_db)
+RewriteCond %{REQUEST_URI} !^/(tmp)
 
 RewriteCond %{REQUEST_URI} !index.php
 

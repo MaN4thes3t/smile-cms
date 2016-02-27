@@ -28,6 +28,24 @@ class DropZoneController extends SmileBackendController
 
     }
 
+    public function actionUploadNew(){
+        Yii::$app->response->getHeaders()->set('Vary', 'Accept');
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        if (isset($_FILES['images']) && Yii::$app->request->get('hash') && Yii::$app->request->get('class')) {
+            $model_hash = Yii::$app->request->get('hash');
+            $model_class = Yii::$app->request->get('class');
+
+            $model =  new SmileDropZoneModel([
+                'imageFolder'=>'tmp'
+            ]);
+            $response = $model->saveImageNew($model_hash, $model_class);
+            if($response){
+                return $response;
+            }
+        }
+        return ['error' => Yii::t('backend', 'Upload file error')];
+    }
+
     public function actionUpload()
     {
         Yii::$app->response->getHeaders()->set('Vary', 'Accept');
@@ -44,6 +62,20 @@ class DropZoneController extends SmileBackendController
         }
         return ['error' => Yii::t('backend', 'Upload file error')];
    }
+
+    public function actionDeleteNew(){
+        if(Yii::$app->request->isAjax){
+            $model = new SmileDropZoneModel();
+            $model->initFields(Yii::$app->request->get('hash'),Yii::$app->request->get('class'));
+            if(Yii::$app->request->get('image_name')){
+                /**
+                 * TODO delete images name
+                 */
+                return 1;
+            }
+        }
+        return 0;
+    }
 
     public function actionDelete(){
         if(Yii::$app->request->isAjax){

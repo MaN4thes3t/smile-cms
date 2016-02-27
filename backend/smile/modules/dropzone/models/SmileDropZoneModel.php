@@ -56,7 +56,7 @@ class SmileDropZoneModel extends ActiveRecord
         parent::init();
         $this->root = Yii::getAlias('@img_root');
         $this->basePath = self::SEPARATOR.$this->imageFolder;
-        $this->rootPath = $this->root.self::SEPARATOR.$this->basePath;
+        $this->rootPath = $this->root.$this->basePath;
     }
 
     public function rules()
@@ -66,6 +66,14 @@ class SmileDropZoneModel extends ActiveRecord
             [['name','model'], 'string'],
             [['id_item','order','date'], 'integer'],
         ];
+    }
+
+    public function loadImagesNew(){
+        $images = '';
+        /**
+         * TODO find images in session
+         */
+        $arr_img = [];
     }
 
     public function loadImages(){
@@ -164,10 +172,80 @@ class SmileDropZoneModel extends ActiveRecord
         self::$MODELCLASS = StringHelper::basename($this->_modelClass);
     }
 
+    public function saveImageNew($id, $class){
+        $this->prepareFiles();
+        $this->initFields($id,$class);
+        return $this->uploadImageNew();
+    }
+
     public function saveImage($id, $class){
         $this->prepareFiles();
         $this->initFields($id,$class);
         return $this->uploadImage();
+    }
+
+    public function uploadImageNew(){
+        $response = [];
+        if($this->_files){
+            $modelShortClass = self::$MODELCLASS;
+            $date = getdate();
+            $modelPath = self::SEPARATOR .$modelShortClass.
+                self::SEPARATOR .$this->_modelId;
+            $savePath = $this->rootPath.$modelPath;
+            $showPath = $this->basePath.$modelPath;
+            if(FileHelper::createDirectory($savePath,0777)){
+                foreach ($this->_files as $file) {
+                    $fileName = substr(uniqid(md5(rand()), true), 0, 10);
+                    $fileName .= '-' . Inflector::slug($file->baseName);
+                    $fileName .= '.' . $file->extension;
+                    $savePathFile = $savePath.self::SEPARATOR.$fileName;
+                    $showPathFile = $showPath.self::SEPARATOR.$fileName;
+                    if ($file->saveAs($savePathFile, true)) {
+                        $image = Yii::$app->image->load($savePathFile);
+                        if($image){
+                            $image->crop(self::IMG_MAX_WIDTH,self::IMG_MAX_HEIGHT)->save($savePathFile,80);
+                            //save to database logic
+                            $thumbnailSavePath = $savePath.
+                                self::SEPARATOR.
+                                $this->thumbnailsFolder.
+                                self::SEPARATOR.self::IMG_MIN_WIDTH.'x'.self::IMG_MIN_HEIGHT;
+                            $thumbnailSavePathFile = $thumbnailSavePath.self::SEPARATOR.$fileName;
+                            $thumbnailShowPathFile = $showPath.
+                                self::SEPARATOR.
+                                $this->thumbnailsFolder.
+                                self::SEPARATOR.self::IMG_MIN_WIDTH.'x'.self::IMG_MIN_HEIGHT.
+                                self::SEPARATOR.$fileName;
+                            if(FileHelper::createDirectory($thumbnailSavePath, 0777)){
+                                $thumbnail = $image->resize(self::IMG_MIN_WIDTH,self::IMG_MIN_HEIGHT)->save($thumbnailSavePathFile,80);
+                                if($thumbnail){
+                                    $response['files'][] = [
+                                        'name' => $file->baseName,
+                                        'type' => $file->type,
+                                        'size' => $file->size,
+                                        'url' => $showPathFile,
+                                        'thumbnailUrl' =>$thumbnailShowPathFile,
+                                        'id_image'=>rand(1,1234)+rand(1234,5678),
+                                        'order_image'=>rand(1,1234)+rand(1234,5678),
+                                        'class'=>$this->_modelClass,
+                                        'class_id'=>$this->_modelId,
+                                        'deleteUrl' => Url::to(
+                                            [
+                                                '/dropzone/drop-zone/delete-new',
+                                                'class'=>$this->_modelClass,
+                                                'image_name'=>$fileName,
+                                                'hash'=>$this->_modelId
+                                            ]
+                                        ),
+                                        'deleteType' => 'GET'
+                                    ];
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return $response;
     }
 
     public function uploadImage(){
