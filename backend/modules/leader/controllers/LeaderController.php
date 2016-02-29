@@ -38,6 +38,7 @@ class LeaderController extends SmileBackendController
         $model = new Leader();
         $model->loadDefaultValues();
         $model->attachMultilingual();
+        $model->attachImageUpload();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $model->save(false);
             if(!Yii::$app->request->post('edit')){
@@ -48,6 +49,7 @@ class LeaderController extends SmileBackendController
         }
         return $this->render('create', [
             'model' => $model,
+            'new_image_hash'=>Yii::$app->request->post('new_image_hash','')
         ]);
 
     }
@@ -83,6 +85,7 @@ class LeaderController extends SmileBackendController
     {
         if (($model = Leader::findOne($id)) !== null) {
             $model->attachMultilingual();
+            $model->attachImageUpload();
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

@@ -145,13 +145,6 @@ class News extends SmileBackendModel
                 $model->save();
             }
         }
-        if(Yii::$app->request->post('new_image_hash')){
-            $modelImages = new SmileDropZoneModel();
-            $modelImages->initFields($this->id,get_class($this));
-            /**
-             * TODO add logic
-             */
-        }
         parent::afterSave($insert, $changedAttributes);
     }
 
@@ -159,14 +152,6 @@ class News extends SmileBackendModel
         Tag::deleteAll(['id_news'=>$this->id]);
         Category::deleteAll(['id_news'=>$this->id]);
         Type::deleteAll(['id_news'=>$this->id]);
-        $modelImages = new SmileDropZoneModel();
-        $modelImages->initFields($this->id,get_class($this));
-        $modelImages = $modelImages::find()
-            ->where(['id_item'=>$this->id,'model'=>StringHelper::basename(get_class($this))])
-            ->all();
-        foreach ($modelImages as $model) {
-            $model->delete();
-        }
         if($this->photo){
             $dir = Yii::getAlias('@img_root').DIRECTORY_SEPARATOR.'uploads'.DIRECTORY_SEPARATOR.'NewsPhoto'.DIRECTORY_SEPARATOR.$this->id;
             SmileDropZoneModel::delTree($dir);

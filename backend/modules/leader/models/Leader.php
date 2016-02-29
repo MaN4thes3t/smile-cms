@@ -68,14 +68,6 @@ class Leader extends SmileBackendModel
     }
 
     public function afterDelete(){
-        $modelImages = new SmileDropZoneModel();
-        $modelImages->initFields($this->id,get_class($this));
-        $modelImages = $modelImages::find()
-            ->where(['id_item'=>$this->id,'model'=>StringHelper::basename(get_class($this))])
-            ->all();
-        foreach ($modelImages as $model) {
-            $model->delete();
-        }
         parent::afterDelete();
     }
 

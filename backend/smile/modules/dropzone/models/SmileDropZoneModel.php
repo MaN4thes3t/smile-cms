@@ -68,12 +68,31 @@ class SmileDropZoneModel extends ActiveRecord
         ];
     }
 
-    public function loadImagesNew(){
-        $images = '';
-        /**
-         * TODO find images in session
-         */
+    public function loadImagesNew($hash){
+
         $arr_img = [];
+        if(!empty(Yii::$app->session->get($hash)['files'])){
+            $images = Yii::$app->session->get($hash)['files'];
+            foreach($images as $key=>$img){
+                $arr_img[$key]['class'] = $this->_modelClass;
+                $arr_img[$key]['class_id'] = $this->_modelId;
+                $arr_img[$key]['id_image'] = $key;
+                $arr_img[$key]['order_image'] = $key;
+                $arr_img[$key]['name'] = $img['fileName'];
+                $arr_img[$key]['deleteUrl'] =  Url::to(
+                    [
+                        '/dropzone/drop-zone/delete-new',
+                        'id_image'=>$key,
+                        'hash'=>$this->_modelId
+                    ]);
+                $arr_img[$key]['url'] = $img['url'];
+                $arr_img[$key]['thumbnailUrl'] = $img['thumbnailUrl'];
+                $arr_img[$key]['size'] = filesize($img['savePathFile']);
+                $arr_img[$key]['type'] = $img['type'];
+                $arr_img[$key]['deleteType'] = 'GET';
+            }
+        }
+        return $arr_img;
     }
 
     public function loadImages(){
@@ -183,9 +202,45 @@ class SmileDropZoneModel extends ActiveRecord
         $this->initFields($id,$class);
         return $this->uploadImage();
     }
+    public function moveImagesNew(){
+        if(Yii::$app->request->post('new_image_hash')
+            && !empty(Yii::$app->session->get(Yii::$app->request->post('new_image_hash'))['files'])){
+            $files = Yii::$app->session->get(Yii::$app->request->post('new_image_hash'))['files'];
+            $path = is_array(Yii::$app->session->get(Yii::$app->request->post('new_image_hash'))['savePath'])?current(Yii::$app->session->get(Yii::$app->request->post('new_image_hash'))['savePath']):Yii::$app->session->get(Yii::$app->request->post('new_image_hash'))['savePath'];
+            $modelShortClass = self::$MODELCLASS;
+            $date = getdate();
+            $modelPath = self::SEPARATOR .$modelShortClass.
+                self::SEPARATOR .$date['year'].
+                self::SEPARATOR .$date['mon'].
+                self::SEPARATOR .$date['mday'].
+                self::SEPARATOR .$this->_modelId;
+            $savePath = $this->rootPath.$modelPath;
+            if(FileHelper::createDirectory($savePath,0777)){
+                foreach($files as $file){
+                    VarDumper::dump($file['savePathFile'],6,1);
+                    VarDumper::dump($savePath.self::SEPARATOR.$file['fileName'],6,1);
 
+                    copy($file['savePathFile'], $savePath.self::SEPARATOR.$file['fileName']);
+                    $model = $this->saveToDb($file['fileName'], $date);
+                    $thumbnailSavePath = $savePath.
+                        self::SEPARATOR.
+                        $model->id.
+                        self::SEPARATOR.
+                        $this->thumbnailsFolder.
+                        self::SEPARATOR.self::IMG_MIN_WIDTH.'x'.self::IMG_MIN_HEIGHT;
+                    if(FileHelper::createDirectory($thumbnailSavePath, 0777)){
+                        copy($file['thumbnailSavePathFile'], $thumbnailSavePath.self::SEPARATOR.$file['fileName']);
+                    }
+
+                }
+            }
+            self::delTree($path);
+            Yii::$app->session->remove(Yii::$app->request->post('new_image_hash'));
+        }
+    }
     public function uploadImageNew(){
         $response = [];
+        $session_response = [];
         if($this->_files){
             $modelShortClass = self::$MODELCLASS;
             $date = getdate();
@@ -193,8 +248,9 @@ class SmileDropZoneModel extends ActiveRecord
                 self::SEPARATOR .$this->_modelId;
             $savePath = $this->rootPath.$modelPath;
             $showPath = $this->basePath.$modelPath;
+            $session_response['savePath'] = $savePath;
             if(FileHelper::createDirectory($savePath,0777)){
-                foreach ($this->_files as $file) {
+                foreach($this->_files as $key=>$file) {
                     $fileName = substr(uniqid(md5(rand()), true), 0, 10);
                     $fileName .= '-' . Inflector::slug($file->baseName);
                     $fileName .= '.' . $file->extension;
@@ -218,26 +274,37 @@ class SmileDropZoneModel extends ActiveRecord
                             if(FileHelper::createDirectory($thumbnailSavePath, 0777)){
                                 $thumbnail = $image->resize(self::IMG_MIN_WIDTH,self::IMG_MIN_HEIGHT)->save($thumbnailSavePathFile,80);
                                 if($thumbnail){
+                                    $rand_key = (int)round(time() / (rand(1,1000)+rand(1000,2000)));
+                                    $session_response['files'][$rand_key] = [
+                                        'savePathFile'=>$savePathFile,
+                                        'thumbnailSavePathFile'=>$thumbnailSavePathFile,
+                                        'fileName'=>$fileName,
+                                        'id_image'=>$rand_key,
+                                        'order_image'=>$rand_key,
+                                        'url' => $showPathFile,
+                                        'thumbnailUrl' =>$thumbnailShowPathFile,
+                                        'type' => $file->type,
+                                    ];
                                     $response['files'][] = [
                                         'name' => $file->baseName,
                                         'type' => $file->type,
                                         'size' => $file->size,
                                         'url' => $showPathFile,
                                         'thumbnailUrl' =>$thumbnailShowPathFile,
-                                        'id_image'=>rand(1,1234)+rand(1234,5678),
-                                        'order_image'=>rand(1,1234)+rand(1234,5678),
+                                        'id_image'=>$rand_key,
+                                        'order_image'=>$rand_key,
                                         'class'=>$this->_modelClass,
                                         'class_id'=>$this->_modelId,
                                         'deleteUrl' => Url::to(
                                             [
                                                 '/dropzone/drop-zone/delete-new',
-                                                'class'=>$this->_modelClass,
-                                                'image_name'=>$fileName,
+                                                'id_image'=>$rand_key,
                                                 'hash'=>$this->_modelId
                                             ]
                                         ),
                                         'deleteType' => 'GET'
                                     ];
+
                                 }
                             }
                         }
@@ -245,6 +312,7 @@ class SmileDropZoneModel extends ActiveRecord
                 }
             }
         }
+        Yii::$app->session->set($this->_modelId,array_merge_recursive(Yii::$app->session->get($this->_modelId,[]),$session_response));
         return $response;
     }
 

@@ -16,6 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $this->render('_form', [
         'model' => $model,
+        'new_image_hash' => $new_image_hash,
     ]) ?>
 
 </div>

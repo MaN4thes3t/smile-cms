@@ -53,6 +53,30 @@ Smile.Poll = {
     }
 };
 Smile.Image = {
+    initNewImages:function(){
+        //$('#images-upload-fileupload tbody.files').sortable({
+        //    update: function(event, ui){
+        //        var arr = {};
+        //        $('#images-upload-fileupload tbody.files tr').each(function(key, elem){
+        //            $(elem).attr('data-order',key+1);
+        //            arr[$(elem).data('id_image')] = {order:key+1};
+        //        });
+        //        console.log(arr);
+        //        $.ajax({
+        //            type: "get",
+        //            url: "/backend/dropzone/drop-zone/sort-new",
+        //            data:{
+        //                image:arr,
+        //                hash:$('#new_image_hash').val()
+        //            },
+        //            success: function(msg){
+        //                console.log(msg);
+        //            }
+        //        });
+        //    }
+        //});
+        //$('#images-upload-fileupload tbody.files').disableSelection();
+    },
     init: function(){
         $('#images-upload-fileupload tbody.files').sortable({
             update: function(event, ui){

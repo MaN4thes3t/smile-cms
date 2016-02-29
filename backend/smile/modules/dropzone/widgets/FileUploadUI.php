@@ -86,9 +86,12 @@ class FileUploadUI extends BaseUpload
     {
         $model = new SmileDropZoneModel();
         $images = [];
-        $model->initFields($this->idItem,$this->modelClass);
         if($this->idItem){
+            $model->initFields($this->idItem,$this->modelClass);
             $images = $model->loadImages();
+        }elseif($this->hash){
+            $model->initFields($this->hash,$this->modelClass);
+            $images = $model->loadImagesNew($this->hash);
         }
 
         echo $this->render($this->uploadTemplateView);

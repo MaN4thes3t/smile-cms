@@ -51,36 +51,49 @@ use backend\smile\modules\dropzone\widgets\FileUploadUI;
     <?php echo Tabs::widget([
         'items' => $items,
     ]);?>
+    <?php
+    $arr_image_params = [
+        'name'=>'images[]',
+        'gallery'=>false,
+        'id'=>'images-upload',
+        'modelClass'=>get_class($model),
+        'fieldOptions' => [
+            'accept' => 'image/*',
+            'fileTypes'=>'png',
+        ],
+        'clientOptions' => [
+            'maxFileSize' => 5000000,
+            'autoUpload'=>true,
+            'fileTypes'=>'png',
+            'multipart'=>true,
+            'forceIframeTransport'=>false,
+            'singleFileUploads'=>false,
+        ]
+    ];
+    if($model->isNewRecord){
+        ?>
+        <?=SmileHtml::hiddenInput('new_image_hash',!empty($new_image_hash)?$new_image_hash:md5(time()),[
+            'id'=>'new_image_hash'
+        ])?>
+        <?php
+        $arr_image_params['clientEvents']['fileuploadalways'] = 'function(e, data) {
+                                    Smile.Image.initNewImages();
+                                }';
+        $arr_image_params['hash'] = !empty($new_image_hash)?$new_image_hash:md5(time());
+        $arr_image_params['url'] = ['/dropzone/drop-zone/upload-new', 'hash' => !empty($new_image_hash)?$new_image_hash:md5(time()), 'class'=>get_class($model)];
+    }else{
+        $arr_image_params['idItem'] = $model->id;
+        $arr_image_params['clientEvents']['fileuploadalways'] = 'function(e, data) {
+                                    Smile.Image.init();
+                                }';
+        $arr_image_params['url'] = ['/dropzone/drop-zone/upload', 'id' => $model->id, 'class'=>get_class($model)];
+    }?>
+    <div class="form-group">
+        <?= FileUploadUI::widget($arr_image_params);
+        ?>
+    </div>
     <?php if(!$model->isNewRecord){
         ?>
-        <div class="form-group">
-            <?= FileUploadUI::widget([
-                'name'=>'images[]',
-                'gallery'=>false,
-                'id'=>'images-upload',
-                'idItem'=>$model->id,
-                'modelClass'=>get_class($model),
-                'url' => ['/dropzone/drop-zone/upload', 'id' => $model->id, 'class'=>get_class($model)],
-                'fieldOptions' => [
-                    'accept' => 'image/*',
-                    'fileTypes'=>'png',
-                ],
-                'clientOptions' => [
-                    'maxFileSize' => 5000000,
-                    'autoUpload'=>true,
-                    'fileTypes'=>'png',
-                    'multipart'=>true,
-                    'forceIframeTransport'=>false,
-                    'singleFileUploads'=>false,
-                ],
-                'clientEvents'=>[
-                    'fileuploadalways'=>'function(e, data) {
-                                    Smile.Image.init();
-                                }',
-                ]
-            ]);
-            ?>
-        </div>
         <script type="text/javascript">
             $(document).ready(function(){
                 Smile.Image.init();

@@ -161,32 +161,40 @@ use kartik\color\ColorInput;
             'multipart'=>true,
             'forceIframeTransport'=>false,
             'singleFileUploads'=>false,
-        ],
-        'clientEvents'=>[
-            'fileuploadalways'=>'function(e, data) {
-                                    Smile.Image.init();
-                                }',
         ]
     ];
     if($model->isNewRecord){
         ?>
-        <?=SmileHtml::hiddenInput('new_image_hash',!empty($new_image_hash)?$new_image_hash:md5(time()))?>
+        <?=SmileHtml::hiddenInput('new_image_hash',!empty($new_image_hash)?$new_image_hash:md5(time()),[
+            'id'=>'new_image_hash'
+        ])?>
         <?php
+        $arr_image_params['clientEvents']['fileuploadalways'] = 'function(e, data) {
+                                    Smile.Image.initNewImages();
+                                }';
         $arr_image_params['hash'] = !empty($new_image_hash)?$new_image_hash:md5(time());
         $arr_image_params['url'] = ['/dropzone/drop-zone/upload-new', 'hash' => !empty($new_image_hash)?$new_image_hash:md5(time()), 'class'=>get_class($model)];
     }else{
         $arr_image_params['idItem'] = $model->id;
+        $arr_image_params['clientEvents']['fileuploadalways'] = 'function(e, data) {
+                                    Smile.Image.init();
+                                }';
         $arr_image_params['url'] = ['/dropzone/drop-zone/upload', 'id' => $model->id, 'class'=>get_class($model)];
     }?>
         <div class="form-group">
             <?= FileUploadUI::widget($arr_image_params);
             ?>
         </div>
+    <?php if(!$model->isNewRecord){
+        ?>
         <script type="text/javascript">
             $(document).ready(function(){
                 Smile.Image.init();
             })
         </script>
+        <?php
+    }?>
+
     <div class="form-group">
         <?= SmileHtml::submitButton($model->isNewRecord ? Yii::t('backend','Создать') : Yii::t('backend','Сохранить'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
         <?= SmileHtml::submitButton(Yii::t('backend','Сохранить и редактировать'), ['class' => 'btn btn-info','name'=>'edit','value'=>'1']) ?>

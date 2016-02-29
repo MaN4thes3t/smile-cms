@@ -65,12 +65,10 @@ class DropZoneController extends SmileBackendController
 
     public function actionDeleteNew(){
         if(Yii::$app->request->isAjax){
-            $model = new SmileDropZoneModel();
-            $model->initFields(Yii::$app->request->get('hash'),Yii::$app->request->get('class'));
-            if(Yii::$app->request->get('image_name')){
-                /**
-                 * TODO delete images name
-                 */
+            if(!empty(Yii::$app->session->get(Yii::$app->request->get('hash'))['files'][Yii::$app->request->get('id_image')])){
+                $arr = Yii::$app->session->get(Yii::$app->request->get('hash'));
+                unset($arr['files'][Yii::$app->request->get('id_image')]);
+                Yii::$app->session->set(Yii::$app->request->get('hash'),$arr);
                 return 1;
             }
         }
@@ -103,4 +101,18 @@ class DropZoneController extends SmileBackendController
             }
         }
     }
+//    public function actionSortNew(){
+//        if(Yii::$app->request->isAjax){
+//            if(Yii::$app->request->get('image') && !empty(Yii::$app->session->get(Yii::$app->request->get('hash'))['files'])){
+//                $images = Yii::$app->request->get('image',[]);
+//                $arr = Yii::$app->session->get(Yii::$app->request->get('hash'));
+//                $files = $arr['files'];
+//                foreach($images as $key=>$val){
+//                    $arr['files'][$val['order']] = $files[$key];
+//                    unset($arr['files'][$key]);
+//                }
+//                Yii::$app->session->set(Yii::$app->request->get('hash'),$arr);
+//            }
+//        }
+//    }
 }
