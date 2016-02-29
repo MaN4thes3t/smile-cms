@@ -14,7 +14,9 @@ use backend\smile\modules\dropzone\widgets\FileUploadUI;
 
 <div class="leader-form span6">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin([
+        'enableClientValidation' => false,
+    ]); ?>
     <div class="form-group">
         <?= SmileHtml::label(Yii::t('backend','День рождения'))?>
         <?= DatePicker::widget([

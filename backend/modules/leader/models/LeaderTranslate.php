@@ -34,7 +34,7 @@ class LeaderTranslate extends SmileBackendModelTranslate
     public function rules()
     {
         return [
-            [['language'], 'required'],
+            [['language','description','last_name','first_name'], 'required'],
             [['id_item'], 'required', 'on'=>'ownerUpdate'],
             [['id_item'], 'integer'],
             [['language'], 'string', 'max' => 16],

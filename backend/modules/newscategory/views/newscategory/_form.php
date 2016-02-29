@@ -12,7 +12,9 @@ use yii\jui\DatePicker;
 
 <div class="newscategory-form span6">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin([
+        'enableClientValidation' => false,
+    ]); ?>
 
     <?= $form->field($model, 'show')->checkbox(); ?>
     <?= $form->field($model, 'show_in_menu')->checkbox(); ?>

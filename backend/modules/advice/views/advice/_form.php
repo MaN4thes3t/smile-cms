@@ -14,7 +14,9 @@ use kartik\select2\Select2;
 
 <div class="advice-form span6">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin([
+        'enableClientValidation' => false,
+    ]); ?>
 
     <?= $form->field($model, 'show')->checkbox(); ?>
     <div class="form-group">

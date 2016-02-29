@@ -15,6 +15,7 @@ use yii\redactor\widgets\Redactor;
 ?>
 <?php
 $className = StringHelper::basename(get_class($model));
+//VarDumper::dump($model,6,1);
 ?>
     <div class="types_fields point_of_view the_word_public interview">
 <?= $form->field($model, 'first_name')->textInput(array(

@@ -33,7 +33,7 @@ class AdviceTranslate extends SmileBackendModelTranslate
     public function rules()
     {
         return [
-            [['language'], 'required'],
+            [['language','title','short_description','description'], 'required'],
             [['id_item'], 'required', 'on'=>'ownerUpdate'],
             [['id_item'], 'integer'],
             [['language'], 'string', 'max' => 16],

@@ -13,9 +13,12 @@ use yii\helpers\Json;
 
 <div class="poll-form span6">
 
-    <?php $form = ActiveForm::begin(['options'=>[
-        'id'=>'poll_form'
-    ]]); ?>
+    <?php $form = ActiveForm::begin([
+        'enableClientValidation' => false,
+        'options'=>[
+            'id'=>'poll_form',
+        ]
+    ]); ?>
 
     <?= $form->field($model, 'show')->checkbox(); ?>
     <?= $form->field($model, 'my_version')->checkbox([

@@ -112,18 +112,22 @@ Smile.Grid = {
         $('#mass_action_submit').on('click',function(e){
             e.preventDefault();
             if($('#mass_action_actions').val()){
-                $.each($('.mass_action_checkbox:checked'),function(index,element){
-                    $.ajax({
-                        type:'GET',
-                        url:$('#mass_action_actions').val(),
-                        data:{
-                            id:$(element).val()
-                        },
-                        success:function(data)  {
-                            $.pjax.reload('#pjax-mass-action');
-                        }
-                    });
-                });
+                if(confirm('Вы уверены?')){
+                    if($('#mass_action_actions').val()){
+                        $.each($('.mass_action_checkbox:checked'),function(index,element){
+                            $.ajax({
+                                type:'GET',
+                                url:$('#mass_action_actions').val(),
+                                data:{
+                                    id:$(element).val()
+                                },
+                                success:function(data)  {
+                                    $.pjax.reload('#pjax-mass-action');
+                                }
+                            });
+                        });
+                    }
+                }
             }
         });
     }

@@ -39,7 +39,7 @@ class NewsTranslate extends SmileBackendModelTranslate
     public function rules()
     {
         return [
-            [['language'], 'required'],
+            [['language','title','description','short_description'], 'required'],
             [['id_item'], 'required', 'on'=>'ownerUpdate'],
             [['id_item'], 'integer'],
             [['language'], 'string', 'max' => 16],
@@ -74,10 +74,10 @@ class NewsTranslate extends SmileBackendModelTranslate
 //                die();
                 return mb_substr($keywords,2);
             }],
+            [['seodescription'], 'string'],
             ['seodescription','default','value'=>function($model){
                 return $model->short_description;
             }],
-            [['seodescription'], 'string'],
             [['annotation'], 'string'],
             [['first_name'], 'string'],
             [['second_name'], 'string'],

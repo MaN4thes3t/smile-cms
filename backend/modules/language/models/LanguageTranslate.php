@@ -28,7 +28,7 @@ class LanguageTranslate extends SmileBackendModelTranslate
     public function rules()
     {
         return [
-            [['language'], 'required'],
+            [['language','translate'], 'required'],
             [['id_item'], 'required', 'on'=>'ownerUpdate'],
             [['id_item'], 'integer'],
             [['translate'], 'string', 'max' => 255],

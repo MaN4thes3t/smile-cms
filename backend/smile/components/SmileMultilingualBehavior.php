@@ -39,9 +39,9 @@ class SmileMultilingualBehavior extends Behavior
         $this->translatePK = current($multilingualModelClassName::primaryKey());
 
         $this->_noChecking = [
-            $this->multilingualIndex,
-            $this->multilingualKey,
-            $this->translatePK,
+            $this->multilingualIndex=>$this->multilingualIndex,
+            $this->multilingualKey=>$this->multilingualKey,
+            $this->translatePK=>$this->translatePK,
         ];
     }
 
@@ -73,6 +73,8 @@ class SmileMultilingualBehavior extends Behavior
         $isValid = true;
 
         $className = $this->prepareClassName($this->multilingualModelClassName);
+        $attr_count = count(array_diff_key($this->translateModels[Yii::$app->language]->attributes,$this->_noChecking));
+        $lang_count_empty_attr = 0;
         foreach(Yii::$app->params['languages'] as $lang=>$info)
         {
             if($this->multilingualArr){
@@ -80,8 +82,10 @@ class SmileMultilingualBehavior extends Behavior
             }else{
                 $this->translateModels[$lang]->load([$className => Yii::$app->request->post()[$className][$lang]]);
             }
+
             $this->translateModels[$lang]->{$this->multilingualIndex} = $lang;
             $makeValidate = false;
+            $count_empty_attr = 0;
             foreach($this->translateModels[$lang]->attributes as $key=>$val) {
                 if(in_array($key, $this->_noChecking))
                 {
@@ -90,13 +94,25 @@ class SmileMultilingualBehavior extends Behavior
                 if(!empty($val))
                 {
                     $makeValidate = true;
+                }else{
+                    $count_empty_attr++;
                 }
             }
+            if($count_empty_attr == $attr_count){
+                $lang_count_empty_attr++;
+            }
+
             if($makeValidate){
                 $result = $this->translateModels[$lang]->validate();
                 if(!$result){
                     $isValid = false;
                 }
+            }
+        }
+        if($isValid && $lang_count_empty_attr == count(Yii::$app->params['languages'])){
+            $result = $this->translateModels[Yii::$app->language]->validate();
+            if(!$result){
+                $isValid = false;
             }
         }
         return $event->isValid = $isValid;

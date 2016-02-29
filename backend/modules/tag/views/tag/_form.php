@@ -11,7 +11,9 @@ use yii\bootstrap\Tabs;
 
 <div class="tag-form span6">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin([
+        'enableClientValidation' => false,
+    ]); ?>
 
     <?= $form->field($model, 'show')->checkbox(); ?>
 

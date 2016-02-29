@@ -29,7 +29,7 @@ class DictionaryTranslate extends SmileBackendModelTranslate
     public function rules()
     {
         return [
-            [['language'], 'required'],
+            [['language','translation'], 'required'],
             [['id_item'], 'required', 'on'=>'ownerUpdate'],
             [['id_item'], 'integer'],
             [['language'], 'string', 'max' => 16],

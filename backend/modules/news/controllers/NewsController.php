@@ -5,6 +5,7 @@ namespace backend\modules\news\controllers;
 use backend\modules\news\models\News;
 use backend\smile\modules\dropzone\models\SmileDropZoneModel;
 use Yii;
+use yii\web\Response;
 use yii\web\UploadedFile;
 use backend\smile\controllers\SmileBackendController;
 use yii\web\NotFoundHttpException;
@@ -14,6 +15,7 @@ use backend\modules\news\models\NewsSearch;
 use yii\filters\AccessControl;
 use yii\helpers\FileHelper;
 use yii\helpers\VarDumper;
+use yii\widgets\ActiveForm;
 
 /**
  * NewsController implements the CRUD actions for News model.
@@ -70,6 +72,7 @@ class NewsController extends SmileBackendController
 
     public function actionUpdate($id)
     {
+
         $model = $this->findModel($id);
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if(Yii::$app->request->post('photo_deleted')){

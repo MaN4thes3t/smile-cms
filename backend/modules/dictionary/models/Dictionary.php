@@ -38,6 +38,7 @@ class Dictionary extends SmileBackendModel
     public function rules()
     {
         return [
+            [['category', 'message'], 'required'],
             [['category', 'message'], 'string']
         ];
     }

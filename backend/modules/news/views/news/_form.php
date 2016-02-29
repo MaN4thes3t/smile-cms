@@ -19,7 +19,12 @@ use kartik\color\ColorInput;
 
 <div class="news-form span6">
 
-    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
+    <?php $form = ActiveForm::begin([
+        'enableClientValidation' => false,
+        'options' => [
+            'enctype' => 'multipart/form-data'
+        ]
+    ]); ?>
     <?php
     echo $form->field($model, 'title_color')->widget(ColorInput::classname(), [
         'options' => ['placeholder' => Yii::t('backend','Выберите цвет заголовка')],

@@ -49,7 +49,6 @@ class Leader extends SmileBackendModel
         if ($this->$attribute) {
             if(is_string($this->$attribute)){
                 $this->$attribute = strtotime($this->$attribute);
-
             }else{
                 $this->addError($attribute, Yii::t('backend','Введите корректную дату'));
             }
