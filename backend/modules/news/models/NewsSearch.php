@@ -78,10 +78,10 @@ class NewsSearch extends News
         }
 
         if($this->categories){
-            $query->joinWith(['types'=>function($q){
-                return $q->from(Category::tableName().' as categories');
+            $query->joinWith(['categories'=>function($q){
+                return $q->from(Category::tableName());
             }]);
-            $query->andWhere(['categories.id_category'=>$this->categories]);
+            $query->andWhere([Category::tableName().'.id_category'=>$this->categories]);
         }
 
         if($this->create_date){

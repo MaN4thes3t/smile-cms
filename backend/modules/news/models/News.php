@@ -87,10 +87,6 @@ class News extends SmileBackendModel
         return $this->hasMany(Type::className(), ['id_news' => 'id'])->indexBy('type_code');
     }
 
-    public function getAuthor(){
-
-    }
-
     /**
      * @inheritdoc
      */

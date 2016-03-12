@@ -51,7 +51,7 @@ class PollTranslate extends SmileBackendModelTranslate
         if(empty($this->$attribute)){
             $this->$attribute = $this->title;
         }
-        $this->$attribute = str_replace(' ','-',$this->$attribute);
+        $this->$attribute = strtolower(str_replace(' ','-',$this->$attribute));
         $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
     }
 

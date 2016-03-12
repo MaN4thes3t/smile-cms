@@ -44,7 +44,7 @@ class NewscategoryTranslate extends SmileBackendModelTranslate
         if(empty($this->$attribute)){
             $this->$attribute = $this->name;
         }
-        $this->$attribute = str_replace(' ','-',$this->$attribute);
+        $this->$attribute = strtolower(str_replace(' ','-',$this->$attribute));
         $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
     }
     /**
