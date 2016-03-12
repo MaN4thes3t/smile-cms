@@ -4,6 +4,7 @@ namespace backend\modules\advice\models;
 
 use Yii;
 use backend\smile\models\SmileBackendModelTranslate;
+use dosamigos\transliterator\TransliteratorHelper;
 /**
  * This is the model class for table "advice_translate".
  *
@@ -15,6 +16,7 @@ use backend\smile\models\SmileBackendModelTranslate;
  * @property string $seotitle
  * @property string $seokeywords
  * @property string $seodescription
+ * @property string $translit
  *
  */
 class AdviceTranslate extends SmileBackendModelTranslate
@@ -36,6 +38,7 @@ class AdviceTranslate extends SmileBackendModelTranslate
             [['language','title','short_description','description'], 'required'],
             [['id_item'], 'required', 'on'=>'ownerUpdate'],
             [['id_item'], 'integer'],
+            [['translit'],'translitValidation','skipOnEmpty' => false],
             [['language'], 'string', 'max' => 16],
             [['description'], 'string'],
             [['title'], 'string'],
@@ -44,6 +47,15 @@ class AdviceTranslate extends SmileBackendModelTranslate
             [['seodescription'], 'string'],
             [['short_description'], 'string'],
         ];
+    }
+
+    public function translitValidation($attribute,$params){
+        $this->$attribute = trim($this->$attribute);
+        if(empty($this->$attribute)){
+            $this->$attribute = $this->title;
+        }
+        $this->$attribute = str_replace(' ','-',$this->$attribute);
+        $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
     }
 
     /**
@@ -55,6 +67,7 @@ class AdviceTranslate extends SmileBackendModelTranslate
             'title' => Yii::t('backend','Заголовок'),
             'seotitle' => Yii::t('backend','SEO-title'),
             'seokeywords' => Yii::t('backend','SEO-keywords'),
+            'translit' => Yii::t('backend','Транслит совета'),
             'seodescription' => Yii::t('backend','SEO-description'),
             'description' => Yii::t('backend','Описание'),
             'short_description' => Yii::t('backend','Короткое описание'),

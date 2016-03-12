@@ -4,6 +4,7 @@ namespace backend\modules\leader\models;
 
 use Yii;
 use backend\smile\models\SmileBackendModelTranslate;
+use dosamigos\transliterator\TransliteratorHelper;
 /**
  * This is the model class for table "leader_translate".
  *
@@ -16,6 +17,7 @@ use backend\smile\models\SmileBackendModelTranslate;
  * @property string $seotitle
  * @property string $seokeywords
  * @property string $seodescription
+ * @property string $translit
  *
  */
 class LeaderTranslate extends SmileBackendModelTranslate
@@ -44,7 +46,16 @@ class LeaderTranslate extends SmileBackendModelTranslate
             [['seotitle'], 'string'],
             [['seokeywords'], 'string'],
             [['seodescription'], 'string'],
+            [['translit'],'translitValidation','skipOnEmpty' => false],
         ];
+    }
+    public function translitValidation($attribute,$params){
+        $this->$attribute = trim($this->$attribute);
+        if(empty($this->$attribute)){
+            $this->$attribute = $this->first_name.$this->last_name;
+        }
+        $this->$attribute = str_replace(' ','-',$this->$attribute);
+        $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
     }
 
     /**
@@ -56,6 +67,7 @@ class LeaderTranslate extends SmileBackendModelTranslate
             'first_name' => Yii::t('backend','Имя'),
             'last_name' => Yii::t('backend','Фамилия'),
             'seotitle' => Yii::t('backend','SEO-title'),
+            'translit' => Yii::t('backend','Транслит лидера'),
             'seokeywords' => Yii::t('backend','SEO-keywords'),
             'seodescription' => Yii::t('backend','SEO-description'),
             'description' => Yii::t('backend','Описание'),

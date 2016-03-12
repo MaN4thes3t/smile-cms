@@ -15,7 +15,6 @@ use yii\redactor\widgets\Redactor;
 ?>
 <?php
 $className = StringHelper::basename(get_class($model));
-//VarDumper::dump($model,6,1);
 ?>
     <div class="types_fields point_of_view the_word_public interview">
 <?= $form->field($model, 'first_name')->textInput(array(
@@ -35,6 +34,7 @@ $className = StringHelper::basename(get_class($model));
     'id' => $className.'_'.$language.'_'.'annotation'
 )); ?>
     </div>
+
     <?= $form->field($model, 'title')->textInput(array(
         'name' => $className.'['.$language.'][title]',
         'id' => $className.'_'.$language.'_'.'title'
@@ -94,5 +94,9 @@ $className = StringHelper::basename(get_class($model));
     <?= $form->field($model, 'seodescription')->textarea(array(
         'name' => $className.'['.$language.'][seodescription]',
         'id' => $className.'_'.$language.'_'.'seodescription'
+    )); ?>
+    <?= $form->field($model, 'translit')->textInput(array(
+        'name' => $className.'['.$language.'][translit]',
+        'id' => $className.'_'.$language.'_'.'translit'
     )); ?>
 

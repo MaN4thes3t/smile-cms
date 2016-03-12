@@ -7,6 +7,8 @@ use Yii;
 use backend\smile\models\SmileBackendModelTranslate;
 use yii\helpers\StringHelper;
 use yii\helpers\VarDumper;
+use dosamigos\transliterator\TransliteratorHelper;
+
 
 /**
  * This is the model class for table "news_translate".
@@ -21,6 +23,7 @@ use yii\helpers\VarDumper;
  * @property string $seotitle
  * @property string $seokeywords
  * @property string $seodescription
+ * @property string $translit
  *
  */
 class NewsTranslate extends SmileBackendModelTranslate
@@ -42,12 +45,10 @@ class NewsTranslate extends SmileBackendModelTranslate
             [['language','title','description','short_description'], 'required'],
             [['id_item'], 'required', 'on'=>'ownerUpdate'],
             [['id_item'], 'integer'],
-            [['language'], 'string', 'max' => 16],
-            [['description'], 'string'],
-            [['title'], 'string'],
-            [['short_description'], 'string'],
-            [['seotitle'], 'string'],
-            [['seokeywords'], 'string'],
+            [['language','description','title','short_description','seotitle',
+            'seokeywords','annotation','first_name','second_name',
+            'seodescription'], 'string'],
+            [['translit'],'translitValidation','skipOnEmpty' => false],
             ['seotitle','default','value'=>function($model){
                 return $model->title;
             }],
@@ -74,16 +75,19 @@ class NewsTranslate extends SmileBackendModelTranslate
 //                die();
                 return mb_substr($keywords,2);
             }],
-            [['seodescription'], 'string'],
             ['seodescription','default','value'=>function($model){
                 return $model->short_description;
             }],
-            [['annotation'], 'string'],
-            [['first_name'], 'string'],
-            [['second_name'], 'string'],
         ];
     }
-
+    public function translitValidation($attribute,$params){
+        $this->$attribute = trim($this->$attribute);
+        if(empty($this->$attribute)){
+            $this->$attribute = $this->title;
+        }
+        $this->$attribute = str_replace(' ','-',$this->$attribute);
+        $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
+    }
     /**
      * @inheritdoc
      */
@@ -96,6 +100,7 @@ class NewsTranslate extends SmileBackendModelTranslate
             'seokeywords' => Yii::t('backend','SEO-keywords'),
             'seodescription' => Yii::t('backend','SEO-description'),
             'description' => Yii::t('backend','Описание'),
+            'translit' => Yii::t('backend','Транслит новости'),
             'annotation' => Yii::t('backend','Анотация (если тип "Точка зрения")'),
             'first_name' => Yii::t('backend','Имя (если тип "Точка зрения" или "Слово общественности" или "Интервью")'),
             'second_name' => Yii::t('backend','Фамилия (если тип "Точка зрения" или "Слово общественности" или "Интервью")'),

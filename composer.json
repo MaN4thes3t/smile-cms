@@ -26,7 +26,8 @@
         "2amigos/yii2-file-upload-widget": "~1.0",
         "yurkinx/yii2-image": "dev-master",
         "bower-asset/blueimp-file-upload": "~9.9.0",
-        "kartik-v/yii2-widget-colorinput": "*"
+        "kartik-v/yii2-widget-colorinput": "*",
+        "2amigos/yii2-transliterator-helper": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
