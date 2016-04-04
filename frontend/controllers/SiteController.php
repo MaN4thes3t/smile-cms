@@ -1,26 +1,21 @@
 <?php
 namespace frontend\controllers;
-use backend\modules\news\models\News;
-use backend\modules\page\models\Page;
-use backend\modules\partners\models\Partners;
+
 use Yii;
-use yii\base\InvalidParamException;
-use yii\helpers\VarDumper;
-use yii\web\BadRequestHttpException;
-use app\components\Controller;
+use frontend\smile\controllers\SmileFrontendController;
 
 /**
  * Site controller
  */
-class SiteController extends Controller
+class SiteController extends SmileFrontendController
 {
+
     /**
      * @inheritdoc
      */
     public function behaviors()
     {
         return [
-
         ];
     }
 
@@ -36,18 +31,9 @@ class SiteController extends Controller
         ];
     }
 
-    public function actionMainPage(){
-        $main_page = Page::find()->with('t')->where(['main_page'=>'1','show'=>'1'])->one();
-        if(!$main_page){
-            throw new BadRequestHttpException('The requested page does not exist.');
-        }
-        $news = News::find()->with('t')->where(['show'=>'1'])->orderBy('date DESC')->all();
-        $partners = Partners::find()->all();
-        return $this->render('main',
-            [
-                'model'=>$main_page,
-                'news'=>$news,
-                'partners'=>$partners
-            ]);
+    public function actionIndex(){
+        echo 'site, action index';
+        return $this->render('index');
     }
+
 }

@@ -5,7 +5,7 @@ use Yii;
 use yii\helpers\VarDumper;
 use backend\smile\controllers\SmileBackendController;
 use backend\models\LoginForm;
-
+use yii\helpers\Url;
 
 /**
  * Site controller
@@ -30,7 +30,7 @@ class SiteController extends SmileBackendController
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            return Yii::$app->getResponse()->redirect(Url::toRoute(['/news/news'],true));
         } else {
             return $this->render('login', [
                 'model' => $model,

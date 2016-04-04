@@ -15,12 +15,15 @@ class MainAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
+
     public $css = [
     ];
+
     public $js = [
         'js/main.js',
         'js/jquery.dotdotdot.min.js'
     ];
+
     public $depends = [
         'yii\web\JqueryAsset',
         'yii\jui\JuiAsset',

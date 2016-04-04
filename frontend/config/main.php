@@ -2,22 +2,20 @@
 $params = array_merge(
     require(__DIR__ . '/../../common/config/params.php'),
 //    require(__DIR__ . '/../../common/config/params-local.php'),
-    require(__DIR__ . '/params.php'),
-    require(__DIR__ . '/params-local.php')
+//    require(__DIR__ . '/params-local.php'),
+    require(__DIR__ . '/params.php')
 );
 
 return [
-    'id' => 'app-frontend',
+    'id' => 'smile-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'language'=>'ru',
-    'sourceLanguage'=>'ru',
     'components' => [
-        'user' => [
-            'identityClass' => 'common\models\User',
-            'enableAutoLogin' => true,
-        ],
+//        'user' => [
+//            'identityClass' => 'common\models\User',
+//            'enableAutoLogin' => true,
+//        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -31,26 +29,33 @@ return [
             'errorAction' => 'site/error',
         ],
         'request'=>[
-            'class' => 'common\components\Request',
-            'web'=> '/frontend/web'
-
+            /* @var \frontend\smile\components\SmileFrontendRequest */
+            'class' => 'frontend\smile\components\SmileFrontendRequest',
+            'frontendWebUrl'=> '/frontend/web',
         ],
         'urlManager' => [
+            /* @var \frontend\smile\components\SmileFrontendUrlManager */
+            'class'=>'frontend\smile\components\SmileFrontendUrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'enableStrictParsing' => true,
             'rules' => [
-                ''=>'site/main-page',
+                ''=>'site/index',
+                'news'=>'news/list',
+//                'news/one-news'=>'news/one-news',
+                '<controller:news>/<url:[\w_\/-]+>'=>'<controller>/index',
+//                '<controller>/<action>'=>'<controller>/<action>',
 //                '<controller:news>/<category:\d+>/<news:\d+/>'=>'news/one',
 //                '<controller:news>/<category:\d+/>'=>'news/index',
 //                '<controller:news>/<action:\w+/>'=>'news/index',
 //                '<controller:contacts>/<contact:\d+/>'=>'contacts/index',
-                '<controller:news/>'=>'<controller>index',
-                '<controller:news>/<id:\d+>'=>'news/one',
-                '<controller:photo/>'=>'<controller>index',
-                '<controller:partners/>'=>'<controller>index',
-                '<controller:video/>'=>'<controller>index',
-                '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-                '<translit:[\w_\/-]+>'=>'site/page',
+//                '<controller:news/>'=>'<controller>index',
+//                '<controller:news>/<id:\d+>'=>'news/one',
+//                '<controller:photo/>'=>'<controller>index',
+//                '<controller:partners/>'=>'<controller>index',
+//                '<controller:video/>'=>'<controller>index',
+//                '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+//                '<translit:[\w_\/-]+>'=>'site/page',
             ]
         ],
         'assetManager' => [

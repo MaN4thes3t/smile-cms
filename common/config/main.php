@@ -12,7 +12,7 @@ return [
         'image' => [
             /* @var \yii\image\ImageDriver */
             'class' => 'yii\image\ImageDriver',
-            'driver' => 'GD',  //GD or Imagick
+            'driver' => 'GD',
         ],
         'request'=>[
             /* @var \common\smile\components\SmileCommonRequest */
@@ -56,8 +56,7 @@ return [
         'authManager' => [
             /* @var \yii\rbac\PhpManager */
             'class' => 'yii\rbac\PhpManager',
-            'defaultRoles' => ['user','moder','admin'], //здесь прописываем роли
-            //зададим куда будут сохраняться наши файлы конфигураций RBAC
+            'defaultRoles' => ['user','moder','admin'],
             'itemFile' => '@common/components/rbac/items.php',
             'assignmentFile' => '@common/components/rbac/assignments.php',
             'ruleFile' => '@common/components/rbac/rules.php'

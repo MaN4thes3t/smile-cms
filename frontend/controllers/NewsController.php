@@ -1,25 +1,24 @@
 <?php
 namespace frontend\controllers;
-use backend\modules\news\models\News;
+
 use Yii;
-use yii\base\InvalidParamException;
-use yii\helpers\VarDumper;
-use yii\web\BadRequestHttpException;
-use app\components\Controller;
-use yii\data\Pagination;
+use frontend\smile\controllers\SmileFrontendController;
+
 /**
  * Site controller
  */
-class NewsController extends Controller
+class NewsController extends SmileFrontendController
 {
-    public $defaultAction = 'index';
+    static $TYPES = [
+        'one-news'=>'one-news',
+    ];
+
     /**
      * @inheritdoc
      */
     public function behaviors()
     {
         return [
-
         ];
     }
 
@@ -34,21 +33,23 @@ class NewsController extends Controller
             ],
         ];
     }
-    public function actionIndex(){
-        $query = News::find()->with('t')->where(['show'=>'1'])->orderBy('date DESC');
-        $countQuery = clone $query;
-        $pages = new Pagination(['totalCount' => $countQuery->count(),'defaultPageSize'=>9]);
-        $news = $query->offset($pages->offset)
-            ->limit($pages->limit)
-            ->all();
-        $this->view->params['pages'] = 'news';
-        return $this->render('index',[
-            'news'=>$news,
-            'pages'=>$pages
-        ]);
+
+    public function actionOneNews(){
+        echo 'news, actionOneNews';
     }
-    public function actionOne($id){
-        VarDumper::dump($id,6,1);
+
+    public function actionIndex($url){
+        echo 'news, action index '.$url;
+        if(in_array($url,self::$TYPES)){
+            $this->runAction(self::$TYPES[$url]);
+        }
+        return $this->render('index');
     }
+
+    public function actionList(){
+        echo 'news, action list';
+        return $this->render('list');
+    }
+
 
 }
