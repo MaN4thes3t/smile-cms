@@ -1,7 +1,1 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Àðò¸ì
- * Date: 05.04.2016
- * Time: 0:31
- */

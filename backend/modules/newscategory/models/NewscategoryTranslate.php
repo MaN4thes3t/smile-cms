@@ -4,7 +4,7 @@ namespace backend\modules\newscategory\models;
 
 use Yii;
 use backend\smile\models\SmileBackendModelTranslate;
-use dosamigos\transliterator\TransliteratorHelper;
+
 /**
  * This is the model class for table "category".
  *
@@ -35,17 +35,24 @@ class NewscategoryTranslate extends SmileBackendModelTranslate
             [['id_item'], 'required', 'on'=>'ownerUpdate'],
             [['id_item'], 'integer'],
             [['language'], 'string', 'max' => 16],
-            [['name'], 'string'],
-            [['translit'],'translitValidation','skipOnEmpty' => false],
+            [['name','seokeywords', 'seotitle', 'seodescription'], 'string'],
+            ['seotitle','default','value'=>function($model){
+                return $model->name;
+            }],
+            ['seokeywords','default','value'=>function($model){
+                $keywords = [];
+                foreach(explode(' ',$model->name) as $title){
+                    if($title && is_string($title) && strlen($title)>2){
+                        $keywords[] = mb_strtolower($title);
+                    }
+                }
+                return implode(', ', $keywords);
+            }],
+            ['seodescription','default','value'=>function($model){
+                return $model->name;
+            }],
+
         ];
-    }
-    public function translitValidation($attribute,$params){
-        $this->$attribute = trim($this->$attribute);
-        if(empty($this->$attribute)){
-            $this->$attribute = $this->name;
-        }
-        $this->$attribute = strtolower(str_replace(' ','-',$this->$attribute));
-        $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
     }
     /**
      * @inheritdoc
@@ -54,7 +61,9 @@ class NewscategoryTranslate extends SmileBackendModelTranslate
     {
         return [
             'name' => Yii::t('backend','Название'),
-            'translit' => Yii::t('backend','Транслит категории'),
+            'seotitle' => Yii::t('backend','SEO-title'),
+            'seokeywords' => Yii::t('backend','SEO-keywords'),
+            'seodescription' => Yii::t('backend','SEO-description'),
         ];
     }
 }

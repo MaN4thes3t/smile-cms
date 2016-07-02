@@ -34,7 +34,10 @@ $className = StringHelper::basename(get_class($model));
     'id' => $className.'_'.$language.'_'.'annotation'
 )); ?>
     </div>
-
+    <?= $form->field($model, 'mark')->textInput(array(
+        'name' => $className.'['.$language.'][mark]',
+        'id' => $className.'_'.$language.'_'.'mark'
+    )); ?>
     <?= $form->field($model, 'title')->textInput(array(
         'name' => $className.'['.$language.'][title]',
         'id' => $className.'_'.$language.'_'.'title'
@@ -95,8 +98,5 @@ $className = StringHelper::basename(get_class($model));
         'name' => $className.'['.$language.'][seodescription]',
         'id' => $className.'_'.$language.'_'.'seodescription'
     )); ?>
-    <?= $form->field($model, 'translit')->textInput(array(
-        'name' => $className.'['.$language.'][translit]',
-        'id' => $className.'_'.$language.'_'.'translit'
-    )); ?>
+
 

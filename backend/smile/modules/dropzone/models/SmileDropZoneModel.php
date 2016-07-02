@@ -29,7 +29,7 @@ use yii\web\UploadedFile;
 class SmileDropZoneModel extends ActiveRecord
 {
     const IMG_MAX_WIDTH = 2048;
-    const IMG_MIN_WIDTH = 156;
+    const IMG_MIN_WIDTH = 232;
     const IMG_MAX_HEIGHT = 1536;
     const IMG_MIN_HEIGHT = 156;
     const SEPARATOR = DIRECTORY_SEPARATOR;
@@ -217,8 +217,6 @@ class SmileDropZoneModel extends ActiveRecord
             $savePath = $this->rootPath.$modelPath;
             if(FileHelper::createDirectory($savePath,0777)){
                 foreach($files as $file){
-                    VarDumper::dump($file['savePathFile'],6,1);
-                    VarDumper::dump($savePath.self::SEPARATOR.$file['fileName'],6,1);
 
                     copy($file['savePathFile'], $savePath.self::SEPARATOR.$file['fileName']);
                     $model = $this->saveToDb($file['fileName'], $date);

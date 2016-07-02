@@ -19,6 +19,7 @@ use kartik\select2\Select2;
     ]); ?>
 
     <?= $form->field($model, 'show')->checkbox(); ?>
+    <?= $form->field($model, 'translit')->textInput(); ?>
     <div class="form-group">
         <?= SmileHtml::label(Yii::t('frontend','Выберите теги'))?>
         <?= Select2::widget([

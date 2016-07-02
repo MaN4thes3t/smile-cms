@@ -20,7 +20,7 @@ use yii\jui\DatePicker;
     <?= $form->field($model, 'show_in_menu')->checkbox(); ?>
     <?= $form->field($model, 'show_in_left_menu')->checkbox(); ?>
 
-
+    <?= $form->field($model, 'translit')->textInput(); ?>
     <?php foreach (Yii::$app->params['languages'] as $lang=>$info): ?>
         <?php
         $tab = [

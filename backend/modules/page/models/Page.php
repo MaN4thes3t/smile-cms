@@ -2,8 +2,8 @@
 
 namespace backend\modules\page\models;
 
-use Yii;
-
+use yii;
+use dosamigos\transliterator\TransliteratorHelper;
 use backend\smile\models\SmileBackendModel;
 
 use yii\helpers\VarDumper;
@@ -38,10 +38,28 @@ class Page extends SmileBackendModel
     public function rules()
     {
         return [
-            [['show', 'show_in_menu'], 'required'],
+            [['show'], 'required'],
+            [['order'], 'integer'],
+            [['translit'],'translitValidation','skipOnEmpty' => false],
         ];
     }
-
+    public function translitValidation($attribute,$params){
+        $this->$attribute = trim($this->$attribute);
+        if(empty($this->$attribute)){
+            foreach(Yii::$app->params['languages'] as $lang=>$info){
+                if($this->$attribute){
+                    break;
+                }
+                $this->$attribute = $this->translateModels[$lang]->title;
+            }
+        }
+        $this->$attribute = mb_strtolower(str_replace(' ','-',$this->$attribute));
+        $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
+        $duplicates = self::find()->where([$attribute=>$this->$attribute])->all();
+        if(count($duplicates)){
+            $this->$attribute .= '-'.$this->id;
+        }
+    }
     /**
      * @inheritdoc
      */
@@ -50,7 +68,8 @@ class Page extends SmileBackendModel
         return [
             'id' => Yii::t('backend','Ид'),
             'show' => Yii::t('backend','Отображать'),
-            'show_in_menu' => Yii::t('backend','Отображать в меню'),
+            'translit' => Yii::t('backend','Транслит страницы'),
+            'order' => Yii::t('backend','Сортировка'),
         ];
     }
 

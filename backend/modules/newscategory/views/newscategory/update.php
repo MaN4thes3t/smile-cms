@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $model backend\modules\newscategory\models\Newscategory */
 
 $this->title = Yii::t('backend','Редактирование категории') . ': ' . $model->t->name;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('backend','Лидеры'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('backend','Категории'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = Yii::t('backend','Редактирование');
 ?>
 <div class="newscategory-translate-update">

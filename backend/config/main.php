@@ -37,6 +37,9 @@ return [
         'tag' => [
             'class' => 'backend\modules\tag\Tag',
         ],
+        'source' => [
+            'class' => 'backend\modules\source\Source',
+        ],
         'leader' => [
             'class' => 'backend\modules\leader\Leader',
         ],

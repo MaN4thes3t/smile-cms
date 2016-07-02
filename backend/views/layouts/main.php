@@ -68,6 +68,10 @@ use yii\helpers\VarDumper;
                             'url'=>Url::toRoute(['/tag/tag'],true),
                             'controller'=>'tag'
                         ],
+                        Yii::t('backend','Источники') => [
+                            'url'=>Url::toRoute(['/source/source'],true),
+                            'controller'=>'source'
+                        ],
                         Yii::t('backend','Управление языками') => [
                             'url'=>Url::toRoute(['/language/language'],true),
                             'controller'=>'language'

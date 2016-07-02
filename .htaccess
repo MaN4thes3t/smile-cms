@@ -14,9 +14,9 @@ RewriteEngine On
 ##Allow only one user with specified username
 #require user test123
 
-RewriteCond %{REQUEST_URI} !^/backend/
-RewriteCond %{REQUEST_URI}  !\.(css|js|php|html|jpg|gif|png|ico|ttf|eot|svg|woff|woff2)$
-#RewriteRule ^(.*)([^/])$ http://%{HTTP_HOST}/$1$2/ [L,R=301] //редриект без "/" на "/"
+#RewriteCond %{REQUEST_URI} !^/backend/
+#RewriteCond %{REQUEST_URI}  !\.(css|js|php|html|jpg|gif|png|ico|ttf|eot|svg|woff|woff2)$
+#RewriteRule ^(.*)([^/])$ http://%{HTTP_HOST}/$1$2/ [L,R=301] //СЂРµРґРёСЂРµРєС‚ РІСЃРµРіРѕ РЅР° /
 
 RewriteCond %{REQUEST_URI} ^/(backend)
 

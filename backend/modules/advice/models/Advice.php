@@ -5,7 +5,7 @@ namespace backend\modules\advice\models;
 use Yii;
 
 use backend\smile\models\SmileBackendModel;
-use yii\helpers\VarDumper;
+use yii\helpers\VarDumper;use dosamigos\transliterator\TransliteratorHelper;
 /**
  * This is the model class for table "advice".
  *
@@ -37,6 +37,7 @@ class Advice extends SmileBackendModel
     {
         return [
             [['show'], 'required'],
+            [['translit'],'translitValidation','skipOnEmpty' => false],
         ];
     }
 
@@ -49,7 +50,26 @@ class Advice extends SmileBackendModel
         return [
             'id' => Yii::t('backend','Ид'),
             'show' => Yii::t('backend','Отображать'),
+            'translit' => Yii::t('backend','Транслит совета'),
         ];
+    }
+
+    public function translitValidation($attribute,$params){
+        $this->$attribute = trim($this->$attribute);
+        if(empty($this->$attribute)){
+            foreach(Yii::$app->params['languages'] as $lang=>$info){
+                if($this->$attribute){
+                    break;
+                }
+                $this->$attribute = $this->translateModels[$lang]->title;
+            }
+        }
+        $this->$attribute = mb_strtolower(str_replace(' ','-',$this->$attribute));
+        $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
+        $duplicates = self::find()->where([$attribute=>$this->$attribute])->all();
+        if(count($duplicates)){
+            $this->$attribute .= '-'.$this->id;
+        }
     }
 
     public function getTags(){

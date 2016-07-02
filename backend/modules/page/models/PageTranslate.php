@@ -4,7 +4,7 @@ namespace backend\modules\page\models;
 
 use Yii;
 use backend\smile\models\SmileBackendModelTranslate;
-use dosamigos\transliterator\TransliteratorHelper;
+
 /**
  * This is the model class for table "page_translate".
  *
@@ -83,17 +83,10 @@ class PageTranslate extends SmileBackendModelTranslate
                 }
                 return implode(', ', $keywords);
             }],
-            [['translit'],'translitValidation','skipOnEmpty' => false],
+
         ];
     }
-    public function translitValidation($attribute,$params){
-        $this->$attribute = trim($this->$attribute);
-        if(empty($this->$attribute)){
-            $this->$attribute = $this->title;
-        }
-        $this->$attribute = strtolower(str_replace(' ','-',$this->$attribute));
-        $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
-    }
+    
     /**
      * @inheritdoc
      */
@@ -105,7 +98,6 @@ class PageTranslate extends SmileBackendModelTranslate
             'seokeywords' => Yii::t('backend','SEO-keywords'),
             'seodescription' => Yii::t('backend','SEO-description'),
             'description' => Yii::t('backend','Описание'),
-            'translit' => Yii::t('backend','Транслит страницы'),
         ];
     }
 }

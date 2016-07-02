@@ -4,7 +4,7 @@ namespace backend\modules\leader\models;
 
 use Yii;
 use backend\smile\models\SmileBackendModelTranslate;
-use dosamigos\transliterator\TransliteratorHelper;
+
 /**
  * This is the model class for table "leader_translate".
  *
@@ -83,16 +83,8 @@ class LeaderTranslate extends SmileBackendModelTranslate
                 }
                 return implode(', ', $keywords);
             }],
-            [['translit'],'translitValidation','skipOnEmpty' => false],
+            
         ];
-    }
-    public function translitValidation($attribute,$params){
-        $this->$attribute = trim($this->$attribute);
-        if(empty($this->$attribute)){
-            $this->$attribute = $this->first_name.$this->last_name;
-        }
-        $this->$attribute = strtolower(str_replace(' ','-',$this->$attribute));
-        $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
     }
 
     /**

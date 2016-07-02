@@ -75,15 +75,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['1'=>Yii::t('backend','Отображать'),'0'=>Yii::t('backend','Не отображать')],
                     ['prompt'=>Yii::t('backend','Выберите'),'class'=>'form-control'])
             ],
-            [
-                'attribute'=>'show_in_menu',
-                'value'=>function($data) {
-                    return $data->show_in_menu==1?Yii::t('backend','Отображать'):Yii::t('backend','Не отображать');
-                },
-                'filter'=>SmileHtml::activeDropDownList($searchModel,'show_in_menu',
-                    ['1'=>Yii::t('backend','Отображать'),'0'=>Yii::t('backend','Не отображать')],
-                    ['prompt'=>Yii::t('backend','Выберите'),'class'=>'form-control'])
-            ],
+            'order'
 
         ],
     ]); ?>

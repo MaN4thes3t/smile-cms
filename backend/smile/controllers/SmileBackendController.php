@@ -14,6 +14,8 @@ use yii\helpers\VarDumper;
 
 class SmileBackendController extends Controller {
 
+
+    public $enableCsrfValidation = false;
     /**
      * @inheritdoc
      */

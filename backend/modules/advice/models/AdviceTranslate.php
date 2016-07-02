@@ -4,7 +4,7 @@ namespace backend\modules\advice\models;
 
 use Yii;
 use backend\smile\models\SmileBackendModelTranslate;
-use dosamigos\transliterator\TransliteratorHelper;
+
 /**
  * This is the model class for table "advice_translate".
  *
@@ -38,7 +38,6 @@ class AdviceTranslate extends SmileBackendModelTranslate
             [['language','title','short_description','description'], 'required'],
             [['id_item'], 'required', 'on'=>'ownerUpdate'],
             [['id_item'], 'integer'],
-            [['translit'],'translitValidation','skipOnEmpty' => false],
             [['language','description','title','seotitle','seokeywords','seodescription','short_description'], 'string'],
             ['seotitle','default','value'=>function($model){
                 return $model->title;
@@ -92,14 +91,6 @@ class AdviceTranslate extends SmileBackendModelTranslate
         ];
     }
 
-    public function translitValidation($attribute,$params){
-        $this->$attribute = trim($this->$attribute);
-        if(empty($this->$attribute)){
-            $this->$attribute = $this->title;
-        }
-        $this->$attribute = strtolower(str_replace(' ','-',$this->$attribute));
-        $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
-    }
 
     /**
      * @inheritdoc
@@ -110,7 +101,7 @@ class AdviceTranslate extends SmileBackendModelTranslate
             'title' => Yii::t('backend','Заголовок'),
             'seotitle' => Yii::t('backend','SEO-title'),
             'seokeywords' => Yii::t('backend','SEO-keywords'),
-            'translit' => Yii::t('backend','Транслит совета'),
+
             'seodescription' => Yii::t('backend','SEO-description'),
             'description' => Yii::t('backend','Описание'),
             'short_description' => Yii::t('backend','Короткое описание'),

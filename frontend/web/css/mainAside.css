@@ -1,0 +1,177 @@
+.firstAside {
+    position: relative;
+    color: #969cac;
+}
+
+.lang {
+    margin-bottom: 17px;
+}
+
+.lang li {
+    float: left;
+}
+
+.lang li:first-child {
+    margin-right: 5px;
+}
+
+.lang li a::before {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right: 5px;
+    content: '';
+    background-size: 100% 100%;
+}
+
+.lang li.ukr.langActive a::before {
+    background-image: url('../images/ukr.png');
+}
+
+.lang li.ukr.langActive a::before {
+    background-image: url('../images/ukr.png');
+}
+
+.lang li.ukr:hover a::before {
+    background-image: url('../images/ukr.png');
+}
+
+.lang li.ukr a::before {
+    background-image: url('../images/ukr-i.png');
+}
+
+.lang li.rus.langActive a::before {
+    background-image: url('../images/rus.png');
+}
+
+.lang li.rus:hover a::before {
+    background-image: url('../images/rus.png');
+}
+
+.lang li.rus.langActive a::before {
+    background-image: url('../images/rus.png');
+}
+
+.lang li.rus a::before {
+    background-image: url('../images/rus-i.png');
+}
+
+.helpNav {
+    margin-bottom: 50px;
+}
+
+.helpNav li {
+    margin-bottom: 19px;
+}
+
+.helpNav a {
+    position: relative;
+    padding-left: 25px;
+}
+
+.helpNav a:hover {
+    text-decoration: none;
+}
+
+.helpNav li a::before {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: '';
+    background-size: 100% 100%;
+}
+
+.helpNav li.rss a::before {
+    background-image: url('../images/rss.gif');
+}
+
+.helpNav li.rss:hover a {
+    color: #f4820f;
+}
+
+.helpNav li a:hover {
+    color: #4862aa;
+}
+
+.helpNav li.mob a::before {
+    background-image: url('../images/mob-ver.gif');
+}
+
+.helpNav li.logIn a::before {
+    background-image: url('../images/enter.gif');
+}
+
+.helpNav li.signIn a::before {
+    background-image: url('../images/signin.gif');
+}
+
+.asideNav {
+    margin-bottom: 17px;
+}
+
+.asideNav li {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-top: 1px solid #dce9ff;
+}
+
+.asideNav li:last-child {
+    border-bottom: 1px solid #dce9ff;
+}
+
+.asideNav .red {
+    color: #d93e3e;
+}
+
+.asideNav li a {
+    font-family: 'Scada', sans-serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4264ae;
+}
+
+.asideNav li a:hover {
+    text-decoration: none;
+    color: #d93e3e;
+}
+
+.asideSoc li {
+    font-size: 0;
+    float: left;
+    margin-right: 5px;
+}
+
+.asideSoc li a {
+    font-size: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: 100% 100%;
+}
+
+.asideSoc li.vk a {
+    background-image: url('../images/vk.png');
+}
+
+.asideSoc li.fb a {
+    background-image: url('../images/fb.png');
+}
+
+.asideSoc li.ok a {
+    background-image: url('../images/ok.png');
+}
+
+.asideSoc li.youtube a {
+    display: block;
+    width: 70px;
+    height: 30px;
+    margin-top: 17px;
+    background-image: url('../images/youtube.png');
+    background-position: 0;
+    background-size: 100%;
+}

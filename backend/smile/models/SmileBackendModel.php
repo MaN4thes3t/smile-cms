@@ -3,7 +3,7 @@
 namespace backend\smile\models;
 
 use backend\smile\modules\dropzone\components\ImageUploadBehavior;
-use Yii;
+use yii;
 use yii\db\ActiveRecord;
 use yii\helpers\VarDumper;
 use backend\smile\components\SmileMultilingualBehavior;

@@ -9,6 +9,7 @@ use backend\smile\models\SmileBackendModel;
 use yii\helpers\StringHelper;
 use yii\helpers\VarDumper;
 use yii\helpers\Json;
+use dosamigos\transliterator\TransliteratorHelper;
 /**
  * This is the model class for table "poll".
  *
@@ -52,7 +53,26 @@ class Poll extends SmileBackendModel
             [['show','type','my_version'], 'required'],
             [['my_version_text'], 'versionsValidation'],
             [['my_version_count'], 'double'],
+            [['translit'],'translitValidation','skipOnEmpty' => false],
         ];
+    }
+
+    public function translitValidation($attribute,$params){
+        $this->$attribute = trim($this->$attribute);
+        if(empty($this->$attribute)){
+            foreach(Yii::$app->params['languages'] as $lang=>$info){
+                if($this->$attribute){
+                    break;
+                }
+                $this->$attribute = $this->translateModels[$lang]->title;
+            }
+        }
+        $this->$attribute = mb_strtolower(str_replace(' ','-',$this->$attribute));
+        $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
+        $duplicates = self::find()->where([$attribute=>$this->$attribute])->all();
+        if(count($duplicates)){
+            $this->$attribute .= '-'.$this->id;
+        }
     }
 
     public function versionsValidation($attribute, $params){
@@ -75,6 +95,7 @@ class Poll extends SmileBackendModel
             'type' => Yii::t('backend','Тип опроса'),
             'my_version' => Yii::t('backend','Мой вариант'),
             'my_version_text' => Yii::t('backend','Варианты'),
+            'translit' => Yii::t('backend','Транслит опроса'),
         ];
     }
     public function afterSave($insert, $changedAttributes){

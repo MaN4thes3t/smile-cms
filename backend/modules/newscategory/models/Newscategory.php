@@ -8,6 +8,7 @@ use Yii;
 use backend\smile\models\SmileBackendModel;
 
 use yii\helpers\VarDumper;
+use dosamigos\transliterator\TransliteratorHelper;
 /**
  * This is the model class for table "category".
  *
@@ -41,6 +42,7 @@ class Newscategory extends SmileBackendModel
     {
         return [
             [['show','show_in_menu','show_in_left_menu'], 'required'],
+            [['translit'],'translitValidation','skipOnEmpty' => false],
         ];
     }
 
@@ -54,7 +56,25 @@ class Newscategory extends SmileBackendModel
             'show' => Yii::t('backend','Отображать'),
             'show_in_menu' => Yii::t('backend','Отображать в меню'),
             'show_in_left_menu' => Yii::t('backend','Отображать в левом меню'),
+            'translit' => Yii::t('backend','Транслит категории'),
         ];
+    }
+    public function translitValidation($attribute,$params){
+        $this->$attribute = trim($this->$attribute);
+        if(empty($this->$attribute)){
+            foreach(Yii::$app->params['languages'] as $lang=>$info){
+                if($this->$attribute){
+                    break;
+                }
+                $this->$attribute = $this->translateModels[$lang]->name;
+            }
+        }
+        $this->$attribute = mb_strtolower(str_replace(' ','-',$this->$attribute));
+        $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
+        $duplicates = self::find()->where([$attribute=>$this->$attribute])->all();
+        if(count($duplicates)){
+            $this->$attribute .= '-'.$this->id;
+        }
     }
 
     public function afterDelete(){

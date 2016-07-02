@@ -6,7 +6,7 @@ use Yii;
 use backend\smile\models\SmileBackendModelTranslate;
 use yii\helpers\VarDumper;
 use yii\helpers\StringHelper;
-use dosamigos\transliterator\TransliteratorHelper;
+
 
 /**
  * This is the model class for table "poll_translate".
@@ -42,17 +42,23 @@ class PollTranslate extends SmileBackendModelTranslate
             [['id_item'], 'required', 'on'=>'ownerUpdate'],
             [['id_item'], 'integer'],
             [['language'], 'string', 'max' => 16],
-            [['title'], 'string'],
-            [['translit'],'translitValidation','skipOnEmpty' => false],
+            [['title','seodescription','seotitle'], 'string'],
+            ['seotitle','default','value'=>function($model){
+                return $model->title;
+            }],
+            ['seokeywords','default','value'=>function($model){
+                $keywords = [];
+                foreach(explode(' ',$model->title) as $title){
+                    if($title && is_string($title) && strlen($title)>2){
+                        $keywords[] = mb_strtolower($title);
+                    }
+                }
+                return implode(', ', $keywords);
+            }],
+            ['seodescription','default','value'=>function($model){
+                return $model->title;
+            }],
         ];
-    }
-    public function translitValidation($attribute,$params){
-        $this->$attribute = trim($this->$attribute);
-        if(empty($this->$attribute)){
-            $this->$attribute = $this->title;
-        }
-        $this->$attribute = strtolower(str_replace(' ','-',$this->$attribute));
-        $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
     }
 
     /**
@@ -63,7 +69,7 @@ class PollTranslate extends SmileBackendModelTranslate
     {
         return [
             'title' => Yii::t('backend','Заголовок'),
-            'translit' => Yii::t('backend','Транслит опроса'),
+            
         ];
     }
 }

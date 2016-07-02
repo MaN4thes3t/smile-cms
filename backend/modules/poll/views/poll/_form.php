@@ -21,6 +21,7 @@ use yii\helpers\Json;
     ]); ?>
 
     <?= $form->field($model, 'show')->checkbox(); ?>
+    <?= $form->field($model, 'translit')->textInput(); ?>
     <?= $form->field($model, 'my_version')->checkbox([
         'class'=>'my_version_checkbox'
     ]); ?>

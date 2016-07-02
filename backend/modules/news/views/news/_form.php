@@ -4,14 +4,14 @@ use backend\smile\components\SmileHtml;
 use yii\widgets\ActiveForm;
 use yii\bootstrap\Tabs;
 use yii\helpers\Url;
-use yii\jui\DatePicker;
 use backend\smile\modules\dropzone\widgets\FileUploadUI;
 use backend\modules\tag\models\Tag;
+use backend\modules\source\models\Source;
 use backend\modules\newscategory\models\Newscategory;
 use yii\helpers\ArrayHelper;
 use kartik\select2\Select2;
 use kartik\color\ColorInput;
-
+use dosamigos\datetimepicker\DateTimePicker;
 /* @var $this yii\web\View */
 /* @var $model backend\modules\news\models\News */
 /* @var $form yii\widgets\ActiveForm */
@@ -57,47 +57,74 @@ use kartik\color\ColorInput;
         'name' => 'Tag',
         'value' => ArrayHelper::map($model->tags,'id_tag', 'id_tag'),
         'data' =>
-            ArrayHelper::map(Tag::find()->with('t')->all(),'id',function($tag){
+            ArrayHelper::map(Tag::find()->where(['show'=>1])->with('t')->all(),'id',function($tag){
                 return $tag->t->text;
             }),
         'options' => ['multiple' => true, 'placeholder' => Yii::t('backend','Выберите теги')]
     ]);?>
     </div>
     <div class="form-group">
+        <?= SmileHtml::label(Yii::t('frontend','Выберите источник'))?>
+        <?= Select2::widget([
+            'name' => 'Source',
+            'value' => ArrayHelper::map($model->sources,'id_source', 'id_source'),
+            'data' =>
+                ArrayHelper::map(Source::find()->where(['show'=>1])->with('t')->all(),'id',function($source){
+                    return $source->t->name;
+                }),
+            'options' => ['multiple' => false, 'placeholder' => Yii::t('backend','Выберите источник')]
+        ]);?>
+    </div>
+    <div class="form-group">
         <?= SmileHtml::label(Yii::t('backend','Дата создания'))?>
-        <?= DatePicker::widget([
+        <?php
+        if($model->create_date)
+        $model->create_date = date('d.m.Y H:i', $model->create_date);?>
+        <?= DateTimePicker::widget([
             'model' => $model,
             'attribute' => 'create_date',
             'language' => 'uk',
-            'dateFormat' => 'dd.MM.yyyy',
-            'options' =>[
-                'class'=>'form-control'
+            'template' => '{button}{input}{reset}',
+            'clientOptions' =>[
+                'autoclose' => true,
+                'class'=>'form-control',
+                'format' => 'dd.mm.yyyy HH:ii',
             ],
         ]); ?>
     </div>
 
     <div class="form-group">
         <?= SmileHtml::label(Yii::t('backend','Дата окончания'))?>
-        <?= DatePicker::widget([
+        <?php
+        if($model->end_date)
+        $model->end_date = date('d.m.Y H:i', $model->end_date);?>
+        <?= DateTimePicker::widget([
             'model' => $model,
-            'dateFormat' => 'dd.MM.yyyy',
             'attribute' => 'end_date',
             'language' => 'uk',
-            'options' =>[
-                'class'=>'form-control'
+            'template' => '{button}{input}{reset}',
+            'clientOptions' =>[
+                'autoclose' => true,
+                'class'=>'form-control',
+                'format' => 'dd.mm.yyyy HH:ii',
             ],
         ]); ?>
     </div>
     <div class="types_fields poster">
     <div class="form-group">
         <?= SmileHtml::label(Yii::t('backend','Дата события (если тип "Афиша")'))?>
-        <?= DatePicker::widget([
+        <?php
+        if($model->event_date)
+        $model->event_date = date('d.m.Y H:i', $model->event_date);?>
+        <?= DateTimePicker::widget([
             'model' => $model,
             'attribute' => 'event_date',
-            'dateFormat' => 'dd.MM.yyyy',
             'language' => 'uk',
-            'options' =>[
-                'class'=>'form-control'
+            'template' => '{button}{input}{reset}',
+            'clientOptions' =>[
+                'autoclose' => true,
+                'class'=>'form-control',
+                'format' => 'dd.mm.yyyy HH:ii',
             ],
         ]); ?>
     </div>
@@ -124,7 +151,7 @@ use kartik\color\ColorInput;
         ?>
     </div>
     <?= $form->field($model, 'show')->checkbox(); ?>
-
+    <?= $form->field($model, 'translit')->textInput(); ?>
     <?php foreach (Yii::$app->params['languages'] as $lang=>$info): ?>
         <?php
         $tab = [

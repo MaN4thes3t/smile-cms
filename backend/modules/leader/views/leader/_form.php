@@ -31,7 +31,7 @@ use backend\smile\modules\dropzone\widgets\FileUploadUI;
     </div>
 
     <?= $form->field($model, 'show')->checkbox(); ?>
-
+    <?= $form->field($model, 'translit')->textInput(); ?>
 
     <?php foreach (Yii::$app->params['languages'] as $lang=>$info): ?>
         <?php

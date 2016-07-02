@@ -76,9 +76,6 @@ $className = StringHelper::basename(get_class($model));
         'name' => $className.'['.$language.'][seodescription]',
         'id' => $className.'_'.$language.'_'.'seodescription'
     )); ?>
-    <?= $form->field($model, 'translit')->textInput(array(
-        'name' => $className.'['.$language.'][translit]',
-        'id' => $className.'_'.$language.'_'.'translit'
-    )); ?>
+
 
 

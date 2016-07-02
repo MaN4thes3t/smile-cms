@@ -24,6 +24,18 @@ $className = StringHelper::basename(get_class($model));
         'name' => $className.'['.$language.'][title]',
         'id' => $className.'_'.$language.'_'.'title'
     )); ?>
+    <?= $form->field($model, 'seotitle')->textInput(array(
+        'name' => $className.'['.$language.'][seotitle]',
+        'id' => $className.'_'.$language.'_'.'seotitle'
+    )); ?>
+    <?= $form->field($model, 'seokeywords')->textarea(array(
+        'name' => $className.'['.$language.'][seokeywords]',
+        'id' => $className.'_'.$language.'_'.'seokeywords'
+    )); ?>
+    <?= $form->field($model, 'seodescription')->textarea(array(
+        'name' => $className.'['.$language.'][seodescription]',
+        'id' => $className.'_'.$language.'_'.'seodescription'
+    )); ?>
 <div class="answers_container_main">
     <div class="answers_container">
         <?php
@@ -71,10 +83,7 @@ $className = StringHelper::basename(get_class($model));
         ])?>
     </div>
 </div>
-<?= $form->field($model, 'translit')->textInput(array(
-    'name' => $className.'['.$language.'][translit]',
-    'id' => $className.'_'.$language.'_'.'translit'
-)); ?>
+
 
 
 

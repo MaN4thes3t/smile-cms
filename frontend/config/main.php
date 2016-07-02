@@ -41,21 +41,8 @@ return [
             'enableStrictParsing' => true,
             'rules' => [
                 ''=>'site/index',
-                'news'=>'news/list',
-//                'news/one-news'=>'news/one-news',
-                '<controller:news>/<url:[\w_\/-]+>'=>'<controller>/index',
-//                '<controller>/<action>'=>'<controller>/<action>',
-//                '<controller:news>/<category:\d+>/<news:\d+/>'=>'news/one',
-//                '<controller:news>/<category:\d+/>'=>'news/index',
-//                '<controller:news>/<action:\w+/>'=>'news/index',
-//                '<controller:contacts>/<contact:\d+/>'=>'contacts/index',
-//                '<controller:news/>'=>'<controller>index',
-//                '<controller:news>/<id:\d+>'=>'news/one',
-//                '<controller:photo/>'=>'<controller>index',
-//                '<controller:partners/>'=>'<controller>index',
-//                '<controller:video/>'=>'<controller>index',
-//                '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-//                '<translit:[\w_\/-]+>'=>'site/page',
+                '<controller:[\w\d\-_]+>/<url:[\w\d_\/\-]+>'=>'<controller>/one',
+                '<controller:[\w\d\-_]+>'=>'<controller>/index',
             ]
         ],
         'assetManager' => [

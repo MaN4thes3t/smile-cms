@@ -7,7 +7,7 @@ use Yii;
 use backend\smile\models\SmileBackendModelTranslate;
 use yii\helpers\StringHelper;
 use yii\helpers\VarDumper;
-use dosamigos\transliterator\TransliteratorHelper;
+
 
 
 /**
@@ -47,8 +47,7 @@ class NewsTranslate extends SmileBackendModelTranslate
             [['id_item'], 'integer'],
             [['language','description','title','short_description','seotitle',
             'seokeywords','annotation','first_name','second_name',
-            'seodescription'], 'string'],
-            [['translit'],'translitValidation','skipOnEmpty' => false],
+            'seodescription', 'mark'], 'string'],
             ['seotitle','default','value'=>function($model){
                 return $model->title;
             }],
@@ -109,14 +108,6 @@ class NewsTranslate extends SmileBackendModelTranslate
             }],
         ];
     }
-    public function translitValidation($attribute,$params){
-        $this->$attribute = trim($this->$attribute);
-        if(empty($this->$attribute)){
-            $this->$attribute = $this->title;
-        }
-        $this->$attribute = strtolower(str_replace(' ','-',$this->$attribute));
-        $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
-    }
     /**
      * @inheritdoc
      */
@@ -129,7 +120,7 @@ class NewsTranslate extends SmileBackendModelTranslate
             'seokeywords' => Yii::t('backend','SEO-keywords'),
             'seodescription' => Yii::t('backend','SEO-description'),
             'description' => Yii::t('backend','Описание'),
-            'translit' => Yii::t('backend','Транслит новости'),
+            'mark' => Yii::t('backend','Метка новости'),
             'annotation' => Yii::t('backend','Анотация (если тип "Точка зрения")'),
             'first_name' => Yii::t('backend','Имя (если тип "Точка зрения" или "Слово общественности" или "Интервью")'),
             'second_name' => Yii::t('backend','Фамилия (если тип "Точка зрения" или "Слово общественности" или "Интервью")'),

@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul,
+figure,
+p,
+h1,
+h2,
+h3,
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+input,
+button {
+    outline: none;
+}
+
+body {
+    font-family: 'Scada', sans-serif;
+    font-size: 13px;
+}
+
+.clear-b::before {
+    display: table;
+    clear: both;
+    content: '';
+}
+.clear::after {
+    display: table;
+    clear: both;
+    content: '';
+}
+
+.mainWrapper {
+    width: 100%;
+    max-width: 1260px;
+    min-width: 1260px;
+    margin: 0 auto;
+}
+
+.mainAside {
+    position: relative;
+    float: left;
+    width: 10%;
+    min-width: 130px;
+    max-width: 130px;
+    margin-top: 20px;
+}
+
+.mainBlock {
+    position: relative;
+    float: left;
+    width: 90%;
+    max-width: 1130px;
+    padding-top: 20px;
+    padding-right: .8%;
+    padding-left: .8%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+
+.multbg-left-to-rigth {
+    border-left: 1px solid #b5d0ff;
+    background-image: linear-gradient(to right, #b5d0ff, #f4f8ff), linear-gradient(to right, #b5d0ff, #f4f8ff);
+    background-size: 100% 1px;
+    background-position: top left, bottom left;
+    background-repeat: no-repeat;
+}
+/* font-family: 'Noto sans', sans-serif; */
+
+
+/* font-family: 'Scada', sans-serif; */

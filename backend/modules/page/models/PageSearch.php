@@ -20,7 +20,6 @@ class PageSearch extends Page
     {
         return [
             [['show'],'integer'],
-            [['show_in_menu'],'integer'],
             [['title'],'string'],
         ];
     }
@@ -60,10 +59,6 @@ class PageSearch extends Page
 
         if($this->show != ''){
             $query->andWhere([''.Page::tableName().'.'.'show' => $this->show]);
-        }
-
-        if($this->show_in_menu != ''){
-            $query->andWhere([''.Page::tableName().'.'.'show_in_menu' => $this->show_in_menu]);
         }
         $query->joinWith(['t'=>function($q){
             return $q->from(PageTranslate::tableName().' as translate');

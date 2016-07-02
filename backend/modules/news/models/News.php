@@ -2,12 +2,14 @@
 
 namespace backend\modules\news\models;
 
-use Yii;
+use backend\modules\news\models\NewsImage;
+use yii;
 
 use backend\smile\models\SmileBackendModel;
 use backend\smile\modules\dropzone\models\SmileDropZoneModel;
 use yii\helpers\StringHelper;
 use yii\helpers\VarDumper;
+use dosamigos\transliterator\TransliteratorHelper;
 /**
  * This is the model class for table "news".
  *
@@ -51,7 +53,7 @@ class News extends SmileBackendModel
             [['create_date','end_date','color','event_date','title_color'], 'string'],
             [['photo'], 'file', 'extensions' => 'gif, jpg, png'],
             ['create_date','default','value'=>function($value){
-                return date('m/d/Y');
+                return date('m/d/Y H:i');
             }],
             ['end_date','default','value'=>function($value){
                 return date('m/d/Y',strtotime('+1 year'));
@@ -61,14 +63,33 @@ class News extends SmileBackendModel
             ['user_id','default','value'=>function($model){
                 return Yii::$app->user->id;
             }],
+            [['translit'],'translitValidation','skipOnEmpty' => false],
         ];
+    }
+
+
+    public function translitValidation($attribute,$params){
+        $this->$attribute = trim($this->$attribute);
+        if(empty($this->$attribute)){
+            foreach(Yii::$app->params['languages'] as $lang=>$info){
+                if($this->$attribute){
+                    break;
+                }
+                $this->$attribute = $this->translateModels[$lang]->title;
+            }
+        }
+        $this->$attribute = mb_strtolower(str_replace(' ','-',$this->$attribute));
+        $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
+        $duplicates = self::find()->where([$attribute=>$this->$attribute])->all();
+        if(count($duplicates)){
+            $this->$attribute .= '-'.$this->id;
+        }
     }
 
     public function dateValidation($attribute, $params){
         if ($this->$attribute) {
             if(is_string($this->$attribute)){
                 $this->$attribute = strtotime($this->$attribute);
-
             }else{
                 $this->addError($attribute, Yii::t('backend','Введите корректную дату'));
             }
@@ -83,8 +104,17 @@ class News extends SmileBackendModel
         return $this->hasMany(Tag::className(), ['id_news' => 'id'])->joinWith('tag')->indexBy('id_tag');
     }
 
+    public function getSources(){
+        return $this->hasMany(Source::className(), ['id_news' => 'id'])->joinWith('source')->indexBy('id_source');
+    }
+
     public function getTypes(){
         return $this->hasMany(Type::className(), ['id_news' => 'id'])->indexBy('type_code');
+    }
+
+    public function getImages()
+    {
+        return $this->hasMany(NewsImage::className(), [$this->multilingualKey => $this->modelPrimaryKeyAttribute])->orderBy('order')->indexBy('id');
     }
 
     /**
@@ -104,6 +134,7 @@ class News extends SmileBackendModel
             'views' => Yii::t('backend','Просмотры'),
             'comments' => Yii::t('backend','Комментарии'),
             'user_id' => Yii::t('backend','Автор'),
+            'translit' => Yii::t('backend','Транслит новости'),
         ];
     }
 
@@ -118,6 +149,15 @@ class News extends SmileBackendModel
                 $model->id_news = $this->id;
                 $model->save();
             }
+        }
+        Source::deleteAll(['id_news'=>$this->id]);
+        $source = !empty(Yii::$app->request->post()['Source'])?
+            Yii::$app->request->post()['Source']:[];
+        if($source){
+            $model = new Source();
+            $model->id_source = $source;
+            $model->id_news = $this->id;
+            $model->save();
         }
         Category::deleteAll(['id_news'=>$this->id]);
         $categories = !empty(Yii::$app->request->post()['Category'])?
@@ -146,6 +186,7 @@ class News extends SmileBackendModel
 
     public function afterDelete(){
         Tag::deleteAll(['id_news'=>$this->id]);
+        Source::deleteAll(['id_news'=>$this->id]);
         Category::deleteAll(['id_news'=>$this->id]);
         Type::deleteAll(['id_news'=>$this->id]);
         if($this->photo){
