@@ -51,4 +51,8 @@ class Category extends SmileBackendModel
         return $this->hasOne(\backend\modules\newscategory\models\Newscategory::className(), ['id' => 'id_category'])->with('t');
     }
 
+    public function getNews(){
+        return $this->hasMany(News::className(), ['id' => 'id_news'])->with(['t'])->indexBy('id');
+    }
+
 }

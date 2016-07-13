@@ -48,7 +48,7 @@ window.onload = function () {
                 }
                 target.style.borderBottom = "3px solid #d62424";
             } else {
-                sControl.children[item].style.borderBottom = "0px solid #d62424";
+                sControl.children[item].style.borderBottom = "3px solid transparent";
             }
         }
     });

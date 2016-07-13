@@ -15,10 +15,16 @@ if($news){
             <?php foreach($news as $one){
                 ?>
                 <div>
-                    <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/photo-news/'.$one['translit'])?>"
+                    <a <?php echo !$one['images']?'class="no-image"':''?> href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/photo-news/'.$one['translit'])?>"
                        title="<?php echo $one['t']['title']?>" class="imgWrap">
-                        <img width="227px" height="151px"
-                             src="<?php echo ImageHelper::buildImgPathThumbnail(current($one['images']))?>"
+                        <?php
+                        if($one['images']){
+                            $path = ImageHelper::buildImgPathThumbnail(current($one['images']));
+                        }else{
+                            $path = Yii::$app->params['no_image_small'];
+                        }
+                        ?>
+                        <img src="<?php echo $path?>"
                              alt="<?php echo $one['t']['title']?>">
                     </a>
                     <p class="videoCaption">

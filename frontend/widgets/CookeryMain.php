@@ -9,19 +9,17 @@ use yii;
 use yii\base\Widget;
 use yii\helpers\ArrayHelper;
 
-class ZhitomirTodayMain extends Widget {
+class CookeryMain extends Widget {
 
     public $news;
-
-    public $category;
 
     public function init()
     {
         $this->news = News::find()
-            ->joinWith(['t', 'images', 'categories', 'source'])
+            ->joinWith(['t', 'images', 'types'])
             ->andWhere([
                 '`news`.`show`' => 1,
-//                'id_category' => 9,
+                '`type_code`' => 'cookery',
             ])
             ->andWhere('`news_translate`.`title` != ""')
             ->andWhere('`create_date` < '.time())
@@ -29,16 +27,13 @@ class ZhitomirTodayMain extends Widget {
             ->distinct()
             ->orderBy('create_date DESC')
             ->asArray()
-            ->limit(15)
             ->all();
-        $this->category = Newscategory::findOne(9);
     }
 
     public function run()
     {
-        return $this->render('zhitomirTodayMain', [
+        return $this->render('cookeryMain', [
             'news'=>$this->news,
-            'category'=>$this->category,
         ]);
     }
 }

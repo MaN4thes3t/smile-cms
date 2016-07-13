@@ -11,10 +11,16 @@ if($news){
                     ?>
                     <div class="main">
                         <div class="afishaImgWrap">
-                            <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/poster/'.$one['translit'])?>"
+                            <a <?php echo !$one['images']?'class="no-image"':''?> href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/poster/'.$one['translit'])?>"
                                title="<?php echo $one['t']['title']?>">
-                                <img src="<?php echo ImageHelper::buildImgPathThumbnail(current($one['images']))?>"
-                                     alt="<?php echo $one['t']['title']?>">
+                                <?php
+                                if($one['images']){
+                                    $path = ImageHelper::buildImgPathBig(current($one['images']));
+                                }else{
+                                    $path = Yii::$app->params['no_image_big'];
+                                }
+                                ?>
+                                <img src="<?php echo $path?>" alt="<?php echo $one['t']['title']?>">
                             </a>
                         </div>
                         <div class="afishaDesc">
@@ -58,8 +64,15 @@ if($news){
                     ?>
                     <figure class="clear">
                         <div class="moreNewsImgWrap">
-                            <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/poster/'.$one['translit'])?>" title="<?php echo $one['t']['title']?>">
-                                <img src="<?php echo ImageHelper::buildImgPathThumbnail(current($one['images']))?>"
+                            <a <?php echo !$one['images']?'class="no-image"':''?> href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/poster/'.$one['translit'])?>" title="<?php echo $one['t']['title']?>">
+                                <?php
+                                if($one['images']){
+                                    $path = ImageHelper::buildImgPathThumbnail(current($one['images']));
+                                }else{
+                                    $path = Yii::$app->params['no_image_small'];
+                                }
+                                ?>
+                                <img src="<?php echo $path?>"
                                      alt="<?php echo $one['t']['title']?>">
                             </a>
                         </div>

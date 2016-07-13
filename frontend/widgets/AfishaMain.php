@@ -22,7 +22,7 @@ class AfishaMain extends Widget {
             ])
             ->andWhere('`create_date` < '.time())
             ->andWhere('`end_date` > '.time())
-            ->orderBy('create_date DESC')
+            ->orderBy('event_date DESC')
             ->limit(4)
             ->distinct()
             ->asArray()

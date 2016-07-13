@@ -11,16 +11,21 @@ if($news){
                     ?>
                     <li class="sliderItem">
                         <div class="sliderItemWrap">
-                            <a title="<?echo $one['t']['title']?>" href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/news-one/'.$one['translit'])?>">
-                                <img src="<?php echo ImageHelper::buildImgPathBig(current($one['images']))?>" alt="<?echo $one['t']['title']?>">
+                            <a <?php if(!$one['images']){?>class="no-image"<?php }?> title="<?echo $one['t']['title']?>" href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/news-one/'.$one['translit'])?>">
+                                <?php
+                                if($one['images']){
+                                    $path = ImageHelper::buildImgPathBig(current($one['images']));
+                                }else{
+                                    $path = Yii::$app->params['no_image_big'];
+                                }
+                                ?>
+                                <img src="<?php echo $path?>" alt="<?echo $one['t']['title']?>">
                             </a>
                             <h2>
                                 <a title="<?php echo Yii::t('frontend', 'NEWS ONE')?>" href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/news-one/')?>"><?php echo Yii::t('frontend', 'NEWS ONE')?></a>
                             </h2>
                             <time>
                                 <?php
-//                                $create_date = date('Y-m-d',$one['create_date']);
-//                                $today = date('Y-m-d');
                                 $is_today =  date('Y-m-d',$one['create_date']) == date('Y-m-d');
                                 $is_yesterday = date('Y-m-d',$one['create_date']) == date('Y-m-d', strtotime('-1 day'));
                                 $yesterday_date = $is_yesterday?Yii::t('frontend','ВЧЕРА'):date('d.m.y',$one['create_date']);
@@ -30,9 +35,15 @@ if($news){
                             <p>
                                 <a title="<?echo $one['t']['title']?>" href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/news-one/'.$one['translit'])?>"><?echo $one['t']['title']?></a>
                             </p>
-<!--                                    <span>-->
-<!--                                        <a href="#">М.Саакашвілі</a>-->
-<!--                                    </span>-->
+                            <?php
+                            if($one['t']['mark']){
+                                ?>
+                                    <span>
+                                        <?php echo $one['t']['mark']?>
+                                    </span>
+                                <?php
+                            }
+                            ?>
                         </div>
                     </li>
                     <?php
@@ -42,9 +53,14 @@ if($news){
         </div>
         <ul class="sliderControls">
             <?php foreach($news as $one){
+                if($one['images']){
+                    $path = ImageHelper::buildImgPathThumbnail(current($one['images']));
+                }else{
+                    $path = Yii::$app->params['no_image_small'];
+                }
                 ?>
-                <li>
-                    <img src="<?php echo ImageHelper::buildImgPathThumbnail(current($one['images']))?>" alt="<?echo $one['t']['title']?>">
+                <li <?php if(!$one['images']){?>class="no-image"<?php }?>>
+                    <img src="<?php echo $path?>" alt="<?echo $one['t']['title']?>">
                 </li>
                 <?php
             }?>

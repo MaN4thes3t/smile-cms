@@ -15,5 +15,6 @@ $config = yii\helpers\ArrayHelper::merge(
 //\yii\helpers\VarDumper::dump($config,6,1);
 //die();
 //use app\components;
+date_default_timezone_set('Europe/Kiev');
 $application = new yii\web\Application($config);
 $application->run();

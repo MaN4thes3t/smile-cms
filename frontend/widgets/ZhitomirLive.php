@@ -2,43 +2,36 @@
 
 namespace frontend\widgets;
 
-use backend\modules\newscategory\models\Newscategory;
 use backend\modules\news\models\News;
 use backend\modules\page\models\Page;
 use yii;
 use yii\base\Widget;
 use yii\helpers\ArrayHelper;
 
-class ZhitomirTodayMain extends Widget {
+class ZhitomirLive extends Widget {
 
     public $news;
-
-    public $category;
 
     public function init()
     {
         $this->news = News::find()
-            ->joinWith(['t', 'images', 'categories', 'source'])
+            ->joinWith(['t', 'images', 'types'])
             ->andWhere([
                 '`news`.`show`' => 1,
-//                'id_category' => 9,
+                '`type_code`' => 'zhitomir_live',
             ])
-            ->andWhere('`news_translate`.`title` != ""')
             ->andWhere('`create_date` < '.time())
             ->andWhere('`end_date` > '.time())
             ->distinct()
             ->orderBy('create_date DESC')
             ->asArray()
-            ->limit(15)
-            ->all();
-        $this->category = Newscategory::findOne(9);
+            ->one();
     }
 
     public function run()
     {
-        return $this->render('zhitomirTodayMain', [
+        return $this->render('zhitomirLive', [
             'news'=>$this->news,
-            'category'=>$this->category,
         ]);
     }
 }

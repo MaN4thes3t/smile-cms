@@ -67,7 +67,7 @@ use dosamigos\datetimepicker\DateTimePicker;
         <?= SmileHtml::label(Yii::t('frontend','Выберите источник'))?>
         <?= Select2::widget([
             'name' => 'Source',
-            'value' => ArrayHelper::map($model->sources,'id_source', 'id_source'),
+            'value' => $model->source->id,
             'data' =>
                 ArrayHelper::map(Source::find()->where(['show'=>1])->with('t')->all(),'id',function($source){
                     return $source->t->name;

@@ -17,7 +17,14 @@ if($news){
                         <div class="blogImgWrapper">
                             <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/focus-of-the-week/'.$one['translit'])?>"
                                title="<?php echo $one['t']['title']?>">
-                                <img src="<?php echo ImageHelper::buildImgPathThumbnail(current($one['images']))?>" alt="<?php echo $one['t']['title']?>">
+                                <?php
+                                if($one['images']){
+                                    $path = ImageHelper::buildImgPathThumbnail(current($one['images']));
+                                }else{
+                                    $path = Yii::$app->params['no_image_small'];
+                                }
+                                ?>
+                                <img src="<?php echo $path?>" alt="<?php echo $one['t']['title']?>">
                             </a>
                         </div>
                         <figcaption>

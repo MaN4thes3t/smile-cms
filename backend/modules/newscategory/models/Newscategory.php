@@ -71,10 +71,15 @@ class Newscategory extends SmileBackendModel
         }
         $this->$attribute = mb_strtolower(str_replace(' ','-',$this->$attribute));
         $this->$attribute = TransliteratorHelper::process($this->$attribute,'-','en');
-        $duplicates = self::find()->where([$attribute=>$this->$attribute])->all();
+        if($this->id){             $duplicates = self::find()->andWhere([$attribute=>$this->$attribute])->andWhere('id != '.$this->id)->all();         }
         if(count($duplicates)){
             $this->$attribute .= '-'.$this->id;
         }
+    }
+
+    public function getNewsCategory(){
+        return $this->hasMany(Category::className(), ['id_category' => $this->modelPrimaryKeyAttribute])
+            ->joinWith(['news']);
     }
 
     public function afterDelete(){

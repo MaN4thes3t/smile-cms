@@ -15,9 +15,17 @@ if($news){
                 ?>
                 <div>
                     <div class="interviewImgWrapper">
-                        <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/interview/'.$one['translit'])?>"
+                        <a <?php echo !$one['images']?'class="no-image"':''?>
+                            href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/interview/'.$one['translit'])?>"
                            title="<?php echo $one['t']['title']?>">
-                            <img src="<?php echo ImageHelper::buildImgPathBig(current($one['images']))?>"
+                            <?php
+                            if($one['images']){
+                                $path = ImageHelper::buildImgPathBig(current($one['images']));
+                            }else{
+                                $path = Yii::$app->params['no_image_big'];
+                            }
+                            ?>
+                            <img src="<?php echo $path?>"
                                  alt="<?php echo $one['t']['title']?>">
                         </a>
                     </div>

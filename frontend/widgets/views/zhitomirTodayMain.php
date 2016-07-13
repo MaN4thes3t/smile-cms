@@ -13,115 +13,61 @@ if($news && $category){
                 </a>
             </h2>
         </div>
-        <?php foreach($news as $one){
+        <?php foreach($news as $key => $one){
+            $today = date('Y-m-d');
+            $is_today =  date('Y-m-d',$one['create_date']) == $today;
+            $is_yesterday = date('Y-m-d',$one['create_date']) == date('Y-m-d', strtotime('-1 day'));
             ?>
-
+            <?php
+            if(isset($news[$key-1])){
+                if(!$is_today
+                    && round($news[$key-1]['create_date']/(60*60*24)-$one['create_date']/(60*60*24)) >= 1
+                ){
+                    ?>
+                    <section class="olderNews">
+                    <h3><?php if($is_yesterday){echo Yii::t('frontend', 'Вчора');}else{echo date('d.m.y', $one['create_date']);}?></h3>
+                    <?php
+                }
+            }
+            ?>
+            <section class="zhitomirToday-item clear">
+                <?php if($is_today){
+                    ?>
+                    <time datetime="<?php echo date('H:i',$one['create_date'])?>"><?php echo date('H:i',$one['create_date'])?></time>
+                    <?php
+                }
+                ?>
+                <div class="zhitomirToday-wrapContent">
+                    <p>
+                        <a href="#"
+                           title="<?php echo $one['t']['title']?>">
+                            <?php echo $one['t']['title']?>
+                        </a>
+                        <?php if($one['sources']){
+                           ?>
+                            <a href="<?php echo $one['sources']['source']['link']?>"
+                               title="<?php echo $one['sources']['source']['t']['name']?>"
+                               class="zhitomirToday-magazine">
+                                <?php echo $one['sources']['source']['t']['name']?>
+                            </a>
+                        <?php
+                        }?>
+                    </p>
+                </div>
+            </section>
+            <?php
+        if(isset($news[$key-1])){
+            if(!$is_today
+                && date('d', date('Y-m-d',$news[$key-1]['create_date'])) - date('d', date('Y-m-d',$one['create_date']))
+            ) {
+                ?>
+                </section>
+                <?php
+            }
+                }
+                ?>
             <?php
         }?>
-        <section class="zhitomirToday-item clear">
-            <time datetime="08:15">08:15</time>
-            <div class="zhitomirToday-wrapContent">
-                <p><a href="#" title="">Янукович взявся призначати суддів на Житомирщині</a><a href="#" class="zhitomirToday-magazine">Рупор Житомира</a></p>
-            </div>
-        </section>
-        <section class="zhitomirToday-item clear">
-            <time datetime="08:15">09:35</time>
-            <div class="zhitomirToday-wrapContent">
-                <p><a href="#" title="">Запрошує житомирську молодь у гідропарк на КВЕСТ Прояви</a><a href="#" class="zhitomirToday-magazine">Жирнал житомира</a></p>
-            </div>
-        </section>
-        <section class="zhitomirToday-item clear">
-            <time datetime="08:15">10:15</time>
-            <div class="zhitomirToday-wrapContent">
-                <p><a href="#" title="">Янукович взявся призначати суддів на Житомирщині</a><a href="#" class="zhitomirToday-magazine">Рупор Житомира</a></p>
-            </div>
-        </section>
-        <section class="zhitomirToday-item clear">
-            <time datetime="08:15">10:35</time>
-            <div class="zhitomirToday-wrapContent">
-                <p><a href="#" title="">У Житомирі міліція затримала зухвалого грабіжника просто на</a><a href="#" class="zhitomirToday-magazine">Жирнал житомира</a></p>
-            </div>
-        </section>
-        <section class="zhitomirToday-item clear">
-            <time datetime="08:15">10:15</time>
-            <div class="zhitomirToday-wrapContent">
-                <p><a href="#" title="">Власників житомирських магазинів ресторан зобов'яжуть</a><a href="#" class="zhitomirToday-magazine">Рупор Житомира</a></p>
-            </div>
-        </section>
-        <section class="zhitomirToday-item clear">
-            <time datetime="08:15">10:35</time>
-            <div class="zhitomirToday-wrapContent">
-                <p><a href="#" title="">Янукович взявся призначати суддів на Житомирщині</a><a href="#" class="zhitomirToday-magazine">Жирнал житомира</a></p>
-            </div>
-        </section>
-        <section class="zhitomirToday-item clear">
-            <time datetime="08:15">10:15</time>
-            <div class="zhitomirToday-wrapContent">
-                <p><a href="#" title="">Запрошує житомирську молодь у гідропарк на КВЕСТ</a><a href="#" class="zhitomirToday-magazine">Рупор Житомира</a></p>
-            </div>
-        </section>
-        <section class="zhitomirToday-item clear">
-            <time datetime="08:15">10:35</time>
-            <div class="zhitomirToday-wrapContent">
-                <p><a href="#" title="">Янукович взявся призначати суддів на Житомирщині</a><a href="#" class="zhitomirToday-magazine">Жирнал житомира</a></p>
-            </div>
-        </section>
-        <section class="olderNews">
-            <h3>Вчора</h3>
-            <section class="zhitomirToday-item clear">
-                <div class="zhitomirToday-wrapContent">
-                    <p><a href="#" title="">Янукович взявся призначати суддів на Житомирщині</a><a href="#" class="zhitomirToday-magazine">Рупор Житомира</a></p>
-                </div>
-            </section>
-            <section class="zhitomirToday-item clear">
-                <div class="zhitomirToday-wrapContent">
-                    <p><a href="#" title="">У Житомирі міліція затримала зухвалого грабіжника просто на</a><a href="#" class="zhitomirToday-magazine">Жирнал житомира</a></p>
-                </div>
-            </section>
-            <section class="zhitomirToday-item clear">
-                <div class="zhitomirToday-wrapContent">
-                    <p><a href="#" title="">Янукович взявся призначати суддів на Житомирщині</a><a href="#" class="zhitomirToday-magazine">Рупор Житомира</a></p>
-                </div>
-            </section>
-            <section class="zhitomirToday-item clear">
-                <div class="zhitomirToday-wrapContent">
-                    <p><a href="#" title="">У Житомирі міліція затримала зухвалого грабіжника просто на</a><a href="#" class="zhitomirToday-magazine">Жирнал житомира</a></p>
-                </div>
-            </section>
-        </section>
-        <section class="olderNews">
-            <h3>11.08.16</h3>
-            <section class="zhitomirToday-item clear">
-                <div class="zhitomirToday-wrapContent">
-                    <p><a href="#" title="">Янукович взявся призначати суддів на Житомирщині</a><a href="#" class="zhitomirToday-magazine">Рупор Житомира</a></p>
-                </div>
-            </section>
-            <section class="zhitomirToday-item clear">
-                <div class="zhitomirToday-wrapContent">
-                    <p><a href="#" title="">У Житомирі міліція затримала зухвалого грабіжника просто на</a><a href="#" class="zhitomirToday-magazine">Жирнал житомира</a></p>
-                </div>
-            </section>
-            <section class="zhitomirToday-item clear">
-                <div class="zhitomirToday-wrapContent">
-                    <p><a href="#" title="">Янукович взявся призначати суддів на Житомирщині</a><a href="#" class="zhitomirToday-magazine">Рупор Житомира</a></p>
-                </div>
-            </section>
-            <section class="zhitomirToday-item clear">
-                <div class="zhitomirToday-wrapContent">
-                    <p><a href="#" title="">У Житомирі міліція затримала зухвалого грабіжника просто на</a><a href="#" class="zhitomirToday-magazine">Жирнал житомира</a></p>
-                </div>
-            </section>
-            <section class="zhitomirToday-item clear">
-                <div class="zhitomirToday-wrapContent">
-                    <p><a href="#" title="">Янукович взявся призначати суддів на Житомирщині</a><a href="#" class="zhitomirToday-magazine">Рупор Житомира</a></p>
-                </div>
-            </section>
-            <section class="zhitomirToday-item clear">
-                <div class="zhitomirToday-wrapContent">
-                    <p><a href="#" title="">У Житомирі міліція затримала зухвалого грабіжника просто на</a><a href="#" class="zhitomirToday-magazine">Жирнал житомира</a></p>
-                </div>
-            </section>
-        </section>
         <div class="zhitomirToday-pages">
             <span>Сторінки:</span>
             <ul class="">
