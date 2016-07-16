@@ -17,12 +17,28 @@ class AppAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
+
     public $css = [
+        '/css/normalize.css',
+        '/css/owl.carousel.css',
+        '/css/main.css',
+        '/css/mainAside.css',
+        '/css/header.css',
+        '/css/content.css',
     ];
+
     public $js = [
+        '/js/jquery-2.2.0.min.js',
+        '/js/owl.carousel.min.js',
+        '/js/jquery.dotdotdot.min.js',
+        '/js/main.js'
     ];
+    public $jsOptions = [
+        'position'=>\yii\web\View::POS_HEAD,
+    ];
+
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+//        'yii\web\YiiAsset',
+//        'yii\bootstrap\BootstrapAsset',
     ];
 }

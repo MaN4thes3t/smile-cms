@@ -23,14 +23,14 @@ if($news){
                ?>
                 <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/the-voice-of-community/'.$news['translit'])?>"
                    title="<?php echo $news['t']['title']?>">
-                    <img src="<?php echo '/uploads/NewsPhoto/'.$news['id'].'/'.$news['photo']?>" alt="<?php echo $news['t']['first_name']?> <?php echo $news['t']['second_name']?>">
+                    <img src="<?php echo '/uploads/NewsPhoto/'.$news['id'].'/'.$news['photo']?>" alt="<?php echo $news['t']['first_name'].' '.$news['t']['second_name']?>">
                 </a>
                 <?php
             }?>
 
             <figcaption>
                 <p>
-                    <?php echo $news['t']['first_name']?> <br> <?php echo $news['t']['second_name']?>
+                    <?php echo $news['t']['first_name']?><br><?php echo $news['t']['second_name']?>
                 </p>
             </figcaption>
         </figure>

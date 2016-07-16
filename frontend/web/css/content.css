@@ -77,6 +77,7 @@
     font-family: 'Scada', sans-serif;
     position: relative;
     color: #7388bf;
+    display: inline;
 }
 
 .zhitomirToday .zhitomirToday-magazine:hover {
@@ -265,7 +266,11 @@ div.sliderItemWrap {
     font-family: "Noto sans", sans-serif;
     font-style: italic;
     font-size: 1.4em;
+    height: 20px;
     line-height: 1em;
+    overflow: hidden;
+    max-width: 95%;
+    /* display: inline-block; */
 }
 .sliderControls {
     position: relative;
@@ -352,10 +357,13 @@ div.sliderItemWrap {
     margin-top: 10px;
     color: #2954a7;
     position: relative;
+    max-width:135px;
 }
 
 .todayWord figcaption p {
     position: relative;
+    display: block;
+    margin-bottom: 0;
 }
 
 .todayWord figcaption::before {
@@ -492,9 +500,23 @@ div.sliderItemWrap {
     margin-bottom: 14px;
     color: #2954a7;
 }
-.videoCaption a , .zhitomirToday-wrapContent p a, .afishaDesc p a{
+.videoCaption a , .afishaDesc p a, .famousPeople p{
     max-height: 44px;
     display: block;
+}
+.sliderItemWrap p a{
+    max-height: 80px;
+    display: inline-block;
+}
+.famousPeople h2{
+    display:block;
+    max-height: 22px;
+}
+.famousPeople .famousPeopleGo{
+    max-height: 28px;
+    display: inline-block;
+    bottom: -4px;
+    position: relative;
 }
 .photoNewsSlider .videoDesc,
 .videoNewsSlider .videoDesc {
@@ -1536,11 +1558,11 @@ div.sliderItemWrap {
 .asideInfo .social,
 .asideInfo .afisha,
 .asideInfo .mainSlider {
-    float: none;
+    /*float: none;*/
     width: 100%;
     margin-bottom: 20px;
 }
-.asideInfo .sliderItemWrap time,
+    .asideInfo .sliderItemWrap time,
 .asideInfo .sliderItemWrap h2 {
     font-size: 1.1em;
 }
@@ -1890,7 +1912,7 @@ div.sliderItemWrap {
 }
 
 /**/
-/*ÐºÐ°Ñ€Ð¾Ñ‡Ðµ Ð´Ð»Ñ Ñ„Ð¾Ñ‚Ð¾ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹*/
+/*ÃƒÂÃ‚ÂºÃƒÂÃ‚Â°Ãƒâ€˜Ã¢â€šÂ¬ÃƒÂÃ‚Â¾Ãƒâ€˜Ã¢â‚¬Â¡ÃƒÂÃ‚Âµ ÃƒÂÃ‚Â´ÃƒÂÃ‚Â»Ãƒâ€˜Ã‚Â Ãƒâ€˜Ã¢â‚¬Å¾ÃƒÂÃ‚Â¾Ãƒâ€˜Ã¢â‚¬Å¡ÃƒÂÃ‚Â¾ Ãƒâ€˜Ã‚ÂÃƒâ€˜Ã¢â‚¬Å¡Ãƒâ€˜Ã¢â€šÂ¬ÃƒÂÃ‚Â°ÃƒÂÃ‚Â½ÃƒÂÃ‚Â¸Ãƒâ€˜Ã¢â‚¬Â Ãƒâ€˜Ã¢â‚¬Â¹*/
 .photoSlider {
     /*margin-bottom: 20px;*/
 }
@@ -2487,4 +2509,34 @@ div.sliderItemWrap {
 }
 .liderTextWrap > a {
     color: #999999;
+}
+
+
+.todayWord h3 a {
+    max-height: 46px;
+    display: block;
+}
+
+.todayWord p a {
+    max-height: 324px;
+    display: block;
+}
+
+.afisha .moreNews p a {
+    max-height: 36px;
+    display: block;
+}
+
+.zhitomirLiveDesc a {
+    display: block;
+    max-height: 32px;
+}
+
+p.zhitomirLiveHeader a {
+    max-height:63px;
+    display:block;
+}
+.advice li a, .mNews .text a, .interview p a, .focusOfTheWeek p a{
+    max-height:40px;
+    display: block;
 }

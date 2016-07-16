@@ -12,6 +12,8 @@ class NewsOneSlider extends Widget {
 
     public $news;
 
+    public $count = 5;
+
     public function init()
     {
         $this->news = News::find()
@@ -22,7 +24,7 @@ class NewsOneSlider extends Widget {
             ])
             ->andWhere('`create_date` < '.time())
             ->andWhere('`end_date` > '.time())
-            ->limit(5)
+            ->limit($this->count)
             ->distinct()
             ->orderBy('create_date DESC')
             ->asArray()

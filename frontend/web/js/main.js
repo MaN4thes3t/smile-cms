@@ -1,5 +1,4 @@
-window.onload = function () {
-    //модифицирую слайдер для фотостраницы... ибо там пезда:D
+$(document).ready(function(){
     try {
         var photoSliderMainBlock = document.getElementsByClassName('sliderWrap')[0],
             photoSliderControls = document.getElementsByClassName('sliderControlsHelp')[0],
@@ -36,8 +35,8 @@ window.onload = function () {
         var buf = '';
         if (target.tagName == 'IMG') {
             target = target.parentElement;
-        } else {
-            target = target.parentElement;
+        } else if(target.tagName == 'UL') {
+            return;
         }
         for (var item = 0; item < sControl.children.length; item++) {
             if (target == sControl.children[item]) {
@@ -58,7 +57,7 @@ window.onload = function () {
     var todayMonth = new Date().getUTCMonth();
     var todayDate = new Date().getUTCDate();
     var todayYear = new Date().getUTCFullYear();
-    
+
     try{
         makeCalendar(engMonth[todayMonth], todayYear, todayDate+1);
         var calendar = document.getElementsByClassName('calendar')[0];
@@ -150,5 +149,21 @@ window.onload = function () {
             }
         }
     } catch (e) {}
-    $(".videoCaption a, .zhitomirToday-wrapContent p a, .afishaDesc p a").dotdotdot({});
-};
+    $(document).ready(function(){
+        $(".videoCaption a, .afishaDesc p a, .famousPeople h2, " +
+            ".famousPeople p, " +
+            ".famousPeople .famousPeopleGo," +
+            ".sliderItemWrap p a, .todayWord h3 a, " +
+            ".afisha .moreNews p a, .zhitomirLiveDesc a, p.zhitomirLiveHeader a, .focusOfTheWeek p a, .interview p a, .advice li a, .mNews .text a "
+        ).dotdotdot();
+        $('.todayWord p a').dotdotdot({
+            callback: function( isTruncated, orgContent){
+                if(isTruncated){
+                    $('.todayWord p a').css('max-height', 'inherit');
+                }
+
+            }
+        });
+    });
+});
+

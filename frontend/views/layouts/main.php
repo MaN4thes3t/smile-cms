@@ -1,10 +1,9 @@
 <?php
 use yii\helpers\Html;
-use frontend\assets\MainAsset;
 use frontend\widgets\FamousPeopleHeader;
 use frontend\widgets\MainNav;
 
-MainAsset::register($this);
+\frontend\assets\AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -128,35 +127,35 @@ MainAsset::register($this);
                         <div class="calendarTimeTD time"><?php echo $date['hours']?>:<?php echo $date['minutes']?></div>
                     </div>
                 </div>
-                <div class="currency">
-                    <dl>
-                        <?php
-                        $xml = simpleXML_load_file('https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=3', "SimpleXMLElement", LIBXML_NOCDATA);
-                        $cur = array('USD', 'EUR');
-                        function xml2array ( $xmlObject, $out = array () )
-                        {
-                            foreach ( (array) $xmlObject as $index => $node )
-                                $out[$index] = ( is_object ( $node ) ) ? xml2array ( $node ) : $node;
-
-                            return $out;
-                        }
-                        if($xml->row){
-                            $xml = xml2array($xml->row);
-                            foreach($xml as $row){
-                                $arr = isset($row[0]['@attributes'])?$row[0]['@attributes']:$row['exchangerate']['@attributes'];
-                                if(in_array($arr['ccy'], $cur)){
-                                    $rate = (string)$arr['buy'];
-                                    $rate = intval($rate*100)/100;
-                                    $cur[$arr['ccy']] = $rate;
-                                }
-
-                            }
-                        }
-                        ?>
-                        <dt><?php echo Yii::t('frontend', 'Курс валют')?>:</dt>
-                        <dd>$ <?php echo $cur['USD']?>, € <?php echo $cur['EUR']?></dd>
-                    </dl>
-                </div>
+<!--                <div class="currency">-->
+<!--                    <dl>-->
+<!--                        --><?php
+//                        $xml = simpleXML_load_file('https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=3', "SimpleXMLElement", LIBXML_NOCDATA);
+//                        $cur = array('USD', 'EUR');
+//                        function xml2array ( $xmlObject, $out = array () )
+//                        {
+//                            foreach ( (array) $xmlObject as $index => $node )
+//                                $out[$index] = ( is_object ( $node ) ) ? xml2array ( $node ) : $node;
+//
+//                            return $out;
+//                        }
+//                        if($xml->row){
+//                            $xml = xml2array($xml->row);
+//                            foreach($xml as $row){
+//                                $arr = isset($row[0]['@attributes'])?$row[0]['@attributes']:$row['exchangerate']['@attributes'];
+//                                if(in_array($arr['ccy'], $cur)){
+//                                    $rate = (string)$arr['buy'];
+//                                    $rate = intval($rate*100)/100;
+//                                    $cur[$arr['ccy']] = $rate;
+//                                }
+//
+//                            }
+//                        }
+//                        ?>
+<!--                        <dt>--><?php //echo Yii::t('frontend', 'Курс валют')?><!--:</dt>-->
+<!--                        <dd>$ --><?php //echo $cur['USD']?><!--, € --><?php //echo $cur['EUR']?><!--</dd>-->
+<!--                    </dl>-->
+<!--                </div>-->
                 <nav class="siteNav">
                     <ul class="clear">
                         <li><a href="#">One News</a></li>

@@ -20,6 +20,7 @@ class VideoNewsSlider extends Widget {
                 '`news`.`show`' => 1,
                 '`type_code`' => 'video_news',
             ])
+            ->andWhere('`news_translate`.`title` != ""')
             ->andWhere('`create_date` < '.time())
             ->andWhere('`end_date` > '.time())
             ->orderBy('create_date DESC')

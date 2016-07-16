@@ -5,7 +5,7 @@ use frontend\smile\components\ImageHelper;
 if($news){
     ?>
     <div class="videoNewsSlider">
-        <h2><a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/video-news/')?>"
+        <h2><a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/video-news')?>"
                title="<?php echo Yii::t('frontend', 'ВИДЕОNEWS')?>"><?php echo Yii::t('frontend', 'ВИДЕОNEWS')?>
             </a>
         </h2>
@@ -30,12 +30,12 @@ if($news){
                              alt="<?php echo $one['t']['title']?>">
                     </a>
                     <p class="videoCaption">
-                        <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/video-news/'.$news['translit'])?>"
+                        <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/video-news/'.$one['translit'])?>"
                            title="<?php echo $one['t']['title']?>"><?php echo $one['t']['title']?></a>
                     </p>
                     <p class="videoDesc">
 <!--                        <a href="#" title="">Народний контроль</a>-->
-                        <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/video-news/'.$news['translit'])?>"
+                        <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/video-news/'.$one['translit'])?>"
                            title="<?php echo $one['t']['title']?>">
                             <?php
                             $month = [
