@@ -28,6 +28,7 @@ class MainAsset extends AssetBundle
     public $js = [
         '/js/jquery-2.2.0.min.js',
         '/js/owl.carousel.min.js',
+        '/js/jquery.dotdotdot.min.js',
         '/js/main.js',
     ];
     public $jsOptions = [

@@ -13,12 +13,16 @@ if($news){
             <?php foreach($news as $one){
                 ?>
                 <div>
-                    <a <?php echo !$one['images']?'class="no-image"':''?> href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/video-news/'.$one['translit'])?>" title="<?php echo $one['t']['title']?>" class="imgWrap">
+                    <a <?php echo !$one['images'] && !$one['video_id']?'class="no-image"':''?> href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/video-news/'.$one['translit'])?>" title="<?php echo $one['t']['title']?>" class="imgWrap">
                         <?php
                         if($one['images']){
                             $path = ImageHelper::buildImgPathThumbnail(current($one['images']));
                         }else{
-                            $path = Yii::$app->params['no_image_small'];
+                            if($one['video_id']){
+                                $path = 'http://img.youtube.com/vi/'.$one['video_id'].'/0.jpg';
+                            }else{
+                                $path = Yii::$app->params['no_image_small'];
+                            }
                         }
                         ?>
                         <img

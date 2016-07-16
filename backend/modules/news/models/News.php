@@ -50,7 +50,7 @@ class News extends SmileBackendModel
     {
         return [
             [['show'], 'required'],
-            [['create_date','end_date','color','event_date','title_color'], 'string'],
+            [['create_date','end_date','color','event_date','title_color', 'video_id'], 'string'],
             [['photo'], 'file', 'extensions' => 'gif, jpg, png'],
             ['create_date','default','value'=>function($value){
                 return date('m/d/Y H:i');
@@ -138,6 +138,7 @@ class News extends SmileBackendModel
             'comments' => Yii::t('backend','Комментарии'),
             'user_id' => Yii::t('backend','Автор'),
             'translit' => Yii::t('backend','Транслит новости'),
+            'video_id' => Yii::t('backend','Ид видео (если тип "Видео новость")'),
         ];
     }
 

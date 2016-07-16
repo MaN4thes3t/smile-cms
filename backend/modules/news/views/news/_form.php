@@ -110,24 +110,29 @@ use dosamigos\datetimepicker\DateTimePicker;
             ],
         ]); ?>
     </div>
-    <div class="types_fields poster">
-    <div class="form-group">
-        <?= SmileHtml::label(Yii::t('backend','Дата события (если тип "Афиша")'))?>
-        <?php
-        if($model->event_date)
-        $model->event_date = date('d.m.Y H:i', $model->event_date);?>
-        <?= DateTimePicker::widget([
-            'model' => $model,
-            'attribute' => 'event_date',
-            'language' => 'uk',
-            'template' => '{button}{input}{reset}',
-            'clientOptions' =>[
-                'autoclose' => true,
-                'class'=>'form-control',
-                'format' => 'dd.mm.yyyy HH:ii',
-            ],
-        ]); ?>
+    <div class="types_fields video_news">
+        <div class="form-group">
+            <?= $form->field($model, 'video_id')->textInput(); ?>
+        </div>
     </div>
+    <div class="types_fields poster">
+        <div class="form-group">
+            <?= SmileHtml::label(Yii::t('backend','Дата события (если тип "Афиша")'))?>
+            <?php
+            if($model->event_date)
+            $model->event_date = date('d.m.Y H:i', $model->event_date);?>
+            <?= DateTimePicker::widget([
+                'model' => $model,
+                'attribute' => 'event_date',
+                'language' => 'uk',
+                'template' => '{button}{input}{reset}',
+                'clientOptions' =>[
+                    'autoclose' => true,
+                    'class'=>'form-control',
+                    'format' => 'dd.mm.yyyy HH:ii',
+                ],
+            ]); ?>
+        </div>
     </div>
     <div class="types_fields point_of_view the_word_public interview">
     <?php if($model->photo){

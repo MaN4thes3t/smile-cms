@@ -150,4 +150,5 @@ window.onload = function () {
             }
         }
     } catch (e) {}
+    $(".videoCaption a, .zhitomirToday-wrapContent p a, .afishaDesc p a").dotdotdot({});
 };

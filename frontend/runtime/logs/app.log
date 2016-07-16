@@ -21109,3 +21109,1656 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2016-07-14 21:55:33 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 21:55:33 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 21:55:33 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '565b4e620d9d507e85ddd253cc51948cb593f33832c78caca14b1e6907825087a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"1bCwXRXh8Gn12VuHBR73GkDCUkotSorI\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=565b4e620d9d507e85ddd253cc51948cb593f33832c78caca14b1e6907825087a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221bCwXRXh8Gn12VuHBR73GkDCUkotSorI%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '3782'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468522533.057
+    'REQUEST_TIME' => 1468522533
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 21:55:43 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 21:55:43 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 21:55:43 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '565b4e620d9d507e85ddd253cc51948cb593f33832c78caca14b1e6907825087a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"1bCwXRXh8Gn12VuHBR73GkDCUkotSorI\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=565b4e620d9d507e85ddd253cc51948cb593f33832c78caca14b1e6907825087a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221bCwXRXh8Gn12VuHBR73GkDCUkotSorI%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '3801'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468522543.262
+    'REQUEST_TIME' => 1468522543
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 21:55:54 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 21:55:54 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 21:55:54 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '565b4e620d9d507e85ddd253cc51948cb593f33832c78caca14b1e6907825087a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"1bCwXRXh8Gn12VuHBR73GkDCUkotSorI\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=565b4e620d9d507e85ddd253cc51948cb593f33832c78caca14b1e6907825087a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221bCwXRXh8Gn12VuHBR73GkDCUkotSorI%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '3800'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468522554.639
+    'REQUEST_TIME' => 1468522554
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 21:55:56 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 21:55:56 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 21:55:56 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '565b4e620d9d507e85ddd253cc51948cb593f33832c78caca14b1e6907825087a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"1bCwXRXh8Gn12VuHBR73GkDCUkotSorI\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=565b4e620d9d507e85ddd253cc51948cb593f33832c78caca14b1e6907825087a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221bCwXRXh8Gn12VuHBR73GkDCUkotSorI%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '3805'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468522556.06
+    'REQUEST_TIME' => 1468522556
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:01:48 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: frontend\widgets\ZhitomirTodayMain::count' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\frontend\widgets\ZhitomirTodayMain.php(34): yii\base\Component->__set('count', '6')
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Object.php(107): frontend\widgets\ZhitomirTodayMain->init()
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs(Array)
+#4 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('frontend\\widget...', Array, Array)
+#5 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('frontend\\widget...', Array, Array)
+#6 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Widget.php(97): yii\BaseYii::createObject(Array)
+#7 C:\OpenServer\domains\smile-cms\frontend\views\site\index.php(18): yii\base\Widget::widget()
+#8 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#9 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#10 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(frontend\controllers\SiteController))
+#11 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#12 C:\OpenServer\domains\smile-cms\frontend\controllers\SiteController.php(11): yii\base\Controller->render('index')
+#13 [internal function]: frontend\controllers\SiteController->actionIndex()
+#14 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#17 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/index', Array)
+#18 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#19 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#20 {main}
+2016-07-14 22:01:47 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UokMpGMQNyMvC3F380ympMHrtT8TWLuV\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UokMpGMQNyMvC3F380ympMHrtT8TWLuV%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '3901'
+    'REDIRECT_URL' => '/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468522907.963
+    'REQUEST_TIME' => 1468522907
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:01:49 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 22:01:49 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 22:01:49 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UokMpGMQNyMvC3F380ympMHrtT8TWLuV\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UokMpGMQNyMvC3F380ympMHrtT8TWLuV%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '3902'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468522909.661
+    'REQUEST_TIME' => 1468522909
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:05:11 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Invalid argument supplied for foreach()' in C:\OpenServer\domains\smile-cms\frontend\widgets\views\zhitomirTodayMain.php:16
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\frontend\widgets\views\zhitomirTodayMain.php(16): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', 'C:\\OpenServer\\d...', 16, Array)
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(frontend\widgets\ZhitomirTodayMain))
+#4 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Widget.php(191): yii\base\View->render('zhitomirTodayMa...', Array, Object(frontend\widgets\ZhitomirTodayMain))
+#5 C:\OpenServer\domains\smile-cms\frontend\widgets\ZhitomirTodayMain.php(57): yii\base\Widget->render('zhitomirTodayMa...', Array)
+#6 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Widget.php(98): frontend\widgets\ZhitomirTodayMain->run()
+#7 C:\OpenServer\domains\smile-cms\frontend\views\site\index.php(18): yii\base\Widget::widget()
+#8 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#9 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#10 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(frontend\controllers\SiteController))
+#11 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#12 C:\OpenServer\domains\smile-cms\frontend\controllers\SiteController.php(11): yii\base\Controller->render('index')
+#13 [internal function]: frontend\controllers\SiteController->actionIndex()
+#14 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#17 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/index', Array)
+#18 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#19 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#20 {main}
+2016-07-14 22:05:10 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UokMpGMQNyMvC3F380ympMHrtT8TWLuV\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UokMpGMQNyMvC3F380ympMHrtT8TWLuV%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '3926'
+    'REDIRECT_URL' => '/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468523110.873
+    'REQUEST_TIME' => 1468523110
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:05:12 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 22:05:12 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 22:05:12 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UokMpGMQNyMvC3F380ympMHrtT8TWLuV\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UokMpGMQNyMvC3F380ympMHrtT8TWLuV%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '3927'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468523112.537
+    'REQUEST_TIME' => 1468523112
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:05:31 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 22:05:31 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 22:05:31 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UokMpGMQNyMvC3F380ympMHrtT8TWLuV\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UokMpGMQNyMvC3F380ympMHrtT8TWLuV%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '3943'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468523131.613
+    'REQUEST_TIME' => 1468523131
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:19:01 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'frontend\widgets\Pagination' not found' in C:\OpenServer\domains\smile-cms\frontend\widgets\ZhitomirTodayMain.php:34
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-07-14 22:19:00 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UokMpGMQNyMvC3F380ympMHrtT8TWLuV\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UokMpGMQNyMvC3F380ympMHrtT8TWLuV%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '4089'
+    'REDIRECT_URL' => '/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468523940.945
+    'REQUEST_TIME' => 1468523940
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:19:02 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 22:19:02 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 22:19:02 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UokMpGMQNyMvC3F380ympMHrtT8TWLuV\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UokMpGMQNyMvC3F380ympMHrtT8TWLuV%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '4090'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468523942.354
+    'REQUEST_TIME' => 1468523942
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:19:15 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The "pagination" property must be set.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\widgets\LinkPager.php:120
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Object.php(107): yii\widgets\LinkPager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#3 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\widgets\\Lin...', Array, Array)
+#4 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\widgets\\Lin...', Array, Array)
+#5 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Widget.php(97): yii\BaseYii::createObject(Array)
+#6 C:\OpenServer\domains\smile-cms\frontend\widgets\views\zhitomirTodayMain.php(71): yii\base\Widget::widget(Array)
+#7 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#8 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#9 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(frontend\widgets\ZhitomirTodayMain))
+#10 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Widget.php(191): yii\base\View->render('zhitomirTodayMa...', Array, Object(frontend\widgets\ZhitomirTodayMain))
+#11 C:\OpenServer\domains\smile-cms\frontend\widgets\ZhitomirTodayMain.php(47): yii\base\Widget->render('zhitomirTodayMa...', Array)
+#12 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Widget.php(98): frontend\widgets\ZhitomirTodayMain->run()
+#13 C:\OpenServer\domains\smile-cms\frontend\views\site\index.php(18): yii\base\Widget::widget()
+#14 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#15 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#16 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(frontend\controllers\SiteController))
+#17 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#18 C:\OpenServer\domains\smile-cms\frontend\controllers\SiteController.php(11): yii\base\Controller->render('index')
+#19 [internal function]: frontend\controllers\SiteController->actionIndex()
+#20 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#21 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#22 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#23 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/index', Array)
+#24 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#25 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#26 {main}
+2016-07-14 22:19:15 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UokMpGMQNyMvC3F380ympMHrtT8TWLuV\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UokMpGMQNyMvC3F380ympMHrtT8TWLuV%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '4091'
+    'REDIRECT_URL' => '/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468523954.979
+    'REQUEST_TIME' => 1468523954
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:19:16 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 22:19:16 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 22:19:16 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UokMpGMQNyMvC3F380ympMHrtT8TWLuV\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UokMpGMQNyMvC3F380ympMHrtT8TWLuV%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '4092'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468523956.22
+    'REQUEST_TIME' => 1468523956
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:25:12 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 22:25:12 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 22:25:12 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UokMpGMQNyMvC3F380ympMHrtT8TWLuV\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UokMpGMQNyMvC3F380ympMHrtT8TWLuV%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '4187'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468524312.547
+    'REQUEST_TIME' => 1468524312
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:32:10 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '→' (T_STRING), expecting ']'' in C:\OpenServer\domains\smile-cms\frontend\widgets\views\zhitomirTodayMain.php:77
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-07-14 22:32:09 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UokMpGMQNyMvC3F380ympMHrtT8TWLuV\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UokMpGMQNyMvC3F380ympMHrtT8TWLuV%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '4262'
+    'REDIRECT_URL' => '/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468524729.793
+    'REQUEST_TIME' => 1468524729
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:32:11 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 22:32:11 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 22:32:11 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"UokMpGMQNyMvC3F380ympMHrtT8TWLuV\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=cd9f16dfc878b7a3b0c412bf5b72fc3f637f3dcf5287196990d24638ddac2055a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22UokMpGMQNyMvC3F380ympMHrtT8TWLuV%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '4264'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468524731.842
+    'REQUEST_TIME' => 1468524731
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:38:50 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 22:38:50 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 22:38:50 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '8b3d031a202bed90c4add7504eac257c688dd5cb36d0332e75ed7502d09e46bca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"43RMZwFEk9UydM2tmYF2pL91C4U614pp\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=8b3d031a202bed90c4add7504eac257c688dd5cb36d0332e75ed7502d09e46bca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2243RMZwFEk9UydM2tmYF2pL91C4U614pp%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '4445'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468525130.527
+    'REQUEST_TIME' => 1468525130
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:41:46 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 22:41:46 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 22:41:46 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '8b3d031a202bed90c4add7504eac257c688dd5cb36d0332e75ed7502d09e46bca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"43RMZwFEk9UydM2tmYF2pL91C4U614pp\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=8b3d031a202bed90c4add7504eac257c688dd5cb36d0332e75ed7502d09e46bca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2243RMZwFEk9UydM2tmYF2pL91C4U614pp%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '4481'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468525306.782
+    'REQUEST_TIME' => 1468525306
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:41:54 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 22:41:54 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 22:41:54 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '8b3d031a202bed90c4add7504eac257c688dd5cb36d0332e75ed7502d09e46bca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"43RMZwFEk9UydM2tmYF2pL91C4U614pp\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=8b3d031a202bed90c4add7504eac257c688dd5cb36d0332e75ed7502d09e46bca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2243RMZwFEk9UydM2tmYF2pL91C4U614pp%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '4484'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468525314.571
+    'REQUEST_TIME' => 1468525314
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:41:59 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 22:41:59 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 22:41:59 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '8b3d031a202bed90c4add7504eac257c688dd5cb36d0332e75ed7502d09e46bca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"43RMZwFEk9UydM2tmYF2pL91C4U614pp\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=8b3d031a202bed90c4add7504eac257c688dd5cb36d0332e75ed7502d09e46bca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%2243RMZwFEk9UydM2tmYF2pL91C4U614pp%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '4487'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468525319.641
+    'REQUEST_TIME' => 1468525319
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:49:52 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: yii\widgets\LinkPager::route' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Component->__set('route', '/news/')
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\widgets\LinkPager), Array)
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\di\Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#4 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('yii\\widgets\\Lin...', Array, Array)
+#5 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\widgets\\Lin...', Array, Array)
+#6 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Widget.php(97): yii\BaseYii::createObject(Array)
+#7 C:\OpenServer\domains\smile-cms\frontend\widgets\views\zhitomirTodayMain.php(80): yii\base\Widget::widget(Array)
+#8 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#9 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#10 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(frontend\widgets\ZhitomirTodayMain))
+#11 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Widget.php(191): yii\base\View->render('zhitomirTodayMa...', Array, Object(frontend\widgets\ZhitomirTodayMain))
+#12 C:\OpenServer\domains\smile-cms\frontend\widgets\ZhitomirTodayMain.php(53): yii\base\Widget->render('zhitomirTodayMa...', Array)
+#13 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Widget.php(98): frontend\widgets\ZhitomirTodayMain->run()
+#14 C:\OpenServer\domains\smile-cms\frontend\views\site\index.php(18): yii\base\Widget::widget()
+#15 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#16 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#17 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(frontend\controllers\SiteController))
+#18 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#19 C:\OpenServer\domains\smile-cms\frontend\controllers\SiteController.php(11): yii\base\Controller->render('index')
+#20 [internal function]: frontend\controllers\SiteController->actionIndex()
+#21 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#22 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#23 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#24 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/index', Array)
+#25 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#26 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#27 {main}
+2016-07-14 22:49:52 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'f87fd1b0a77bce11396ca6d8e6f1ca05048d310acc227627528923adfad1cb3aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eLdVwLLrs-Xg5dNixSHaRHRqvti2FMUV\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=f87fd1b0a77bce11396ca6d8e6f1ca05048d310acc227627528923adfad1cb3aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eLdVwLLrs-Xg5dNixSHaRHRqvti2FMUV%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '4612'
+    'REDIRECT_URL' => '/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468525792.156
+    'REQUEST_TIME' => 1468525792
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 22:49:53 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 22:49:53 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 22:49:53 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'f87fd1b0a77bce11396ca6d8e6f1ca05048d310acc227627528923adfad1cb3aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eLdVwLLrs-Xg5dNixSHaRHRqvti2FMUV\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=f87fd1b0a77bce11396ca6d8e6f1ca05048d310acc227627528923adfad1cb3aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eLdVwLLrs-Xg5dNixSHaRHRqvti2FMUV%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '4613'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468525793.498
+    'REQUEST_TIME' => 1468525793
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 23:17:02 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 23:17:02 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 23:17:02 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '852b8bdfb46c6346699a842403b7fd14ca186225e1166684a76cf436c1a1a4a5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ok5ZrDyi4qoIImXlnBy39amgKl5XVfVG\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=852b8bdfb46c6346699a842403b7fd14ca186225e1166684a76cf436c1a1a4a5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ok5ZrDyi4qoIImXlnBy39amgKl5XVfVG%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '5199'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468527422.154
+    'REQUEST_TIME' => 1468527422
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 23:17:21 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 23:17:21 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 23:17:21 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '852b8bdfb46c6346699a842403b7fd14ca186225e1166684a76cf436c1a1a4a5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ok5ZrDyi4qoIImXlnBy39amgKl5XVfVG\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/video-news/df'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=852b8bdfb46c6346699a842403b7fd14ca186225e1166684a76cf436c1a1a4a5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ok5ZrDyi4qoIImXlnBy39amgKl5XVfVG%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '5220'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468527441.782
+    'REQUEST_TIME' => 1468527441
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 23:21:29 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'simplexml_load_file(https://api.privatbank.ua/p24api/pubinfo?exchange&amp;coursid=3): failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+' in C:\OpenServer\domains\smile-cms\frontend\views\layouts\main.php:134
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'simplexml_load_...', 'C:\\OpenServer\\d...', 134, Array)
+#1 C:\OpenServer\domains\smile-cms\frontend\views\layouts\main.php(134): simplexml_load_file('https://api.pri...', 'SimpleXMLElemen...', 16384)
+#2 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#3 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#4 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(frontend\controllers\SiteController))
+#5 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<div class="con...')
+#6 C:\OpenServer\domains\smile-cms\frontend\controllers\SiteController.php(11): yii\base\Controller->render('index')
+#7 [internal function]: frontend\controllers\SiteController->actionIndex()
+#8 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#11 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/index', Array)
+#12 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#13 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#14 {main}
+2016-07-14 23:21:27 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '852b8bdfb46c6346699a842403b7fd14ca186225e1166684a76cf436c1a1a4a5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ok5ZrDyi4qoIImXlnBy39amgKl5XVfVG\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=852b8bdfb46c6346699a842403b7fd14ca186225e1166684a76cf436c1a1a4a5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ok5ZrDyi4qoIImXlnBy39amgKl5XVfVG%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '5327'
+    'REDIRECT_URL' => '/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468527687.716
+    'REQUEST_TIME' => 1468527687
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 23:21:34 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 23:21:34 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 23:21:34 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '852b8bdfb46c6346699a842403b7fd14ca186225e1166684a76cf436c1a1a4a5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ok5ZrDyi4qoIImXlnBy39amgKl5XVfVG\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=852b8bdfb46c6346699a842403b7fd14ca186225e1166684a76cf436c1a1a4a5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ok5ZrDyi4qoIImXlnBy39amgKl5XVfVG%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '5330'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468527694.185
+    'REQUEST_TIME' => 1468527694
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 23:21:53 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'simplexml_load_file(https://api.privatbank.ua/p24api/pubinfo?exchange&amp;coursid=3): failed to open stream: HTTP request failed! HTTP/1.1 502 Bad Gateway
+' in C:\OpenServer\domains\smile-cms\frontend\views\layouts\main.php:134
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'simplexml_load_...', 'C:\\OpenServer\\d...', 134, Array)
+#1 C:\OpenServer\domains\smile-cms\frontend\views\layouts\main.php(134): simplexml_load_file('https://api.pri...', 'SimpleXMLElemen...', 16384)
+#2 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#3 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#4 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(frontend\controllers\SiteController))
+#5 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<div class="con...')
+#6 C:\OpenServer\domains\smile-cms\frontend\controllers\SiteController.php(11): yii\base\Controller->render('index')
+#7 [internal function]: frontend\controllers\SiteController->actionIndex()
+#8 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#11 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/index', Array)
+#12 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#13 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#14 {main}
+2016-07-14 23:21:51 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '852b8bdfb46c6346699a842403b7fd14ca186225e1166684a76cf436c1a1a4a5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ok5ZrDyi4qoIImXlnBy39amgKl5XVfVG\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=852b8bdfb46c6346699a842403b7fd14ca186225e1166684a76cf436c1a1a4a5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ok5ZrDyi4qoIImXlnBy39amgKl5XVfVG%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '5332'
+    'REDIRECT_URL' => '/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468527711.605
+    'REQUEST_TIME' => 1468527711
+    'argv' => []
+    'argc' => 0
+]
+2016-07-14 23:21:57 [127.0.0.1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+2016-07-14 23:21:57 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Request.php:189
+Stack trace:
+#0 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\web\Application.php(75): yii\web\Request->resolve()
+#1 C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(frontend\smile\components\SmileFrontendRequest))
+#2 C:\OpenServer\domains\smile-cms\frontend\web\index.php(20): yii\base\Application->run()
+#3 {main}
+2016-07-14 23:21:57 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'dtiiico3p6co71f1b01p7t50m7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '852b8bdfb46c6346699a842403b7fd14ca186225e1166684a76cf436c1a1a4a5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ok5ZrDyi4qoIImXlnBy39amgKl5XVfVG\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_REFERER' => 'http://smile-cms/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=dtiiico3p6co71f1b01p7t50m7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=852b8bdfb46c6346699a842403b7fd14ca186225e1166684a76cf436c1a1a4a5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ok5ZrDyi4qoIImXlnBy39amgKl5XVfVG%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/frontend/web/index.php'
+    'REMOTE_PORT' => '5335'
+    'REDIRECT_URL' => '/favicon.ico'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/favicon.ico'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468527717.171
+    'REQUEST_TIME' => 1468527717
+    'argv' => []
+    'argc' => 0
+]

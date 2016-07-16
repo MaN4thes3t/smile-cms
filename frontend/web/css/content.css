@@ -121,7 +121,9 @@
 .zhitomirToday-pages ul {
     display: inline-block;
 }
-
+.zhitomirToday-pages ul .disabled {
+    display: none;
+}
 .zhitomirToday-pages span {
     font-family: 'Noto sans', sans-serif;
     font-weight: 700;
@@ -490,7 +492,10 @@ div.sliderItemWrap {
     margin-bottom: 14px;
     color: #2954a7;
 }
-
+.videoCaption a , .zhitomirToday-wrapContent p a, .afishaDesc p a{
+    max-height: 44px;
+    display: block;
+}
 .photoNewsSlider .videoDesc,
 .videoNewsSlider .videoDesc {
     color: #999;
