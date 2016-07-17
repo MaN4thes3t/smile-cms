@@ -6,8 +6,8 @@ if($news){
     <div class="famousPeople clear">
         <?php foreach($news as $one){
             $name = $one['t']['first_name'];
-            if($one['t']['last_name']){
-                $name .= ' '.$one['t']['last_name'];
+            if($one['t']['second_name']){
+                $name .= ' '.$one['t']['second_name'];
             }
             ?>
             <section>

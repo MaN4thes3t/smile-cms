@@ -7,14 +7,14 @@ if($news){
     <div class="zhitomirLive">
         <div class="verticalTextWrapper">
             <h2 class="verticalText">
-                <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/zhytomir-live/')?>"
+                <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/zhytomir-live')?>"
                    title="<?php echo Yii::t('frontend', 'Житомир Live')?>">
                     <?php echo Yii::t('frontend', 'Житомир')?> <span><?php echo Yii::t('frontend', 'Live')?></span>
                 </a>
             </h2>
         </div>
         <div class="zhitomirLiveImgWrap">
-            <a <?php if(!$one['images']){?>class="no-image"<?php }?> href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/zhytomir-live/'.$news['translit'])?>"
+            <a <?php if(!$news['images']){?>class="no-image"<?php }?> href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/zhytomir-live/'.$news['translit'])?>"
                title="<?php echo $news['t']['title']?>">
                 <?php
                 if($news['images']){

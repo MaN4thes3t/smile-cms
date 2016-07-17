@@ -18,9 +18,11 @@ class SmileCommonRequest extends Request
 {
     public function init(){
         parent::init();
-        Yii::$app->params['languages'] = Language::find()->with('translate')->asArray()->indexBy('code')->all();
+        Yii::$app->params['languages'] = Yii::$app->db->cache(function(){
+            return Language::find()->with('translate')->asArray()->indexBy('code')->all();
+        }, 3600);
         Yii::$app->params['domain'] = 'smile-cms';
-        if($model = Language::findOne(['is_default'=>1])){
+        if($model = Yii::$app->db->cache(function(){ return Language::findOne(['is_default'=>1]);}, 3600)){
             Yii::$app->sourceLanguage = $model->code;
         }else{
             Yii::$app->sourceLanguage = 'ua';

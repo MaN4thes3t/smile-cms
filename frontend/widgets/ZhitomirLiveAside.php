@@ -2,14 +2,13 @@
 
 namespace frontend\widgets;
 
-use backend\modules\newscategory\models\Newscategory;
 use backend\modules\news\models\News;
 use backend\modules\page\models\Page;
 use yii;
 use yii\base\Widget;
 use yii\helpers\ArrayHelper;
 
-class CookeryMain extends Widget {
+class ZhitomirLiveAside extends Widget {
 
     public $news;
 
@@ -19,21 +18,20 @@ class CookeryMain extends Widget {
             ->joinWith(['t', 'images', 'types'])
             ->andWhere([
                 '`news`.`show`' => 1,
-                '`type_code`' => 'cookery',
+                '`type_code`' => 'zhitomir_live',
             ])
-            ->andWhere('`news_translate`.`title` != ""')
             ->andWhere('`create_date` < '.time())
             ->andWhere('`end_date` > '.time())
             ->distinct()
             ->orderBy('create_date DESC')
-            ->limit(4)
             ->asArray()
+            ->limit(3)
             ->all();
     }
 
     public function run()
     {
-        return $this->render('cookeryMain', [
+        return $this->render('zhitomirLiveAside', [
             'news'=>$this->news,
         ]);
     }

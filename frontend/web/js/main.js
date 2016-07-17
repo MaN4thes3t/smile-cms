@@ -153,7 +153,7 @@ $(document).ready(function(){
         $(".videoCaption a, .afishaDesc p a, .famousPeople h2, " +
             ".famousPeople p, " +
             ".famousPeople .famousPeopleGo," +
-            ".sliderItemWrap p a, .todayWord h3 a, " +
+            ".sliderItemWrap p a, .todayWord h3 a, .asideInfo .zhitomirLive figcaption p a," +
             ".afisha .moreNews p a, .zhitomirLiveDesc a, p.zhitomirLiveHeader a, .focusOfTheWeek p a, .interview p a, .advice li a, .mNews .text a "
         ).dotdotdot();
         $('.todayWord p a').dotdotdot({

@@ -6,7 +6,7 @@ if($news){
     ?>
     <div class="interview">
         <h2 class="blockHeader">
-            <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/interview/')?>" title="<?php echo Yii::t('frontend', 'ИНТЕРВЬЮ')?>">
+            <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/interview')?>" title="<?php echo Yii::t('frontend', 'ИНТЕРВЬЮ')?>">
                 <?php echo Yii::t('frontend', 'ИНТЕРВЬЮ')?>
             </a>
         </h2>

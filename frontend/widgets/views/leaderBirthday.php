@@ -6,7 +6,7 @@ if($leaders){
     ?>
     <div class="birthday">
         <h2 class="blockHeader">
-            <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/leaders/')?>"
+            <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/leaders')?>"
                title="<?php echo Yii::t('frontend', 'ІМЕНИННИКИ СЬОГОДНІ')?>"
             >
                 <?php echo Yii::t('frontend', 'ІМЕНИННИКИ СЬОГОДНІ')?>
@@ -55,9 +55,9 @@ if($leaders){
                                     '11' => Yii::t('frontend', 'ноября'),
                                     '12' => Yii::t('frontend', 'декабря'),
                                 ];
-                                $date = getdate($one['create_date']);
+                                $date = getdate($one['birthday']);
                                 ?>
-                                <time><?php echo $date['mday'].' '.$month[$date['mon']].' '.date('H:i', $one['create_date'])?></time>
+                                <time><?php echo $date['mday'].' '.$month[$date['mon']].' '.date('H:i', $one['birthday'])?></time>
                             </a></p>
                     </figcaption>
                 </figure>

@@ -102,7 +102,7 @@ use frontend\widgets\MainNav;
                             '4' => Yii::t('frontend', 'Четверг'),
                             '5' => Yii::t('frontend', 'Пятница'),
                             '6' => Yii::t('frontend', 'Суббота'),
-                            '7' => Yii::t('frontend', 'Воскресенье'),
+                            '0' => Yii::t('frontend', 'Воскресенье'),
                         ];
                         $month = [
                             '1' => Yii::t('frontend', 'Январь'),
@@ -127,35 +127,44 @@ use frontend\widgets\MainNav;
                         <div class="calendarTimeTD time"><?php echo $date['hours']?>:<?php echo $date['minutes']?></div>
                     </div>
                 </div>
-<!--                <div class="currency">-->
-<!--                    <dl>-->
-<!--                        --><?php
-//                        $xml = simpleXML_load_file('https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=3', "SimpleXMLElement", LIBXML_NOCDATA);
-//                        $cur = array('USD', 'EUR');
-//                        function xml2array ( $xmlObject, $out = array () )
-//                        {
-//                            foreach ( (array) $xmlObject as $index => $node )
-//                                $out[$index] = ( is_object ( $node ) ) ? xml2array ( $node ) : $node;
-//
-//                            return $out;
-//                        }
-//                        if($xml->row){
-//                            $xml = xml2array($xml->row);
-//                            foreach($xml as $row){
-//                                $arr = isset($row[0]['@attributes'])?$row[0]['@attributes']:$row['exchangerate']['@attributes'];
-//                                if(in_array($arr['ccy'], $cur)){
-//                                    $rate = (string)$arr['buy'];
-//                                    $rate = intval($rate*100)/100;
-//                                    $cur[$arr['ccy']] = $rate;
-//                                }
-//
-//                            }
-//                        }
+                <?php
+
+                ?>
+                <div class="currency">
+                    <dl>
+                        <?php
+                        if(!Yii::$app->cache->get('currency')){
+                            $xml = simpleXML_load_file('https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=3', "SimpleXMLElement", LIBXML_NOCDATA);
+                            $cur = array('USD', 'EUR');
+                            function xml2array ( $xmlObject, $out = array () )
+                            {
+                                foreach ( (array) $xmlObject as $index => $node )
+                                    $out[$index] = ( is_object ( $node ) ) ? xml2array ( $node ) : $node;
+
+                                return $out;
+                            }
+                            if($xml->row){
+                                $xml = xml2array($xml->row);
+                                foreach($xml as $row){
+                                    $arr = isset($row[0]['@attributes'])?$row[0]['@attributes']:$row['exchangerate']['@attributes'];
+                                    if(in_array($arr['ccy'], $cur)){
+                                        $rate = (string)$arr['buy'];
+                                        $rate = intval($rate*100)/100;
+                                        $cur[$arr['ccy']] = $rate;
+                                    }
+
+                                }
+                                Yii::$app->cache->set('currency', $cur, 3600);
+                            }
+                        }else{
+                            $cur = Yii::$app->cache->get('currency');
+                        }
+
 //                        ?>
-<!--                        <dt>--><?php //echo Yii::t('frontend', 'Курс валют')?><!--:</dt>-->
-<!--                        <dd>$ --><?php //echo $cur['USD']?><!--, € --><?php //echo $cur['EUR']?><!--</dd>-->
-<!--                    </dl>-->
-<!--                </div>-->
+                        <dt><?php echo Yii::t('frontend', 'Курс валют')?>:</dt>
+                        <dd>$ <?php echo $cur['USD']?>, € <?php echo $cur['EUR']?></dd>
+                    </dl>
+                </div>
                 <nav class="siteNav">
                     <ul class="clear">
                         <li><a href="#">One News</a></li>

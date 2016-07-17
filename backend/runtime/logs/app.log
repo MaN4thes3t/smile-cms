@@ -35818,3 +35818,1362 @@ $_SERVER = [
     ]
     'argc' => 1
 ]
+2016-07-17 13:54:16 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\views\news\index.php:248
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\controllers\NewsController.php:33
+2016-07-17 13:54:16 [127.0.0.1][1][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'jsf7m8qmvg622li19ssde97cr7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '8e73e6ba753c4a7b84fb43641debc54735cb9c0d805a24b759fa563877d979b0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7uHejnk6eiEbDN4dRDiyE-nLwMF_YOrI\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smile-cms/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=jsf7m8qmvg622li19ssde97cr7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=8e73e6ba753c4a7b84fb43641debc54735cb9c0d805a24b759fa563877d979b0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227uHejnk6eiEbDN4dRDiyE-nLwMF_YOrI%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/backend/web/index.php'
+    'REMOTE_PORT' => '9602'
+    'REDIRECT_URL' => '/backend/news/news'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/news/news'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468752856.242
+    'REQUEST_TIME' => 1468752856
+    'argv' => []
+    'argc' => 0
+]
+2016-07-17 13:54:24 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\views\news\_form.php:31
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\views\news\update.php:18
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\controllers\NewsController.php:107
+2016-07-17 13:54:24 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'fileupload' does not exist: C:\OpenServer\domains\smile-cms\vendor\2amigos\yii2-file-upload-widget\src/messages/ua/fileupload.php
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\widgets\views\upload.php:13
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\widgets\FileUploadUI.php:97
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\views\news\_form.php:217
+2016-07-17 13:54:24 [127.0.0.1][1][-][info][application] $_GET = [
+    'id' => '16'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jsf7m8qmvg622li19ssde97cr7'
+    '_csrf' => '8e73e6ba753c4a7b84fb43641debc54735cb9c0d805a24b759fa563877d979b0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7uHejnk6eiEbDN4dRDiyE-nLwMF_YOrI\";}'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'redactorModuleName' => 'NewsTranslate'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smile-cms/backend/news/news'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=jsf7m8qmvg622li19ssde97cr7; _csrf=8e73e6ba753c4a7b84fb43641debc54735cb9c0d805a24b759fa563877d979b0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227uHejnk6eiEbDN4dRDiyE-nLwMF_YOrI%22%3B%7D; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/backend/web/index.php'
+    'REMOTE_PORT' => '9605'
+    'REDIRECT_QUERY_STRING' => 'id=16'
+    'REDIRECT_URL' => '/backend/news/news/update'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=16'
+    'REQUEST_URI' => '/backend/news/news/update?id=16'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468752864.01
+    'REQUEST_TIME' => 1468752864
+    'argv' => [
+        0 => 'id=16'
+    ]
+    'argc' => 1
+]
+2016-07-17 13:54:57 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\views\leader\index.php:130
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\controllers\LeaderController.php:29
+2016-07-17 13:54:57 [127.0.0.1][1][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'jsf7m8qmvg622li19ssde97cr7'
+    '_csrf' => '8e73e6ba753c4a7b84fb43641debc54735cb9c0d805a24b759fa563877d979b0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7uHejnk6eiEbDN4dRDiyE-nLwMF_YOrI\";}'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'redactorModuleName' => 'NewsTranslate'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smile-cms/backend/news/news/update?id=16'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=jsf7m8qmvg622li19ssde97cr7; _csrf=8e73e6ba753c4a7b84fb43641debc54735cb9c0d805a24b759fa563877d979b0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227uHejnk6eiEbDN4dRDiyE-nLwMF_YOrI%22%3B%7D; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/backend/web/index.php'
+    'REMOTE_PORT' => '9613'
+    'REDIRECT_URL' => '/backend/leader/leader'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/leader/leader'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468752897.819
+    'REQUEST_TIME' => 1468752897
+    'argv' => []
+    'argc' => 0
+]
+2016-07-17 13:55:00 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\views\leader\_form.php:30
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\views\leader\update.php:18
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\controllers\LeaderController.php:68
+2016-07-17 13:55:00 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'fileupload' does not exist: C:\OpenServer\domains\smile-cms\vendor\2amigos\yii2-file-upload-widget\src/messages/ua/fileupload.php
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\widgets\views\upload.php:13
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\widgets\FileUploadUI.php:97
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\views\leader\_form.php:92
+2016-07-17 13:55:00 [127.0.0.1][1][-][info][application] $_GET = [
+    'id' => '4'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jsf7m8qmvg622li19ssde97cr7'
+    '_csrf' => '8e73e6ba753c4a7b84fb43641debc54735cb9c0d805a24b759fa563877d979b0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7uHejnk6eiEbDN4dRDiyE-nLwMF_YOrI\";}'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'redactorModuleName' => 'LeaderTranslate'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smile-cms/backend/leader/leader'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=jsf7m8qmvg622li19ssde97cr7; _csrf=8e73e6ba753c4a7b84fb43641debc54735cb9c0d805a24b759fa563877d979b0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227uHejnk6eiEbDN4dRDiyE-nLwMF_YOrI%22%3B%7D; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/backend/web/index.php'
+    'REMOTE_PORT' => '9613'
+    'REDIRECT_QUERY_STRING' => 'id=4'
+    'REDIRECT_URL' => '/backend/leader/leader/update'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=4'
+    'REQUEST_URI' => '/backend/leader/leader/update?id=4'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468752900.619
+    'REQUEST_TIME' => 1468752900
+    'argv' => [
+        0 => 'id=4'
+    ]
+    'argc' => 1
+]
+2016-07-17 14:22:32 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\views\leader\index.php:130
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\controllers\LeaderController.php:29
+2016-07-17 14:22:32 [127.0.0.1][1][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'jsf7m8qmvg622li19ssde97cr7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '707337e7f950640fbaf693fc1eae39b9f2c2c6f0e9e2bb31daa4f7908dea71b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dwduYebIp_OqGC4xlRzD3MaVWvRa4sDH\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'redactorModuleName' => 'LeaderTranslate'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smile-cms/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=jsf7m8qmvg622li19ssde97cr7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=707337e7f950640fbaf693fc1eae39b9f2c2c6f0e9e2bb31daa4f7908dea71b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dwduYebIp_OqGC4xlRzD3MaVWvRa4sDH%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/backend/web/index.php'
+    'REMOTE_PORT' => '10071'
+    'REDIRECT_URL' => '/backend/leader/leader'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/leader/leader'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468754552.228
+    'REQUEST_TIME' => 1468754552
+    'argv' => []
+    'argc' => 0
+]
+2016-07-17 14:22:35 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\views\leader\_form.php:30
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\views\leader\update.php:18
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\controllers\LeaderController.php:68
+2016-07-17 14:22:35 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'fileupload' does not exist: C:\OpenServer\domains\smile-cms\vendor\2amigos\yii2-file-upload-widget\src/messages/ua/fileupload.php
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\widgets\views\upload.php:13
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\widgets\FileUploadUI.php:97
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\views\leader\_form.php:92
+2016-07-17 14:22:35 [127.0.0.1][1][-][info][application] $_GET = [
+    'id' => '4'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jsf7m8qmvg622li19ssde97cr7'
+    '_csrf' => '707337e7f950640fbaf693fc1eae39b9f2c2c6f0e9e2bb31daa4f7908dea71b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dwduYebIp_OqGC4xlRzD3MaVWvRa4sDH\";}'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'redactorModuleName' => 'LeaderTranslate'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smile-cms/backend/leader/leader'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=jsf7m8qmvg622li19ssde97cr7; _csrf=707337e7f950640fbaf693fc1eae39b9f2c2c6f0e9e2bb31daa4f7908dea71b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dwduYebIp_OqGC4xlRzD3MaVWvRa4sDH%22%3B%7D; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/backend/web/index.php'
+    'REMOTE_PORT' => '10071'
+    'REDIRECT_QUERY_STRING' => 'id=4'
+    'REDIRECT_URL' => '/backend/leader/leader/update'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=4'
+    'REQUEST_URI' => '/backend/leader/leader/update?id=4'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468754555.188
+    'REQUEST_TIME' => 1468754555
+    'argv' => [
+        0 => 'id=4'
+    ]
+    'argc' => 1
+]
+2016-07-17 14:22:46 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\controllers\LeaderController.php:60
+2016-07-17 14:22:45 [127.0.0.1][1][-][info][application] $_GET = [
+    'id' => '4'
+]
+
+$_POST = [
+    '_csrf' => 'dXNha2gyVGQRBAUeMVc2LQUsLhovcWAcGSEbL1t/NTIiBTMKXEEQLA=='
+    'Leader' => [
+        'birthday' => '17.07.2016'
+        'show' => '1'
+        'translit' => 'sdfsdsdf-4-4'
+    ]
+    'LeaderTranslate' => [
+        'ua' => [
+            'first_name' => 'sdfsd'
+            'last_name' => 'sdfsdf'
+            'description' => '<p>sdfsdf</p>'
+            'seotitle' => 'sdfsd sdfsdf'
+            'seokeywords' => 'sdfsd, sdfsdf'
+            'seodescription' => ''
+        ]
+        'ru' => [
+            'first_name' => ''
+            'last_name' => ''
+            'description' => ''
+            'seotitle' => ''
+            'seokeywords' => ''
+            'seodescription' => ''
+        ]
+    ]
+    'images' => [
+        0 => ''
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jsf7m8qmvg622li19ssde97cr7'
+    '_csrf' => '707337e7f950640fbaf693fc1eae39b9f2c2c6f0e9e2bb31daa4f7908dea71b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dwduYebIp_OqGC4xlRzD3MaVWvRa4sDH\";}'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'redactorModuleName' => 'LeaderTranslate'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '745'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://smile-cms'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smile-cms/backend/leader/leader/update?id=4'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=jsf7m8qmvg622li19ssde97cr7; _csrf=707337e7f950640fbaf693fc1eae39b9f2c2c6f0e9e2bb31daa4f7908dea71b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dwduYebIp_OqGC4xlRzD3MaVWvRa4sDH%22%3B%7D; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/backend/web/index.php'
+    'REMOTE_PORT' => '10072'
+    'REDIRECT_QUERY_STRING' => 'id=4'
+    'REDIRECT_URL' => '/backend/leader/leader/update'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=4'
+    'REQUEST_URI' => '/backend/leader/leader/update?id=4'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468754565.983
+    'REQUEST_TIME' => 1468754565
+    'argv' => [
+        0 => 'id=4'
+    ]
+    'argc' => 1
+]
+2016-07-17 14:22:46 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\views\leader\index.php:130
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\controllers\LeaderController.php:29
+2016-07-17 14:22:46 [127.0.0.1][1][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'jsf7m8qmvg622li19ssde97cr7'
+    '_csrf' => '707337e7f950640fbaf693fc1eae39b9f2c2c6f0e9e2bb31daa4f7908dea71b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dwduYebIp_OqGC4xlRzD3MaVWvRa4sDH\";}'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'redactorModuleName' => 'LeaderTranslate'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smile-cms/backend/leader/leader/update?id=4'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=jsf7m8qmvg622li19ssde97cr7; _csrf=707337e7f950640fbaf693fc1eae39b9f2c2c6f0e9e2bb31daa4f7908dea71b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dwduYebIp_OqGC4xlRzD3MaVWvRa4sDH%22%3B%7D; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/backend/web/index.php'
+    'REMOTE_PORT' => '10072'
+    'REDIRECT_URL' => '/backend/leader/leader/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/leader/leader/index'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468754566.155
+    'REQUEST_TIME' => 1468754566
+    'argv' => []
+    'argc' => 0
+]
+2016-07-17 14:37:16 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\views\leader\index.php:130
+    in C:\OpenServer\domains\smile-cms\backend\modules\leader\controllers\LeaderController.php:29
+2016-07-17 14:37:15 [127.0.0.1][1][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'jsf7m8qmvg622li19ssde97cr7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '80f498da78b7ed3014b596e44845d73c678cd2632d836ddcc0d5a3b3613fa8afa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hYaSxR-LSJji_7fG2E4A-k-fK-snZvMA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'redactorModuleName' => 'LeaderTranslate'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smile-cms/backend/leader/leader/update?id=4'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=jsf7m8qmvg622li19ssde97cr7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=80f498da78b7ed3014b596e44845d73c678cd2632d836ddcc0d5a3b3613fa8afa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hYaSxR-LSJji_7fG2E4A-k-fK-snZvMA%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/backend/web/index.php'
+    'REMOTE_PORT' => '1868'
+    'REDIRECT_URL' => '/backend/leader/leader/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/leader/leader/index'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468755435.802
+    'REQUEST_TIME' => 1468755435
+    'argv' => []
+    'argc' => 0
+]
+2016-07-17 15:21:05 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\views\news\index.php:248
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\controllers\NewsController.php:33
+2016-07-17 15:21:05 [127.0.0.1][1][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'jsf7m8qmvg622li19ssde97cr7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'f865c1fe3c70a7586c1eabb4b022a79ce03ef2e13127c3e093733a0b095f23a5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"wxsYRh3s2HJslkaV8EssQNtz119AbyG9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'redactorModuleName' => 'LeaderTranslate'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smile-cms/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=jsf7m8qmvg622li19ssde97cr7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=f865c1fe3c70a7586c1eabb4b022a79ce03ef2e13127c3e093733a0b095f23a5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22wxsYRh3s2HJslkaV8EssQNtz119AbyG9%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/backend/web/index.php'
+    'REMOTE_PORT' => '2977'
+    'REDIRECT_URL' => '/backend/news/news'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/news/news'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468758065.509
+    'REQUEST_TIME' => 1468758065
+    'argv' => []
+    'argc' => 0
+]
+2016-07-17 15:21:12 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\views\news\_form.php:31
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\views\news\update.php:18
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\controllers\NewsController.php:107
+2016-07-17 15:21:12 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'fileupload' does not exist: C:\OpenServer\domains\smile-cms\vendor\2amigos\yii2-file-upload-widget\src/messages/ua/fileupload.php
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\widgets\views\upload.php:13
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\widgets\FileUploadUI.php:97
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\views\news\_form.php:217
+2016-07-17 15:21:12 [127.0.0.1][1][-][info][application] $_GET = [
+    'id' => '16'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jsf7m8qmvg622li19ssde97cr7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'a898a42fd3d26e7dab1fa7c780d254b488e46a300d5ad718db8cc8ae65cb1152a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"yYQvU2L2XJGGeQdmS8OxoWGgE4dcgFby\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'redactorModuleName' => 'NewsTranslate'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smile-cms/backend/news/news'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=jsf7m8qmvg622li19ssde97cr7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=a898a42fd3d26e7dab1fa7c780d254b488e46a300d5ad718db8cc8ae65cb1152a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22yYQvU2L2XJGGeQdmS8OxoWGgE4dcgFby%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/backend/web/index.php'
+    'REMOTE_PORT' => '2980'
+    'REDIRECT_QUERY_STRING' => 'id=16'
+    'REDIRECT_URL' => '/backend/news/news/update'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=16'
+    'REQUEST_URI' => '/backend/news/news/update?id=16'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468758072.538
+    'REQUEST_TIME' => 1468758072
+    'argv' => [
+        0 => 'id=16'
+    ]
+    'argc' => 1
+]
+2016-07-17 15:21:20 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\controllers\NewsController.php:79
+2016-07-17 15:21:20 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'fileupload' does not exist: C:\OpenServer\domains\smile-cms\vendor\2amigos\yii2-file-upload-widget\src/messages/ua/fileupload.php
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\widgets\views\upload.php:13
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\widgets\FileUploadUI.php:97
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\views\news\_form.php:217
+2016-07-17 15:21:20 [127.0.0.1][1][-][info][application] $_GET = [
+    'id' => '16'
+]
+
+$_POST = [
+    '_csrf' => 'Rzd1Y2RhLlU.biQVMVNiZx99MiQBMEo4FA86Gws2aTICAxEAAydMLA=='
+    'news-title_color-source' => ''
+    'News' => [
+        'title_color' => ''
+        'create_date' => '16.07.2016 14:30'
+        'end_date' => '14.07.2017 00:00'
+        'video_id' => ''
+        'event_date' => ''
+        'photo' => ''
+        'color' => '#d9d2e9'
+        'show' => '1'
+        'translit' => 'gfdgfdg'
+    ]
+    'Type' => [
+        0 => 'zhitomir_live'
+        1 => 'news_one'
+        2 => 'cookery'
+        3 => 'video_news'
+        4 => 'analytics'
+        5 => 'point_of_view'
+        6 => 'poster'
+        7 => 'focus_of_the_week'
+        8 => 'interview'
+        9 => 'the_word_public'
+    ]
+    'Category' => [
+        0 => '4'
+        1 => '5'
+        2 => '6'
+        3 => '8'
+        4 => '9'
+    ]
+    'Source' => ''
+    'photo_deleted' => '0'
+    'news-color-source' => '#d9d2e9'
+    'NewsTranslate' => [
+        'ua' => [
+            'first_name' => 'Тетяна'
+            'second_name' => 'Гармашенко test test'
+            'annotation' => 'gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdg'
+            'mark' => 'gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdg'
+            'title' => 'gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg '
+            'short_description' => 'gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg gfdgfdggfdgfdg agfdgfdggfdgfdg gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg  gfdgfdggfdgfdg '
+            'description' => '<p>f </p>'
+            'seotitle' => 'gfdgfdg'
+            'seokeywords' => 'gfdgfdg'
+            'seodescription' => 'dfgd'
+        ]
+        'ru' => [
+            'first_name' => ''
+            'second_name' => ''
+            'annotation' => ''
+            'mark' => ''
+            'title' => ''
+            'short_description' => ''
+            'description' => ''
+            'seotitle' => ''
+            'seokeywords' => ''
+            'seodescription' => ''
+        ]
+    ]
+    'edit' => '1'
+]
+
+$_FILES = [
+    'News' => [
+        'name' => [
+            'photo' => ''
+        ]
+        'type' => [
+            'photo' => ''
+        ]
+        'tmp_name' => [
+            'photo' => ''
+        ]
+        'error' => [
+            'photo' => 4
+        ]
+        'size' => [
+            'photo' => 0
+        ]
+    ]
+    'images' => [
+        'name' => [
+            0 => ''
+        ]
+        'type' => [
+            0 => ''
+        ]
+        'tmp_name' => [
+            0 => ''
+        ]
+        'error' => [
+            0 => 4
+        ]
+        'size' => [
+            0 => 0
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jsf7m8qmvg622li19ssde97cr7'
+    '_csrf' => 'a898a42fd3d26e7dab1fa7c780d254b488e46a300d5ad718db8cc8ae65cb1152a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"yYQvU2L2XJGGeQdmS8OxoWGgE4dcgFby\";}'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'redactorModuleName' => 'NewsTranslate'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '12182'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://smile-cms'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary1LlepXaIsrmVBf9o'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smile-cms/backend/news/news/update?id=16'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=jsf7m8qmvg622li19ssde97cr7; _csrf=a898a42fd3d26e7dab1fa7c780d254b488e46a300d5ad718db8cc8ae65cb1152a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22yYQvU2L2XJGGeQdmS8OxoWGgE4dcgFby%22%3B%7D; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/backend/web/index.php'
+    'REMOTE_PORT' => '2981'
+    'REDIRECT_QUERY_STRING' => 'id=16'
+    'REDIRECT_URL' => '/backend/news/news/update'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=16'
+    'REQUEST_URI' => '/backend/news/news/update?id=16'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468758080.386
+    'REQUEST_TIME' => 1468758080
+    'argv' => [
+        0 => 'id=16'
+    ]
+    'argc' => 1
+]
+2016-07-17 15:21:29 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\views\news\index.php:248
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\controllers\NewsController.php:33
+2016-07-17 15:21:29 [127.0.0.1][1][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'jsf7m8qmvg622li19ssde97cr7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => 'ca1e6ffd68433945862bc23f112ca4b5f4f54ac240ecbbb1b308f2a110d221f3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"wW_2VdliARmjIoXGnUFbaA_hq1ZLJ8Fv\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'redactorModuleName' => 'NewsTranslate'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smile-cms/backend/news/news/update?id=16'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=jsf7m8qmvg622li19ssde97cr7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=ca1e6ffd68433945862bc23f112ca4b5f4f54ac240ecbbb1b308f2a110d221f3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22wW_2VdliARmjIoXGnUFbaA_hq1ZLJ8Fv%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/backend/web/index.php'
+    'REMOTE_PORT' => '2977'
+    'REDIRECT_URL' => '/backend/news/news'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/news/news'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468758089.184
+    'REQUEST_TIME' => 1468758089
+    'argv' => []
+    'argc' => 0
+]
+2016-07-17 15:21:35 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\views\news\_form.php:31
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\views\news\update.php:18
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\controllers\NewsController.php:107
+2016-07-17 15:21:35 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'fileupload' does not exist: C:\OpenServer\domains\smile-cms\vendor\2amigos\yii2-file-upload-widget\src/messages/ua/fileupload.php
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\widgets\views\upload.php:13
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\widgets\FileUploadUI.php:97
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\views\news\_form.php:217
+2016-07-17 15:21:34 [127.0.0.1][1][-][info][application] $_GET = [
+    'id' => '17'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jsf7m8qmvg622li19ssde97cr7'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+    '_csrf' => '24adb31a905347567c8a775761188a5301f78e692e37a54f42f513882cfe12f4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"RMDurzvqh5GbTr0gGyFoyziuYdyhHKqu\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'redactorModuleName' => 'NewsTranslate'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smile-cms/backend/news/news'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=jsf7m8qmvg622li19ssde97cr7; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=24adb31a905347567c8a775761188a5301f78e692e37a54f42f513882cfe12f4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22RMDurzvqh5GbTr0gGyFoyziuYdyhHKqu%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/backend/web/index.php'
+    'REMOTE_PORT' => '2977'
+    'REDIRECT_QUERY_STRING' => 'id=17'
+    'REDIRECT_URL' => '/backend/news/news/update'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=17'
+    'REQUEST_URI' => '/backend/news/news/update?id=17'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468758094.984
+    'REQUEST_TIME' => 1468758094
+    'argv' => [
+        0 => 'id=17'
+    ]
+    'argc' => 1
+]
+2016-07-17 15:21:47 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\models\SmileDropZoneModel.php:401
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\models\SmileDropZoneModel.php:341
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\models\SmileDropZoneModel.php:203
+2016-07-17 15:21:46 [127.0.0.1][1][-][info][application] $_GET = [
+    'id' => '17'
+    'class' => 'backend\\modules\\news\\models\\News'
+]
+
+$_POST = [
+    '_csrf' => 'SDB1WE1UcWYafTEtPy4HFyAFMjoZJkEBD0kzNzQuGBMRVAwwBR8AEw=='
+    'news-title_color-source' => ''
+    'News' => [
+        'title_color' => ''
+        'create_date' => '14.07.2016 22:37'
+        'end_date' => '14.07.2017 00:00'
+        'video_id' => ''
+        'event_date' => ''
+        'photo' => ''
+        'color' => ''
+        'show' => '1'
+        'translit' => 'dfgdf'
+    ]
+    'Type' => [
+        0 => 'zhitomir_live'
+        1 => 'news_one'
+        2 => 'cookery'
+        3 => 'video_news'
+        4 => 'photo_news'
+        5 => 'analytics'
+        6 => 'point_of_view'
+        7 => 'poster'
+        8 => 'focus_of_the_week'
+        9 => 'interview'
+        10 => 'the_word_public'
+    ]
+    'Category' => [
+        0 => '4'
+        1 => '5'
+        2 => '6'
+        3 => '8'
+        4 => '9'
+    ]
+    'Source' => ''
+    'news-color-source' => ''
+    'NewsTranslate' => [
+        'ua' => [
+            'first_name' => 'gdfg'
+            'second_name' => 'dfgdf'
+            'annotation' => 'gdfgdfgfdg'
+            'mark' => 'dfg'
+            'title' => 'dfgdf'
+            'short_description' => 'gdfgdfg'
+            'description' => '<p>dfgdfgdfg</p>'
+            'seotitle' => 'dfgdf'
+            'seokeywords' => 'dfgdf'
+            'seodescription' => 'gdfgdfg'
+        ]
+        'ru' => [
+            'first_name' => ''
+            'second_name' => ''
+            'annotation' => ''
+            'mark' => ''
+            'title' => ''
+            'short_description' => ''
+            'description' => ''
+            'seotitle' => ''
+            'seokeywords' => ''
+            'seodescription' => ''
+        ]
+    ]
+]
+
+$_FILES = [
+    'images' => [
+        'name' => [
+            0 => '22.png'
+            1 => '655.png'
+            2 => '3333.png'
+        ]
+        'type' => [
+            0 => 'image/png'
+            1 => 'image/png'
+            2 => 'image/png'
+        ]
+        'tmp_name' => [
+            0 => 'C:\\OpenServer\\userdata\\temp\\php66E6.tmp'
+            1 => 'C:\\OpenServer\\userdata\\temp\\php66E7.tmp'
+            2 => 'C:\\OpenServer\\userdata\\temp\\php66E8.tmp'
+        ]
+        'error' => [
+            0 => 0
+            1 => 0
+            2 => 0
+        ]
+        'size' => [
+            0 => 60424
+            1 => 122315
+            2 => 34284
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jsf7m8qmvg622li19ssde97cr7'
+    '_csrf' => '24adb31a905347567c8a775761188a5301f78e692e37a54f42f513882cfe12f4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"RMDurzvqh5GbTr0gGyFoyziuYdyhHKqu\";}'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'redactorModuleName' => 'NewsTranslate'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '223004'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://smile-cms'
+    'HTTP_X_CSRF_TOKEN' => 'SDB1WE1UcWYafTEtPy4HFyAFMjoZJkEBD0kzNzQuGBMRVAwwBR8AEw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryRbQVy6hhexAkxAav'
+    'HTTP_REFERER' => 'http://smile-cms/backend/news/news/update?id=17'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=jsf7m8qmvg622li19ssde97cr7; _csrf=24adb31a905347567c8a775761188a5301f78e692e37a54f42f513882cfe12f4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22RMDurzvqh5GbTr0gGyFoyziuYdyhHKqu%22%3B%7D; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/backend/web/index.php'
+    'REMOTE_PORT' => '2996'
+    'REDIRECT_QUERY_STRING' => 'id=17&class=backend%5Cmodules%5Cnews%5Cmodels%5CNews'
+    'REDIRECT_URL' => '/backend/dropzone/drop-zone/upload'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=17&class=backend%5Cmodules%5Cnews%5Cmodels%5CNews'
+    'REQUEST_URI' => '/backend/dropzone/drop-zone/upload?id=17&class=backend%5Cmodules%5Cnews%5Cmodels%5CNews'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468758106.512
+    'REQUEST_TIME' => 1468758106
+    'argv' => [
+        0 => 'id=17&class=backend%5Cmodules%5Cnews%5Cmodels%5CNews'
+    ]
+    'argc' => 1
+]
+2016-07-17 15:21:50 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'yii' does not exist: C:\OpenServer\domains\smile-cms\vendor\yiisoft\yii2/messages/ua/yii.php
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\controllers\NewsController.php:79
+2016-07-17 15:21:50 [127.0.0.1][1][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'fileupload' does not exist: C:\OpenServer\domains\smile-cms\vendor\2amigos\yii2-file-upload-widget\src/messages/ua/fileupload.php
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\widgets\views\upload.php:13
+    in C:\OpenServer\domains\smile-cms\backend\smile\modules\dropzone\widgets\FileUploadUI.php:97
+    in C:\OpenServer\domains\smile-cms\backend\modules\news\views\news\_form.php:217
+2016-07-17 15:21:48 [127.0.0.1][1][-][info][application] $_GET = [
+    'id' => '17'
+]
+
+$_POST = [
+    '_csrf' => 'SDB1WE1UcWYafTEtPy4HFyAFMjoZJkEBD0kzNzQuGBMRVAwwBR8AEw=='
+    'news-title_color-source' => ''
+    'News' => [
+        'title_color' => ''
+        'create_date' => '14.07.2016 22:37'
+        'end_date' => '14.07.2017 00:00'
+        'video_id' => ''
+        'event_date' => ''
+        'photo' => ''
+        'color' => ''
+        'show' => '1'
+        'translit' => 'dfgdf'
+    ]
+    'Type' => [
+        0 => 'zhitomir_live'
+        1 => 'news_one'
+        2 => 'cookery'
+        3 => 'video_news'
+        4 => 'photo_news'
+        5 => 'analytics'
+        6 => 'point_of_view'
+        7 => 'poster'
+        8 => 'focus_of_the_week'
+        9 => 'interview'
+        10 => 'the_word_public'
+    ]
+    'Category' => [
+        0 => '4'
+        1 => '5'
+        2 => '6'
+        3 => '8'
+        4 => '9'
+    ]
+    'Source' => ''
+    'news-color-source' => ''
+    'NewsTranslate' => [
+        'ua' => [
+            'first_name' => 'gdfg'
+            'second_name' => 'dfgdf'
+            'annotation' => 'gdfgdfgfdg'
+            'mark' => 'dfg'
+            'title' => 'dfgdf'
+            'short_description' => 'gdfgdfg'
+            'description' => '<p>dfgdfgdfg</p>'
+            'seotitle' => 'dfgdf'
+            'seokeywords' => 'dfgdf'
+            'seodescription' => 'gdfgdfg'
+        ]
+        'ru' => [
+            'first_name' => ''
+            'second_name' => ''
+            'annotation' => ''
+            'mark' => ''
+            'title' => ''
+            'short_description' => ''
+            'description' => ''
+            'seotitle' => ''
+            'seokeywords' => ''
+            'seodescription' => ''
+        ]
+    ]
+    'edit' => '1'
+]
+
+$_FILES = [
+    'News' => [
+        'name' => [
+            'photo' => ''
+        ]
+        'type' => [
+            'photo' => ''
+        ]
+        'tmp_name' => [
+            'photo' => ''
+        ]
+        'error' => [
+            'photo' => 4
+        ]
+        'size' => [
+            'photo' => 0
+        ]
+    ]
+    'images' => [
+        'name' => [
+            0 => ''
+        ]
+        'type' => [
+            0 => ''
+        ]
+        'tmp_name' => [
+            0 => ''
+        ]
+        'error' => [
+            0 => 4
+        ]
+        'size' => [
+            0 => 0
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'jsf7m8qmvg622li19ssde97cr7'
+    '_csrf' => '24adb31a905347567c8a775761188a5301f78e692e37a54f42f513882cfe12f4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"RMDurzvqh5GbTr0gGyFoyziuYdyhHKqu\";}'
+    '_identity' => '24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[1,\"\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    'redactorModuleName' => 'NewsTranslate'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'smile-cms'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '5952'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://smile-cms'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryFavFfAHlBAWR9KSt'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://smile-cms/backend/news/news/update?id=17'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2,nl;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=jsf7m8qmvg622li19ssde97cr7; _csrf=24adb31a905347567c8a775761188a5301f78e692e37a54f42f513882cfe12f4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22RMDurzvqh5GbTr0gGyFoyziuYdyhHKqu%22%3B%7D; _identity=24bdfbbadc027788fec97e59db9393601428ce0ba3f75a167e3461e64f2ddce0a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B1%2C%22%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6\\ext;c:\\openserver\\modules\\php\\PHP-5.6\\pear;c:\\openserver\\modules\\php\\PHP-5.6\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.6\\bin;c:\\openserver\\modules\\http\\Apache-2.4\\bin;c:\\openserver\\modules\\http\\Apache-2.4;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32)'
+    'SERVER_NAME' => 'smile-cms'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/smile-cms'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/smile-cms/backend/web/index.php'
+    'REMOTE_PORT' => '2998'
+    'REDIRECT_QUERY_STRING' => 'id=17'
+    'REDIRECT_URL' => '/backend/news/news/update'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=17'
+    'REQUEST_URI' => '/backend/news/news/update?id=17'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1468758108.701
+    'REQUEST_TIME' => 1468758108
+    'argv' => [
+        0 => 'id=17'
+    ]
+    'argc' => 1
+]

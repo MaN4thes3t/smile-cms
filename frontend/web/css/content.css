@@ -298,7 +298,7 @@ div.sliderItemWrap {
     line-height:83px;
 }
 .sliderControls li.no-image img{
-    width:92px;
+    width: 92px;
     vertical-align: middle;
 }
 .todayWord {
@@ -1796,7 +1796,7 @@ div.sliderItemWrap {
 }
 .photoVideoSimply .photoNewsSlider .imgWrap img,
 .photoVideoSimply .videoNewsSlider .imgWrap img{
-    width: 100%;
+    /* width: 100%; */
 }
 .insideInfo {
     float: right;
@@ -1862,6 +1862,7 @@ div.sliderItemWrap {
     margin-left: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
+    overflow: hidden;
     border-bottom: 1px solid #fff;
 }
 
@@ -1912,7 +1913,7 @@ div.sliderItemWrap {
 }
 
 /**/
-/*ÃƒÂÃ‚ÂºÃƒÂÃ‚Â°Ãƒâ€˜Ã¢â€šÂ¬ÃƒÂÃ‚Â¾Ãƒâ€˜Ã¢â‚¬Â¡ÃƒÂÃ‚Âµ ÃƒÂÃ‚Â´ÃƒÂÃ‚Â»Ãƒâ€˜Ã‚Â Ãƒâ€˜Ã¢â‚¬Å¾ÃƒÂÃ‚Â¾Ãƒâ€˜Ã¢â‚¬Å¡ÃƒÂÃ‚Â¾ Ãƒâ€˜Ã‚ÂÃƒâ€˜Ã¢â‚¬Å¡Ãƒâ€˜Ã¢â€šÂ¬ÃƒÂÃ‚Â°ÃƒÂÃ‚Â½ÃƒÂÃ‚Â¸Ãƒâ€˜Ã¢â‚¬Â Ãƒâ€˜Ã¢â‚¬Â¹*/
+/*ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚ÂºÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¾ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¡ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Âµ ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â´ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â»ÃƒÆ’Ã¢â‚¬ËœÃƒâ€šÃ‚Â ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¾ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¾ ÃƒÆ’Ã¢â‚¬ËœÃƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â°ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â½ÃƒÆ’Ã‚ÂÃƒâ€šÃ‚Â¸ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã¢â‚¬ËœÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¹*/
 .photoSlider {
     /*margin-bottom: 20px;*/
 }
@@ -2539,4 +2540,52 @@ p.zhitomirLiveHeader a {
 .advice li a, .mNews .text a, .interview p a, .focusOfTheWeek p a{
     max-height:40px;
     display: block;
+}
+
+.asideInfo .zhitomirLive figcaption p a {
+    max-height: 80px;
+    display: block;
+}
+
+.asideInfo .sliderControls li.no-image img {
+    width: 68px;
+}
+
+.asideInfo .sliderControls li.no-image {
+    line-height: 68px;
+}
+
+.asideInfo .zhitomirLive a.no-image {
+    width: 95px;
+    height: 95px;
+    display: block;
+    text-align: center;
+    line-height: 95px;
+    background-color: #d7e6ff;
+}
+
+.asideInfo .zhitomirLive a.no-image img {
+    height: 62px;
+    vertical-align: middle;
+}
+.photoNewsSlider a.imgWrap.no-image,
+.videoNewsSlider a.imgWrap.no-image{
+    width: 215px;
+    height: 151px;
+    display: block;
+    text-align: center;
+    background-color: #d7e6ff;
+    line-height: 151px;
+}
+.photoNewsSlider a.imgWrap img,
+.videoNewsSlider a.imgWrap img{
+    width: 215px;
+    height: 151px;
+}
+.photoNewsSlider a.imgWrap.no-image img,
+.videoNewsSlider a.imgWrap.no-image img{
+    width: 112px;
+    height: 84px;
+    display: inline-block;
+    vertical-align: middle;
 }

@@ -6,7 +6,7 @@ if($news){
     ?>
     <div class="focusOfTheWeek">
         <h2 class="blockHeader">
-            <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/focus-of-the-week/')?>"
+            <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/focus-of-the-week')?>"
                title="<?php echo Yii::t('frontend', 'Акценти тижня')?>"><?php echo Yii::t('frontend', 'Акценты недели')?></a></h2>
         <a href="<?php echo Yii::$app->urlManager->createAbsoluteUrl('/focus-of-the-week/')?>" class="blockNext"><?php echo Yii::t('frontend', 'Больше')?> →</a>
         <ul class="clear">

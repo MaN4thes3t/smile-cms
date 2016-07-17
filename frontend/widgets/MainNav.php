@@ -15,15 +15,17 @@ class MainNav extends Widget {
 
     public function init()
     {
-        $this->pages = Page::find()
-            ->joinWith(['t'])
-            ->andWhere([
-                'show' => 1
-            ])
-            ->andWhere('page_translate.title != ""')
-            ->orderBy('order ASC')
-            ->asArray()
-            ->all();
+        $this->pages = Yii::$app->db->cache(function(){
+            return Page::find()
+                ->joinWith(['t'])
+                ->andWhere([
+                    'show' => 1
+                ])
+                ->andWhere('page_translate.title != ""')
+                ->orderBy('order ASC')
+                ->asArray()
+                ->all();
+        }, 3600);
     }
 
     public function run()
